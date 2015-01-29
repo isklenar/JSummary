@@ -36,8 +36,7 @@ public class TextRank implements Summarizer {
      * Constructs a new instance of TextRank
      */
     public TextRank() {
-        try {
-            InputStream fis = new FileInputStream("resources/OpenNLP/en-sent.bin"); //for sentence detection
+        try (InputStream fis = new FileInputStream("resources/OpenNLP/en-sent.bin")){
             SentenceModel sentenceModel = new SentenceModel(fis);
             sentenceDetector = new SentenceDetectorME(sentenceModel);
         } catch (IOException e) {
