@@ -1,15 +1,13 @@
-package cz.fit.cvut.sklenivo.JSummary.util;
+package cz.cvut.fit.sklenivo.JSummary.util;
 
 
 
-import cz.fit.cvut.sklenivo.JSummary.textrank.TextRankSentence;
-import edu.mit.jwi.Dictionary;
+import cz.cvut.fit.sklenivo.JSummary.textrank.TextRankSentence;
 import edu.mit.jwi.IDictionary;
 import opennlp.tools.tokenize.TokenizerME;
 import opennlp.tools.tokenize.TokenizerModel;
 import org.tartarus.snowball.SnowballStemmer;
 
-import java.io.File;
 import java.io.FileInputStream;
 import java.io.IOException;
 import java.io.InputStream;
@@ -107,7 +105,7 @@ public class SentenceComparator {
     }
 
     private void initWordNet(){
-        wordNetDictionary = new Dictionary(new File("resources/WordNet/dict"));
+        /*wordNetDictionary = new Dictionary(new File("resources/WordNet/dict"))*/
     }
 
     /**

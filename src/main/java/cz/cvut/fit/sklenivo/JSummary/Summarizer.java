@@ -1,4 +1,4 @@
-package cz.fit.cvut.sklenivo.JSummary;
+package cz.cvut.fit.sklenivo.JSummary;
 
 /**
  * Created by ivo on 20.10.14.
