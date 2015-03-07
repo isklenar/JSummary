@@ -20,6 +20,10 @@ public class EvolutionarySummarizer implements Summarizer {
 
     private ArrayList<Chromosome> chromosomes = new ArrayList<>();
 
+    private double scalingFactor = 0.7;
+    private double crossRate = 0.4;
+    private double [] randomValues;
+
     int populationSize;
     int clusterSize;
 
@@ -30,12 +34,11 @@ public class EvolutionarySummarizer implements Summarizer {
 
         System.out.println("Pop: " + populationSize + "  Clusters: " + clusterSize);
 
-        System.out.println("Pop: " + populationSize + "  Clusters: " + clusterSize);
-
         for (int i = 0; i < chromosomes.size(); i++){
             System.out.println(chromosomes.get(i).getData());
         }
 
+        System.out.println("T: " + createTrialOffspring(chromosomes.get(0)).getData());
 
         return null;
     }
@@ -43,10 +46,49 @@ public class EvolutionarySummarizer implements Summarizer {
     private void initPopulation() {
         Random random = new Random();
         populationSize = random.nextInt(documentSentences.size()/2) + documentSentences.size()/2;
-        clusterSize = random.nextInt(populationSize/2) + 3;
+        clusterSize = populationSize;
         for (int i = 0; i < populationSize; i++){
             chromosomes.add(randomChromosome(clusterSize));
         }
+        randomValues = new double[documentSentences.size()];
+
+        for (int i = 0; i < randomValues.length; i++){
+            randomValues[i]  = random.nextDouble();
+        }
+    }
+
+    private Chromosome createTrialOffspring(Chromosome parent){
+        Random random = new Random();
+        int firstIndex = random.nextInt(chromosomes.size());
+        int secondIndex = random.nextInt(chromosomes.size());
+        int thirdIndex = random.nextInt(chromosomes.size());
+
+        while (firstIndex == secondIndex || secondIndex == thirdIndex || firstIndex == thirdIndex){
+            firstIndex = random.nextInt(chromosomes.size());
+            secondIndex = random.nextInt(chromosomes.size());
+            thirdIndex = random.nextInt(chromosomes.size());
+        }
+
+        ArrayList<Integer> data = new ArrayList<>();
+        int i = 0;
+        for (Integer item : parent.getData()){
+            double chance = random.nextDouble();
+            if (randomValues[i] < crossRate){
+                int result = chromosomes.get(firstIndex).getData().get(i);
+                int scaled = (int) (scalingFactor *
+                        (chromosomes.get(secondIndex).getData().get(i)
+                                - chromosomes.get(thirdIndex).getData().get(i)));
+
+                result = result + scaled;
+                data.add(result);
+
+            } else {
+                data.add(item);
+            }
+            i++;
+        }
+
+        return new Chromosome(data);
     }
 
     private Chromosome randomChromosome(int clusters) {
