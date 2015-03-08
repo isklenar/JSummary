@@ -16,8 +16,11 @@ public class BayesSentence implements Comparable<BayesSentence> {
     private final int QUESTION_MARK_END = 2;
     private final int EXCLAMATION_MARK_END = 3;
 
-    public BayesSentence(String sentence) {
+    private boolean inSummary;
+
+    public BayesSentence(String sentence, int paragraphPosition) {
         text = sentence;
+        features[Features.PARAGRAPH_POSITION.value] = paragraphPosition;
     }
 
     private enum Features {
@@ -95,7 +98,11 @@ public class BayesSentence implements Comparable<BayesSentence> {
     }
 
     private void extractMathSymbolsCountFeature() {
+        int count = text.length() - text.replace("+", "").length();
+        count += text.length() - text.replace("*", "").length();
+        count += text.length() - text.replace("^", "").length();
 
+        features[Features.SENTENCE_SYMBOLS_COUNT.value] = count;
     }
 
     private void extractSentenceEndFeature() {
@@ -235,7 +242,7 @@ public class BayesSentence implements Comparable<BayesSentence> {
     }
 
     private void extractCommaCountFeature() {
-        int count = text.length() - text.replace(".", "").length(); // number of ','
+        int count = text.length() - text.replace(",", "").length(); // number of ','
         features[Features.COMMA_COUNT.value] = count;
     }
 
@@ -253,5 +260,50 @@ public class BayesSentence implements Comparable<BayesSentence> {
     @Override
     public int compareTo(BayesSentence o) {
         return text.compareTo(o.text);
+    }
+
+    /**
+     * Sets new inSummary.
+     *
+     * @param inSummary New value of inSummary.
+     */
+    public void setInSummary(boolean inSummary) {
+        this.inSummary = inSummary;
+    }
+
+    /**
+     * Gets inSummary.
+     *
+     * @return Value of inSummary.
+     */
+    public boolean isInSummary() {
+        return inSummary;
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+
+        BayesSentence sentence = (BayesSentence) o;
+
+        if (text != null ? !text.equals(sentence.text) : sentence.text != null) return false;
+
+        return true;
+    }
+
+    @Override
+    public int hashCode() {
+        return text != null ? text.hashCode() : 0;
+    }
+
+
+    /**
+     * Gets features.
+     *
+     * @return Value of features.
+     */
+    public double[] getFeatures() {
+        return features;
     }
 }

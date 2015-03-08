@@ -15,12 +15,9 @@ public class NaiveBayes implements Summarizer {
     private SentenceDetectorME sentenceDetector;
     private TokenizerME tokenizer;
 
-    private List<BayesSentence> sentences = new ArrayList<>();
+    private List<BayesSentence> model = new ArrayList<>();
 
     public NaiveBayes() {
-
-
-
         /*
         try {
             InputStream fis = new FileInputStream("resources/OpenNLP/en-sent.bin"); //for sentence detection
@@ -40,34 +37,69 @@ public class NaiveBayes implements Summarizer {
 
 
     public void train(String trainingText, String summary) {
-        String [][] paragraphs = splitParagraphs(trainingText);
+        String [] paragraphs = splitParagraphs(trainingText);
+        List<BayesSentence> sentences = new ArrayList<>();
+
+        for (int i = 0; i < paragraphs.length; i++){
+            sentences.addAll(createBayesSentences(paragraphs[i]));
+        }
+
         List<BayesSentence> summarySentences = createBayesSentences(summary);
-    }
 
-    private List<BayesSentence> createBayesSentences(String summary) {
-        List<String> sentences = ParagraphSplitter.splitParagraph(summary);
-        List<BayesSentence> ret = new ArrayList<>();
-        for (String sentence : sentences){
-            ret.add(new BayesSentence(sentence));
-        }
+        for (BayesSentence sentence : sentences){
+            sentence.extractFeatures();
 
-        return ret;
-    }
-
-
-    private String[][] splitParagraphs(String trainingText) {
-        String [] paragraphs = trainingText.split("\n\n+");
-        String[][] ret = new String[paragraphs.length][];
-
-        for (int i = 0; i < ret.length; i++) {
-            String [] tmp = paragraphs[i].split("\\.");
-            for (String s : tmp){
-                s = s.trim();
+            if (summarySentences.contains(sentence)){
+                sentence.setInSummary(true);
             }
-            ret[i] = tmp;
+        }
+
+        model.addAll(sentences);
+
+        printBayesTable(model);
+    }
+
+    private void printBayesTable(List<BayesSentence> sentences) {
+        System.out.print("\t| ");
+        for(int i = 0; i < sentences.get(0).getFeatures().length; i++){
+            System.out.print((i < 10 ? i + " " : i) + "\t| ");
+        }
+        System.out.println("In summary");
+        int i = 0;
+
+        for (BayesSentence sentence : sentences){
+            printSentenceFeatures(sentence, i);
+            i++;
+        }
+    }
+
+    private void printSentenceFeatures(BayesSentence sentence, int i) {
+        System.out.print("s" + i + "\t| ");
+
+        for (Double feature : sentence.getFeatures()){
+            System.out.print(feature + "\t| ");
+            i++;
+        }
+
+        System.out.println(sentence.isInSummary());
+    }
+
+    private List<BayesSentence> createBayesSentences(String paragraph) {
+        List<String> sentences = ParagraphSplitter.splitParagraph(paragraph);
+        List<BayesSentence> ret = new ArrayList<>();
+        for (int i = 0; i < sentences.size(); i++){
+            int paragraphPosition = i == 0 ? 1 : i == sentences.size() - 1 ? 3 : 2;
+            ret.add(new BayesSentence(sentences.get(i), paragraphPosition));
         }
 
         return ret;
+    }
+
+
+    private String[] splitParagraphs(String trainingText) {
+        String [] paragraphs = trainingText.split("\n\n+");
+
+        return paragraphs;
     }
 
     @Override
