@@ -3,25 +3,20 @@ package cz.cvut.fit.sklenivo.JSummary.textrank;
 
 import cz.cvut.fit.sklenivo.JSummary.Summarizer;
 import cz.cvut.fit.sklenivo.JSummary.util.SentenceComparator;
-import opennlp.tools.sentdetect.SentenceDetectorME;
+import cz.cvut.fit.sklenivo.JSummary.util.SentenceUtils;
 
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.LinkedHashSet;
+import java.util.List;
 
 /**
  * Class for performing TextRank summarization
  */
 public class TextRank implements Summarizer {
     private String input;
-    private Graph graph;
 
-    private ArrayList<TextRankSentence> textRankSentences;
-    private ArrayList<Double> previousScores;
-
-    private int percentage;
-    private boolean useNLP;
-    private SentenceDetectorME sentenceDetector;
+    private double ratio;
     private SentenceComparator sentenceComparator;
 
     final private double PROBABILITY_D = 0.85;
@@ -32,48 +27,37 @@ public class TextRank implements Summarizer {
      * Constructs a new instance of TextRank
      */
     public TextRank() {
-        /*try (InputStream fis = new FileInputStream("/resources/OpenNLP/en-sent.bin")){
-            SentenceModel sentenceModel = new SentenceModel(fis);
-            sentenceDetector = new SentenceDetectorME(sentenceModel);
-        } catch (IOException e) {
-            e.printStackTrace();
-            System.out.println("Error initializing OpenNLP");
-            System.exit(1);
-        }*/
-
     }
 
     /**
      * Performs the summary
      *
      * @param input String with input text that is to be summarized
-     * @param percentage percentage of the summary (e.g. value of 30 means 30% ratio of summarization)
+     * @param ratio ratio of summary
      * @param useNLP flag to determined if the summarization algorithm should use some features from NLP
      *               might make the summarization faster, but also less accurate
      * @return summarized text
      */
     @Override
-    public String summarize(String input, int percentage, boolean stemming,
+    public String summarize(String input, double ratio, boolean stemming,
                             boolean wordNet, boolean stopWords, boolean useNLP,
                             String language){
-        this.input = input;
-        this.percentage = percentage;
-        this.useNLP = useNLP;
+        this.ratio = ratio;
 
         sentenceComparator = new SentenceComparator(stemming, stopWords, wordNet, useNLP, language);
-        previousScores = new ArrayList<>();
-        graph = new Graph();
 
-        splitSentences();
-        buildGraph();
-        prepareScores();
+        List<TextRankSentence> inputText = splitSentences(input);
+        System.out.println("Summarizing " + inputText.size() + " sentences.");
 
-        ArrayList<TextRankSentence> summary = createSummary();
+        Graph graph = buildGraph(inputText);
+
+        prepareScores(inputText, graph);
+
+        List<TextRankSentence> summary = createSummary(inputText);
 
         StringBuilder builder = new StringBuilder();
         for (TextRankSentence textRankSentence : summary){
             builder.append(textRankSentence);
-            builder.append(". ");
         }
 
         return builder.toString();
@@ -81,9 +65,9 @@ public class TextRank implements Summarizer {
 
     /**
      * Creates the summary, picks the top sentences
-     * @return ArrayList of sentences, containing n sentences, where n determined from percentage property
+     * @return List of sentences, containing n sentences, where n determined from percentage property
      */
-    private ArrayList<TextRankSentence> createSummary() {
+    private List<TextRankSentence> createSummary(List<TextRankSentence> textRankSentences) {
         ArrayList<TextRankSentence> originalTextRankSentences = new ArrayList<>();
         originalTextRankSentences.addAll(textRankSentences);
 
@@ -93,7 +77,7 @@ public class TextRank implements Summarizer {
         ArrayList<TextRankSentence> summary = new ArrayList<>();
 
         //calculate how many sentences to output
-        int count = (int)(textRankSentences.size() * (percentage/100.0));
+        int count = (int)(textRankSentences.size() * ratio);
 
         //account for rounding error
         if (count == 0){
@@ -116,7 +100,9 @@ public class TextRank implements Summarizer {
      * This will calculate scores for all sentences.
      * Will terminate early if scores converge fast.
      */
-    private void prepareScores() {
+    private void prepareScores(List<TextRankSentence> textRankSentences, Graph graph) {
+        List<Double> previousScores = new ArrayList<>();
+
         //max 30 iterations, that is enough for majority of texts
         //the longer the text is, the faster it converges
         for (int i = 0; i < 30; i++) {
@@ -125,7 +111,7 @@ public class TextRank implements Summarizer {
                 previousScores.add(textRankSentence.getScore());
             }
 
-            calculateScores();
+            calculateScores(textRankSentences, graph);
 
             boolean breakLoop = true;
             for (int j = 0; j < textRankSentences.size(); j++) {
@@ -148,7 +134,8 @@ public class TextRank implements Summarizer {
      * Calculates scores once for every sentence. Uses formula found in TextRank: Bringing Order into Texts by
      * Rada Mihalcea and Paul Tarau
      */
-    private void calculateScores() {
+    private void calculateScores(List<TextRankSentence> textRankSentences, Graph graph) {
+
         for (TextRankSentence textRankSentence : textRankSentences){
             ArrayList<TextRankSentence> in = graph.getIncoming(textRankSentence);
             ArrayList<TextRankSentence> out = graph.getOutgoing(textRankSentence);
@@ -179,12 +166,14 @@ public class TextRank implements Summarizer {
 
             textRankSentence.setScore(score);
         }
+
     }
 
     /**
      * Creates a directed weighted graph from senteces.
      */
-    private void buildGraph() {
+    private Graph buildGraph(List<TextRankSentence> textRankSentences) {
+        Graph graph = new Graph();
         for (int i = 0; i < textRankSentences.size(); i++) {
             for (int j = 0; j < textRankSentences.size(); j++) {
 
@@ -202,24 +191,21 @@ public class TextRank implements Summarizer {
                 }
             }
         }
+
+        return graph;
     }
 
     /**
      * Splits input into sentences, stores them in a ArrayList to be used for later.
      */
-    private void splitSentences() {
-        String [] sentencesArr;
-        if (useNLP) {
-            sentencesArr = sentenceDetector.sentDetect(input);
-        } else {
-            //split naively
-            sentencesArr = input.split("\\.");
+    private List<TextRankSentence> splitSentences(String input) {
+        List<TextRankSentence> ret = new ArrayList<>();
+        List<String> tmp = SentenceUtils.splitToSentences(input);
+
+        for(String sentence : tmp){
+            ret.add(new TextRankSentence(sentence));
         }
 
-        textRankSentences = new ArrayList<>();
-
-        for (String sentence : sentencesArr){
-            textRankSentences.add(new TextRankSentence(sentence));
-        }
+        return ret;
     }
 }

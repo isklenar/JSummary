@@ -103,7 +103,7 @@ public class SummarizationUI extends JFrame {
             public void actionPerformed(ActionEvent e) {
                 long start = System.nanoTime();
                 String inputText = input.getText();
-                int percentage = slider.getValue();
+                double percentage = slider.getValue() / 100.0;
                 String out = dispatch.get(algorithm.getSelectedItem())
                         .summarize(inputText,
                                 percentage,

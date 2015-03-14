@@ -28,7 +28,7 @@ public class EvolutionarySummarizer implements Summarizer {
     int clusterSize;
 
     @Override
-    public String summarize(String input, int percentage, boolean stemming, boolean wordNet, boolean stopWords, boolean useNLP, String language) {
+    public String summarize(String input, double ratio, boolean stemming, boolean wordNet, boolean stopWords, boolean useNLP, String language) {
         processInput(input, stemming, language);
         initPopulation();
 
@@ -258,4 +258,5 @@ public class EvolutionarySummarizer implements Summarizer {
 
         return count;
     }
+
 }

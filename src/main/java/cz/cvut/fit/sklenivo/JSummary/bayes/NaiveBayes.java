@@ -1,7 +1,7 @@
 package cz.cvut.fit.sklenivo.JSummary.bayes;
 
 import cz.cvut.fit.sklenivo.JSummary.Summarizer;
-import cz.cvut.fit.sklenivo.JSummary.util.ParagraphSplitter;
+import cz.cvut.fit.sklenivo.JSummary.util.SentenceUtils;
 import opennlp.tools.sentdetect.SentenceDetectorME;
 import opennlp.tools.tokenize.TokenizerME;
 
@@ -85,7 +85,7 @@ public class NaiveBayes implements Summarizer {
     }
 
     private List<BayesSentence> createBayesSentences(String paragraph) {
-        List<String> sentences = ParagraphSplitter.splitParagraph(paragraph);
+        List<String> sentences = SentenceUtils.splitToSentences(paragraph);
         List<BayesSentence> ret = new ArrayList<>();
         for (int i = 0; i < sentences.size(); i++){
             int paragraphPosition = i == 0 ? 1 : i == sentences.size() - 1 ? 3 : 2;
@@ -102,9 +102,9 @@ public class NaiveBayes implements Summarizer {
         return paragraphs;
     }
 
+
     @Override
-    public String summarize(String input, int percentage, boolean stemming, boolean wordNet, boolean stopWords, boolean useNLP, String language) {
+    public String summarize(String input, double ratio, boolean stemming, boolean wordNet, boolean stopWords, boolean useNLP, String language) {
         return null;
     }
-
 }

@@ -24,20 +24,20 @@ public class BayesSentence implements Comparable<BayesSentence> {
     }
 
     private enum Features {
-        CHARACTER_COUNT(0),
+        CHARACTER_COUNT(0), //
         PARAGRAPH_POSITION(1),
-        WORD_COUNT(2),
-        COMMA_COUNT(3),
-        CAPITAL_WORDS_COUNT(4),
+        WORD_COUNT(2),//
+        COMMA_COUNT(3), //
+        CAPITAL_WORDS_COUNT(4), //
         ACRONYM_COUNT(5),
         PARENTHESIS_COUNT(6),
         SENTENCE_SYMBOLS_COUNT(7),
-        UNITS_COUNT(8),
+        UNITS_COUNT(8), //
         NUMBERS_COUNT(9),
         ABBREVIATION_COUNT(10),
         APOSTROPHE_COUNT(11),
-        SHORT_WORDS_COUNT(12),
-        LONG_WORDS_COUNT(13),
+        SHORT_WORDS_COUNT(12), //
+        LONG_WORDS_COUNT(13), //
         NOUNS_COUNT(14),
         ADJECTIVES_COUNT(15),
         VERBS_COUNT(16),
@@ -212,8 +212,12 @@ public class BayesSentence implements Comparable<BayesSentence> {
     }
 
     private void extractParenthesisCountFeature() {
-        int count = text.length() - text.replace("(", "").length(); // number of '('
-        count += text.length() - text.replace(")", "").length(); // number of ')'
+        int count = text.length() - text.replace("(", "").length();
+        count += text.length() - text.replace(")", "").length();
+        count += text.length() - text.replace("]", "").length();
+        count += text.length() - text.replace("[", "").length();
+        count += text.length() - text.replace("{", "").length();
+        count += text.length() - text.replace("}", "").length();
         features[Features.PARENTHESIS_COUNT.value] = count;
     }
 
@@ -287,7 +291,7 @@ public class BayesSentence implements Comparable<BayesSentence> {
 
         BayesSentence sentence = (BayesSentence) o;
 
-        if (text != null ? !text.equals(sentence.text) : sentence.text != null) return false;
+        if (text != null ? !text.trim().equals(sentence.text.trim()) : sentence.text != null) return false;
 
         return true;
     }
