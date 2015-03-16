@@ -2,6 +2,7 @@ package cz.cvut.fit.sklenivo.JSummary.bayes;
 
 import cz.cvut.fit.sklenivo.JSummary.Summarizer;
 import cz.cvut.fit.sklenivo.JSummary.util.SentenceUtils;
+import edu.stanford.nlp.tagger.maxent.MaxentTagger;
 import opennlp.tools.sentdetect.SentenceDetectorME;
 import opennlp.tools.tokenize.TokenizerME;
 
@@ -45,9 +46,9 @@ public class NaiveBayes implements Summarizer {
         }
 
         List<BayesSentence> summarySentences = createBayesSentences(summary);
-
+        MaxentTagger tagger = new MaxentTagger("src\\main\\resources\\StanfordPOS\\english-bidirectional-distsim.tagger");
         for (BayesSentence sentence : sentences){
-            sentence.extractFeatures();
+            sentence.extractFeatures(tagger);
 
             if (summarySentences.contains(sentence)){
                 sentence.setInSummary(true);

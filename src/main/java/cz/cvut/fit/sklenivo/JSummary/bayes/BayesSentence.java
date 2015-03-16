@@ -1,6 +1,7 @@
 package cz.cvut.fit.sklenivo.JSummary.bayes;
 
 import cz.cvut.fit.sklenivo.JSummary.util.WordDatabases;
+import edu.stanford.nlp.tagger.maxent.MaxentTagger;
 
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
@@ -17,6 +18,7 @@ public class BayesSentence implements Comparable<BayesSentence> {
     private final int EXCLAMATION_MARK_END = 3;
 
     private boolean inSummary;
+
 
     public BayesSentence(String sentence, int paragraphPosition) {
         text = sentence;
@@ -57,10 +59,9 @@ public class BayesSentence implements Comparable<BayesSentence> {
         public int getValue() {
             return value;
         }
-
     }
 
-    public void extractFeatures(){
+    public void extractFeatures(MaxentTagger tagger){
         extractCharacterCountFeature();
         extractWordCountFeature();
         extractCommaCountFeature();
@@ -74,9 +75,9 @@ public class BayesSentence implements Comparable<BayesSentence> {
         extractApostropheCountFeature();
         extractShortWordsFeature();
         extractLongWordsFeature();
-        extractNounsCountFeature();
-        extractAdjectivesCountFeature();
-        extractVerbsCountFeature();
+        extractNounsCountFeature(tagger);
+        extractAdjectivesCountFeature(tagger);
+        extractVerbsCountFeature(tagger);
         extractLinksCountFeature();
         extractSentenceEndFeature();
         extractMathSymbolsCountFeature();
@@ -94,7 +95,15 @@ public class BayesSentence implements Comparable<BayesSentence> {
     }
 
     private void extractGreekLettersCountFeature() {
+        String [] words = text.split(" ");
+        int count = 0;
+        for (String word : words){
+            if (WordDatabases.GREEK_LETTERS_DATABASE.contains(word.toLowerCase())){
+                count++;
+            }
+        }
 
+        features[Features.GREEK_LETTERS_COUNT.value] = count;
     }
 
     private void extractMathSymbolsCountFeature() {
@@ -120,19 +129,58 @@ public class BayesSentence implements Comparable<BayesSentence> {
     }
 
     private void extractLinksCountFeature() {
+        // http://stackoverflow.com/questions/163360/regular-expresion-to-match-urls-in-java
+        Pattern pattern = Pattern.compile("\\b(https?|ftp|file)://[-a-zA-Z0-9+&@#/%?=~_|!:,.;]*[-a-zA-Z0-9+&@#/%=~_|]");
+        Matcher matcher = pattern.matcher(text);
 
+        int count = 0;
+        while (matcher.find()){
+            count++;
+        }
+
+        features[Features.LINKS_COUNT.value] = count;
     }
 
-    private void extractVerbsCountFeature() {
+    private void extractVerbsCountFeature(MaxentTagger tagger) {
+        String tagged = tagger.tagString(text);
 
+        Pattern pattern = Pattern.compile("_VB");
+        Matcher matcher = pattern.matcher(tagged);
+
+        int count = 0;
+        while (matcher.find()){
+            count++;
+        }
+
+        features[Features.VERBS_COUNT.value] = count;
     }
 
-    private void extractAdjectivesCountFeature() {
+    private void extractAdjectivesCountFeature(MaxentTagger tagger) {
+        String tagged = tagger.tagString(text);
 
+        Pattern pattern = Pattern.compile("_JJ");
+        Matcher matcher = pattern.matcher(tagged);
+
+        int count = 0;
+        while (matcher.find()){
+            count++;
+        }
+
+        features[Features.ADJECTIVES_COUNT.value] = count;
     }
 
-    private void extractNounsCountFeature() {
+    private void extractNounsCountFeature(MaxentTagger tagger) {
+        String tagged = tagger.tagString(text);
 
+        Pattern pattern = Pattern.compile("_NN");
+        Matcher matcher = pattern.matcher(tagged);
+
+        int count = 0;
+        while (matcher.find()){
+            count++;
+        }
+
+        features[Features.NOUNS_COUNT.value] = count;
     }
 
     private void extractLongWordsFeature() {
@@ -180,7 +228,7 @@ public class BayesSentence implements Comparable<BayesSentence> {
         String [] words = text.split(" ");
         int count = 0;
         for (String word : words){
-            if (WordDatabases.unitsDatabase.contains(word)){
+            if (WordDatabases.UNITS_DATABASE.contains(word)){
                 count++;
             }
         }
