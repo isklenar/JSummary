@@ -1,6 +1,7 @@
 package cz.cvut.fit.sklenivo.JSummary.textrank;
 
 
+import cz.cvut.fit.sklenivo.JSummary.SummarizationSettings;
 import cz.cvut.fit.sklenivo.JSummary.Summarizer;
 import cz.cvut.fit.sklenivo.JSummary.util.SentenceComparator;
 import cz.cvut.fit.sklenivo.JSummary.util.SentenceUtils;
@@ -33,18 +34,13 @@ public class TextRank implements Summarizer {
      * Performs the summary
      *
      * @param input String with input text that is to be summarized
-     * @param ratio ratio of summary
-     * @param useNLP flag to determined if the summarization algorithm should use some features from NLP
-     *               might make the summarization faster, but also less accurate
      * @return summarized text
      */
     @Override
-    public String summarize(String input, double ratio, boolean stemming,
-                            boolean wordNet, boolean stopWords, boolean useNLP,
-                            String language){
-        this.ratio = ratio;
+    public String summarize(String input, SummarizationSettings settings){
+        this.ratio = settings.getRatio();
 
-        sentenceComparator = new SentenceComparator(stemming, stopWords, wordNet, useNLP, language);
+        sentenceComparator = new SentenceComparator(settings);
 
         List<TextRankSentence> inputText = splitSentences(input);
         System.out.println("Summarizing " + inputText.size() + " sentences.");

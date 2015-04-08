@@ -2,8 +2,8 @@ package cz.cvut.fit.sklenivo.JSummary.util;
 
 
 
+import cz.cvut.fit.sklenivo.JSummary.SummarizationSettings;
 import cz.cvut.fit.sklenivo.JSummary.textrank.TextRankSentence;
-import edu.mit.jwi.IDictionary;
 import opennlp.tools.tokenize.TokenizerME;
 import opennlp.tools.tokenize.TokenizerModel;
 import org.tartarus.snowball.SnowballStemmer;
@@ -19,46 +19,28 @@ import java.util.Set;
  * Utility class that compares senteces.
  */
 public class SentenceComparator {
-    private boolean stemming;
-    private boolean stopWords;
-    private boolean wordNet;
-    private boolean NLP;
-
-    private String language;
-
     private TokenizerME tokenizer;
-    private IDictionary wordNetDictionary;
+
 
     private SnowballStemmer stemmer;
 
+    private SummarizationSettings settings;
     /**
      * Creates new instance of SentenceComparator
-     * @param stemming use stemming or not
-     * @param stopWords use stopwords or not
-     * @param wordNet use WordNet database or not
-     * @param NLP use NLP tokenizer
-     * @param language language for stemmer and stopwords
      */
-    public SentenceComparator(boolean stemming, boolean stopWords, boolean wordNet, boolean NLP, String language) {
-        this.stemming = stemming;
-        this.stopWords = stopWords;
-        this.wordNet = wordNet;
-        this.NLP = NLP;
-        this.language = language.toLowerCase();
+    public SentenceComparator(SummarizationSettings settings) {
+        this.settings = settings;
 
-        if (stemming){
+        if (settings.isStemming()){
             initStemmer();
         }
 
-        if (stopWords){
+        if (settings.isStopWords()){
             initStopWords();
         }
 
-        if(wordNet){
-            initWordNet();
-        }
 
-        if(NLP){
+        if(settings.isUseNLP()){
             initTokenizer();
         }
     }
@@ -92,11 +74,11 @@ public class SentenceComparator {
     private void initStemmer(){
         try {
             //create a stemmer for specified language
-            stemmer = (SnowballStemmer) Class.forName("org.tartarus.snowball.ext." + language + "Stemmer").newInstance();
+            stemmer = (SnowballStemmer) Class.forName("org.tartarus.snowball.ext." + settings.getLanguage() + "Stemmer").newInstance();
         } catch (InstantiationException | IllegalAccessException | ClassNotFoundException e) {
-            System.out.println("Error creating stemmer for language " + language);
+            System.out.println("Error creating stemmer for language " + settings.getLanguage());
             e.printStackTrace();
-            stemming = false;
+            stemmer = null;
         }
     }
 
@@ -120,7 +102,7 @@ public class SentenceComparator {
         } catch (IOException e) {
             System.out.println("Error creating NLP tokenizer. Reason:");
             System.out.println(e.getMessage());
-            NLP = false;
+            tokenizer = null;
         }
     }
 
@@ -137,14 +119,14 @@ public class SentenceComparator {
      */
     private String [] tokenize(String s1) {
         String [] ret;
-        if (NLP){
+        if (settings.isUseNLP() && tokenizer != null){
             ret = tokenizer.tokenize(s1); //using openNLP's tokenizer
         } else {
             ret = s1.split(" ");
         }
 
 
-        if (stemming){
+        if (settings.isStemming() && stemmer != null){
             for (int i = 0; i < ret.length; i++){
                 stemmer.setCurrent(ret[i]);
                 stemmer.stem();
@@ -153,37 +135,5 @@ public class SentenceComparator {
         }
 
         return ret;
-    }
-
-    public boolean useNLP() {
-        return NLP;
-    }
-
-    public void setNLP(boolean NLP) {
-        this.NLP = NLP;
-    }
-
-    public boolean useStemming() {
-        return stemming;
-    }
-
-    public void setStemming(boolean stemming) {
-        this.stemming = stemming;
-    }
-
-    public boolean useStopWords() {
-        return stopWords;
-    }
-
-    public void setStopWords(boolean stopWords) {
-        this.stopWords = stopWords;
-    }
-
-    public boolean useWordNet() {
-        return wordNet;
-    }
-
-    public void setWordNet(boolean wordNet) {
-        this.wordNet = wordNet;
     }
 }

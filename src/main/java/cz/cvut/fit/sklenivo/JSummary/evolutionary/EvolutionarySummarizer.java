@@ -1,5 +1,6 @@
 package cz.cvut.fit.sklenivo.JSummary.evolutionary;
 
+import cz.cvut.fit.sklenivo.JSummary.SummarizationSettings;
 import cz.cvut.fit.sklenivo.JSummary.Summarizer;
 import org.tartarus.snowball.SnowballStemmer;
 
@@ -28,8 +29,8 @@ public class EvolutionarySummarizer implements Summarizer {
     int clusterSize;
 
     @Override
-    public String summarize(String input, double ratio, boolean stemming, boolean wordNet, boolean stopWords, boolean useNLP, String language) {
-        processInput(input, stemming, language);
+    public String summarize(String input, SummarizationSettings settings) {
+        processInput(input, settings);
         initPopulation();
 
         System.out.println("Pop: " + populationSize + "  Clusters: " + clusterSize);
@@ -123,32 +124,32 @@ public class EvolutionarySummarizer implements Summarizer {
         return valid;
     }
 
-    private void processInput(String input, boolean stemming, String language) {
+    private void processInput(String input, SummarizationSettings settings) {
         String [] sentences = input.split("\\.");
 
         for (String sentence : sentences){
-            ArrayList<String> sentenceTerms = processSentence(sentence, stemming, language);
+            ArrayList<String> sentenceTerms = processSentence(sentence, settings);
             terms.addAll(sentenceTerms);
             documentSentences.add(new EvolutionarySentence(sentenceTerms));
         }
     }
 
-    private ArrayList<String> processSentence(String sentence, boolean stemming, String language) {
+    private ArrayList<String> processSentence(String sentence, SummarizationSettings settings) {
         SnowballStemmer stemmer = null;
         try {
             //create a stemmer for specified language
-            stemmer = (SnowballStemmer) Class.forName("org.tartarus.snowball.ext." + language + "Stemmer").newInstance();
+            stemmer = (SnowballStemmer) Class.forName("org.tartarus.snowball.ext." + settings.getLanguage() + "Stemmer").newInstance();
         } catch (InstantiationException | IllegalAccessException | ClassNotFoundException e) {
-            System.out.println("Error creating stemmer for language " + language);
+            System.out.println("Error creating stemmer for language " + settings.getLanguage());
             e.printStackTrace();
-            stemming = false;
+            stemmer = null;
         }
 
         String [] sentenceTerms = sentence.split(" ");
         ArrayList<String> ret = new ArrayList<>();
 
         for (String term : sentenceTerms){
-            if (stemming){
+            if (settings.isStemming() && stemmer != null){
                 stemmer.setCurrent(term);
                 stemmer.stem();
                 ret.add(stemmer.getCurrent());

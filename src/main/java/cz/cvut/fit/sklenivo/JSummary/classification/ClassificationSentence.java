@@ -1,7 +1,7 @@
 package cz.cvut.fit.sklenivo.JSummary.classification;
 
+import cz.cvut.fit.sklenivo.JSummary.util.POSTagger;
 import cz.cvut.fit.sklenivo.JSummary.util.WordDatabases;
-import edu.stanford.nlp.tagger.maxent.MaxentTagger;
 
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
@@ -64,7 +64,7 @@ public class ClassificationSentence implements Comparable<ClassificationSentence
         }
     }
 
-    public void extractFeatures(MaxentTagger tagger){
+    public void extractFeatures(POSTagger tagger){
         extractCharacterCountFeature();
         extractWordCountFeature();
         extractCommaCountFeature();
@@ -144,8 +144,11 @@ public class ClassificationSentence implements Comparable<ClassificationSentence
         features[Features.LINKS_COUNT.value] = count;
     }
 
-    private void extractVerbsCountFeature(MaxentTagger tagger) {
-        String tagged = tagger.tagString(text);
+    private void extractVerbsCountFeature(POSTagger tagger) {
+        if (tagger == null){
+            return;
+        }
+        String tagged = tagger.tagText(text);
 
         Pattern pattern = Pattern.compile("_VB");
         Matcher matcher = pattern.matcher(tagged);
@@ -158,8 +161,11 @@ public class ClassificationSentence implements Comparable<ClassificationSentence
         features[Features.VERBS_COUNT.value] = count;
     }
 
-    private void extractAdjectivesCountFeature(MaxentTagger tagger) {
-        String tagged = tagger.tagString(text);
+    private void extractAdjectivesCountFeature(POSTagger tagger) {
+        if (tagger == null){
+            return;
+        }
+        String tagged = tagger.tagText(text);
 
         Pattern pattern = Pattern.compile("_JJ");
         Matcher matcher = pattern.matcher(tagged);
@@ -172,8 +178,11 @@ public class ClassificationSentence implements Comparable<ClassificationSentence
         features[Features.ADJECTIVES_COUNT.value] = count;
     }
 
-    private void extractNounsCountFeature(MaxentTagger tagger) {
-        String tagged = tagger.tagString(text);
+    private void extractNounsCountFeature(POSTagger tagger) {
+        if (tagger == null){
+            return;
+        }
+        String tagged = tagger.tagText(text);
 
         Pattern pattern = Pattern.compile("_NN");
         Matcher matcher = pattern.matcher(tagged);

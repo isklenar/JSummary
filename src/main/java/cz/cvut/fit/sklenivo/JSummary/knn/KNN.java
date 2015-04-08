@@ -1,5 +1,6 @@
 package cz.cvut.fit.sklenivo.JSummary.knn;
 
+import cz.cvut.fit.sklenivo.JSummary.SummarizationSettings;
 import cz.cvut.fit.sklenivo.JSummary.TrainableSummarizer;
 import cz.cvut.fit.sklenivo.JSummary.classification.ClassificationPreprocessor;
 import cz.cvut.fit.sklenivo.JSummary.classification.ClassificationSentence;
@@ -28,8 +29,8 @@ public class KNN implements TrainableSummarizer {
 
 
     @Override
-    public String summarize(String input, double ratio, boolean stemming, boolean wordNet, boolean stopWords, boolean useNLP, String language) {
-        List<ClassificationSentence> inputSentences = ClassificationPreprocessor.preProcess(input, null);
+    public String summarize(String input, SummarizationSettings settings) {
+        List<ClassificationSentence> inputSentences = ClassificationPreprocessor.preProcess(input, null, settings);
         classify(inputSentences);
 
         StringBuilder builder = new StringBuilder();
@@ -43,8 +44,8 @@ public class KNN implements TrainableSummarizer {
     }
 
     @Override
-    public void train(String trainingText, String summary) {
-        List<ClassificationSentence> sentences = ClassificationPreprocessor.preProcess(trainingText, summary);
+    public void train(String trainingText, String summary, SummarizationSettings settings) {
+        List<ClassificationSentence> sentences = ClassificationPreprocessor.preProcess(trainingText, summary, settings);
 
         model.addAll(sentences);
     }

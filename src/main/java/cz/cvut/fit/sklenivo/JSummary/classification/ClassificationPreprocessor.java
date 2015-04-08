@@ -1,7 +1,8 @@
 package cz.cvut.fit.sklenivo.JSummary.classification;
 
+import cz.cvut.fit.sklenivo.JSummary.SummarizationSettings;
+import cz.cvut.fit.sklenivo.JSummary.util.POSTagger;
 import cz.cvut.fit.sklenivo.JSummary.util.SentenceUtils;
-import edu.stanford.nlp.tagger.maxent.MaxentTagger;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -11,7 +12,7 @@ import java.util.List;
  */
 public class ClassificationPreprocessor {
 
-    public static List<ClassificationSentence> preProcess(String text, String summary){
+    public static List<ClassificationSentence> preProcess(String text, String summary, SummarizationSettings settings){
         String [] paragraphs = splitParagraphs(text);
         List<ClassificationSentence> sentences = new ArrayList<>();
 
@@ -19,7 +20,7 @@ public class ClassificationPreprocessor {
             sentences.addAll(createClassificationSentences(paragraphs[i]));
         }
 
-        MaxentTagger tagger = new MaxentTagger("src\\main\\resources\\StanfordPOS\\english-bidirectional-distsim.tagger");
+        POSTagger tagger = createTagger(settings);
         for (ClassificationSentence sentence : sentences){
             sentence.extractFeatures(tagger);
         }
@@ -41,6 +42,10 @@ public class ClassificationPreprocessor {
         }
 
         return sentences;
+    }
+
+    private static POSTagger createTagger(SummarizationSettings settings) {
+        return new POSTagger(settings.getLanguage());
     }
 
     private static List<ClassificationSentence> createClassificationSentences(String paragraph) {

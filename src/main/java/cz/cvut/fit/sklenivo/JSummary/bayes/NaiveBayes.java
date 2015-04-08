@@ -1,5 +1,6 @@
 package cz.cvut.fit.sklenivo.JSummary.bayes;
 
+import cz.cvut.fit.sklenivo.JSummary.SummarizationSettings;
 import cz.cvut.fit.sklenivo.JSummary.TrainableSummarizer;
 import cz.cvut.fit.sklenivo.JSummary.classification.ClassificationPreprocessor;
 import cz.cvut.fit.sklenivo.JSummary.classification.ClassificationSentence;
@@ -34,8 +35,8 @@ public class NaiveBayes implements TrainableSummarizer {
 
 
     @Override
-    public void train(String trainingText, String summary) {
-        List<ClassificationSentence> sentences = ClassificationPreprocessor.preProcess(trainingText, summary);
+    public void train(String trainingText, String summary, SummarizationSettings settings) {
+        List<ClassificationSentence> sentences = ClassificationPreprocessor.preProcess(trainingText, summary, settings);
         model.addAll(sentences);
         int in = 0;
         for(ClassificationSentence sentence : model){
@@ -239,16 +240,18 @@ public class NaiveBayes implements TrainableSummarizer {
                     ret = ret.multiply(new BigDecimal(tmp));
                 }
             }
+            else {
+                ret = ret.multiply(new BigDecimal(normalProbabilityDensity(sentence.getFeatures()[i], i, inSummary)));
+            }
 
-            ret = ret.multiply(new BigDecimal(normalProbabilityDensity(sentence.getFeatures()[i], i, inSummary)));
         }
 
         return ret;
     }
 
     @Override
-    public String summarize(String input, double ratio, boolean stemming, boolean wordNet, boolean stopWords, boolean useNLP, String language) {
-        List<ClassificationSentence> sentences = ClassificationPreprocessor.preProcess(input, null);
+    public String summarize(String input, SummarizationSettings settings) {
+        List<ClassificationSentence> sentences = ClassificationPreprocessor.preProcess(input, null, settings);
         System.out.println("==========================================================");
 
         int i = 0;

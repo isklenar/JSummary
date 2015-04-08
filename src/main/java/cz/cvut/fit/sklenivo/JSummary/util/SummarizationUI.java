@@ -1,6 +1,8 @@
 package cz.cvut.fit.sklenivo.JSummary.util;
 
 
+import cz.cvut.fit.sklenivo.JSummary.SummarizationSettings;
+import cz.cvut.fit.sklenivo.JSummary.SummarizationSettingsBuilder;
 import cz.cvut.fit.sklenivo.JSummary.Summarizer;
 import cz.cvut.fit.sklenivo.JSummary.bayes.NaiveBayes;
 import cz.cvut.fit.sklenivo.JSummary.evolutionary.EvolutionarySummarizer;
@@ -113,14 +115,14 @@ public class SummarizationUI extends JFrame {
                 String inputText = input.getText();
                 double percentage = slider.getValue() / 100.0;
                 String out;
-
-                out = dispatch.get(algorithm.getSelectedItem()).summarize(inputText,
-                        percentage,
-                        stemmer.isSelected(),
-                        false,
-                        false,
-                        false,
-                        ((String) language.getSelectedItem()).toLowerCase());
+                SummarizationSettings settings = (new SummarizationSettingsBuilder())
+                        .setRatio(percentage)
+                        .setStemming(stemmer.isSelected())
+                        .setStopWords(stopwords.isSelected())
+                        .setUseNLP(nlp.isSelected())
+                        .setWordNet(wordnet.isSelected())
+                        .setLanguage((String) language.getSelectedItem()).build();
+                out = dispatch.get(algorithm.getSelectedItem()).summarize(inputText, settings);
 
 
                 output.setText(out);
@@ -132,16 +134,24 @@ public class SummarizationUI extends JFrame {
         train.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
+                SummarizationSettings settings = (new SummarizationSettingsBuilder())
+                        .setRatio(slider.getValue() / 100.0)
+                        .setStemming(stemmer.isSelected())
+                        .setStopWords(stopwords.isSelected())
+                        .setUseNLP(nlp.isSelected())
+                        .setWordNet(wordnet.isSelected())
+                        .setLanguage((String)language.getSelectedItem()).build();
+
                 if (algorithm.getSelectedItem().toString().equals("Naive Bayes")){
                     NaiveBayes bayes = (NaiveBayes) dispatch.get("Naive Bayes");
-                    bayes.train(input.getText(), output.getText());
+                    bayes.train(input.getText(), output.getText(), settings);
                     System.out.println("Trained");
                 }
 
                 if (algorithm.getSelectedItem().toString().equals("kNN")){
                     dispatch.put("kNN", new KNN(Integer.parseInt(kTextBox.getText())));
                     KNN knn = (KNN) dispatch.get("kNN");
-                    knn.train(input.getText(), output.getText());
+                    knn.train(input.getText(), output.getText(), settings);
                     System.out.println("Trained");
                 }
             }
