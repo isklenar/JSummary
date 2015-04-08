@@ -1,4 +1,4 @@
-package cz.cvut.fit.sklenivo.JSummary.bayes;
+package cz.cvut.fit.sklenivo.JSummary.classification;
 
 import cz.cvut.fit.sklenivo.JSummary.util.WordDatabases;
 import edu.stanford.nlp.tagger.maxent.MaxentTagger;
@@ -9,7 +9,7 @@ import java.util.regex.Pattern;
 /**
  * Created by ivo on 20.10.14.
  */
-public class BayesSentence implements Comparable<BayesSentence> {
+public class ClassificationSentence implements Comparable<ClassificationSentence> {
     private String text;
     private double [] features = new double[Features.FEATURES_TOTAL.getValue()];
 
@@ -19,36 +19,39 @@ public class BayesSentence implements Comparable<BayesSentence> {
 
     private boolean inSummary;
 
+    public String getText() {
+        return text;
+    }
 
-    public BayesSentence(String sentence, int paragraphPosition) {
+    public ClassificationSentence(String sentence, int paragraphPosition) {
         text = sentence;
         features[Features.PARAGRAPH_POSITION.value] = paragraphPosition;
     }
 
     private enum Features {
-        CHARACTER_COUNT(0), //
-        PARAGRAPH_POSITION(1),
-        WORD_COUNT(2),//
-        COMMA_COUNT(3), //
-        CAPITAL_WORDS_COUNT(4), //
-        ACRONYM_COUNT(5),
-        PARENTHESIS_COUNT(6),
-        SENTENCE_SYMBOLS_COUNT(7),
-        UNITS_COUNT(8), //
-        NUMBERS_COUNT(9),
-        ABBREVIATION_COUNT(10),
-        APOSTROPHE_COUNT(11),
-        SHORT_WORDS_COUNT(12), //
-        LONG_WORDS_COUNT(13), //
-        NOUNS_COUNT(14),
-        ADJECTIVES_COUNT(15),
-        VERBS_COUNT(16),
-        LINKS_COUNT(17),
-        SENTENCE_END(18),
-        MATH_SYMBOLS_COUNT(19),
-        GREEK_LETTERS_COUNT(20),
-        DATETIME_COUNT(21),
-        NUMERIC_COUNT(22),
+        CHARACTER_COUNT(0), //c
+        PARAGRAPH_POSITION(1), //d
+        WORD_COUNT(2),//c
+        COMMA_COUNT(3), //c
+        CAPITAL_WORDS_COUNT(4), //c
+        ACRONYM_COUNT(5), //c
+        PARENTHESIS_COUNT(6), //c
+        SENTENCE_SYMBOLS_COUNT(7), //c
+        UNITS_COUNT(8), //c
+        NUMBERS_COUNT(9), //c
+        ABBREVIATION_COUNT(10), //c
+        APOSTROPHE_COUNT(11), //c
+        SHORT_WORDS_COUNT(12), //c
+        LONG_WORDS_COUNT(13), //c
+        NOUNS_COUNT(14), //c
+        ADJECTIVES_COUNT(15), //c
+        VERBS_COUNT(16), //c
+        LINKS_COUNT(17), //c
+        SENTENCE_END(18), //d
+        MATH_SYMBOLS_COUNT(19), //c
+        GREEK_LETTERS_COUNT(20), //c
+        DATETIME_COUNT(21), //c
+        NUMERIC_COUNT(22), //c
         FEATURES_TOTAL(23);
 
 
@@ -310,8 +313,8 @@ public class BayesSentence implements Comparable<BayesSentence> {
 
 
     @Override
-    public int compareTo(BayesSentence o) {
-        return text.compareTo(o.text);
+    public int compareTo(ClassificationSentence o) {
+        return text.trim().compareTo(o.text.trim());
     }
 
     /**
@@ -337,7 +340,7 @@ public class BayesSentence implements Comparable<BayesSentence> {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
 
-        BayesSentence sentence = (BayesSentence) o;
+        ClassificationSentence sentence = (ClassificationSentence) o;
 
         if (text != null ? !text.trim().equals(sentence.text.trim()) : sentence.text != null) return false;
 

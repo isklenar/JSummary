@@ -4,6 +4,7 @@ package cz.cvut.fit.sklenivo.JSummary.util;
 import cz.cvut.fit.sklenivo.JSummary.Summarizer;
 import cz.cvut.fit.sklenivo.JSummary.bayes.NaiveBayes;
 import cz.cvut.fit.sklenivo.JSummary.evolutionary.EvolutionarySummarizer;
+import cz.cvut.fit.sklenivo.JSummary.knn.KNN;
 import cz.cvut.fit.sklenivo.JSummary.textrank.TextRank;
 
 import javax.swing.*;
@@ -26,11 +27,14 @@ public class SummarizationUI extends JFrame {
     private JComboBox algorithm;
     private JComboBox language;
 
+    private JTextField kTextBox;
+
     public SummarizationUI(){
         dispatch = new HashMap<>();
         dispatch.put("TextRank", new TextRank());
         dispatch.put("Naive Bayes", new NaiveBayes());
         dispatch.put("Evolutionary", new EvolutionarySummarizer());
+        dispatch.put("kNN", new KNN());
 
         initUI();
 
@@ -58,12 +62,16 @@ public class SummarizationUI extends JFrame {
         stopwords = new JRadioButton();
         stopwords.setText("Stop Words");
         stopwords.setSelected(true);
+
+        kTextBox = new JTextField();
+        kTextBox.setText("1");
     }
 
     private void initComboBoxes(){
         algorithm = new JComboBox();
         algorithm.addItem("TextRank");
         algorithm.addItem("Naive Bayes");
+        algorithm.addItem("kNN");
         algorithm.addItem("Evolutionary");
 
         language = new JComboBox();
@@ -90,7 +98,7 @@ public class SummarizationUI extends JFrame {
 
 
         final JPanel panel = new JPanel();
-        panel.setLayout(new GridLayout(2,1)); //2 rows 1 collum
+        panel.setLayout(new GridLayout(2,1)); //2 rows 1 columns
 
         panel.setAlignmentX(Component.CENTER_ALIGNMENT);
 
@@ -104,14 +112,16 @@ public class SummarizationUI extends JFrame {
                 long start = System.nanoTime();
                 String inputText = input.getText();
                 double percentage = slider.getValue() / 100.0;
-                String out = dispatch.get(algorithm.getSelectedItem())
-                        .summarize(inputText,
-                                percentage,
-                                stemmer.isSelected(),
-                                false,
-                                false,
-                                false,
-                                ((String)language.getSelectedItem()).toLowerCase());
+                String out;
+
+                out = dispatch.get(algorithm.getSelectedItem()).summarize(inputText,
+                        percentage,
+                        stemmer.isSelected(),
+                        false,
+                        false,
+                        false,
+                        ((String) language.getSelectedItem()).toLowerCase());
+
 
                 output.setText(out);
                 System.out.println((System.nanoTime() - start) / 1_000_000 + "ms");
@@ -127,15 +137,23 @@ public class SummarizationUI extends JFrame {
                     bayes.train(input.getText(), output.getText());
                     System.out.println("Trained");
                 }
+
+                if (algorithm.getSelectedItem().toString().equals("kNN")){
+                    dispatch.put("kNN", new KNN(Integer.parseInt(kTextBox.getText())));
+                    KNN knn = (KNN) dispatch.get("kNN");
+                    knn.train(input.getText(), output.getText());
+                    System.out.println("Trained");
+                }
             }
         });
 
-        JPanel firstRow = new JPanel(new GridLayout(1,4)); //1 row 3 columns, algorithm, button, train, language
+        JPanel firstRow = new JPanel(new GridLayout(1,5)); //1 row 3 columns, algorithm, button, train, language, k
 
         firstRow.add(algorithm);
         firstRow.add(summarize);
         firstRow.add(train);
         firstRow.add(language);
+        firstRow.add(kTextBox);
         panel.add(firstRow);
 
         JPanel secondRow = new JPanel(new GridLayout(1, 4)); //nlp, stemmer, wordnet, stopwords

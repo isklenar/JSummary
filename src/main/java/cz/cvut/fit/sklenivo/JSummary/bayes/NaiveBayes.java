@@ -1,66 +1,151 @@
 package cz.cvut.fit.sklenivo.JSummary.bayes;
 
-import cz.cvut.fit.sklenivo.JSummary.Summarizer;
-import cz.cvut.fit.sklenivo.JSummary.util.SentenceUtils;
-import edu.stanford.nlp.tagger.maxent.MaxentTagger;
+import cz.cvut.fit.sklenivo.JSummary.TrainableSummarizer;
+import cz.cvut.fit.sklenivo.JSummary.classification.ClassificationPreprocessor;
+import cz.cvut.fit.sklenivo.JSummary.classification.ClassificationSentence;
 import opennlp.tools.sentdetect.SentenceDetectorME;
 import opennlp.tools.tokenize.TokenizerME;
 
-import java.util.ArrayList;
-import java.util.List;
+import java.math.BigDecimal;
+import java.util.*;
 
 /**
  * Created by ivo on 20.10.14.
  */
-public class NaiveBayes implements Summarizer {
+public class NaiveBayes implements TrainableSummarizer {
     private SentenceDetectorME sentenceDetector;
     private TokenizerME tokenizer;
 
-    private List<BayesSentence> model = new ArrayList<>();
+    private List<ClassificationSentence> model = new ArrayList<>();
+    private Map<Integer, Double> featuresMeanInSummary = new HashMap<>();
+    private Map<Integer, Double> featuresVarianceInSummary = new HashMap<>();
+    private Map<Integer, Double> featuresMeanNotInSummary = new HashMap<>();
+    private Map<Integer, Double> featuresVarianceNotInSummary = new HashMap<>();
+
+    private Map<Integer, Map<Double, Double>> discreteProbabilityInSummary = new HashMap<>();
+    private Map<Integer, Map<Double, Double>> discreteProbabilityNotInSummary = new HashMap<>();
+
+
+    private double probabilityInSummary;
 
     public NaiveBayes() {
-        /*
-        try {
-            InputStream fis = new FileInputStream("resources/OpenNLP/en-sent.bin"); //for sentence detection
-            SentenceModel sentenceModel = new SentenceModel(fis);
-            sentenceDetector = new SentenceDetectorME(sentenceModel);
 
-            InputStream is = new FileInputStream("resources/OpenNLP/en-token.bin"); //for tokenizer
-            TokenizerModel tokenizerModel = new TokenizerModel(is);
-            tokenizer = new TokenizerME(tokenizerModel);
-        } catch (IOException e) {
-            e.printStackTrace();
-            System.out.println("Error initializing OpenNLP");
-            System.exit(1);
-        }*/
     }
 
 
-
+    @Override
     public void train(String trainingText, String summary) {
-        String [] paragraphs = splitParagraphs(trainingText);
-        List<BayesSentence> sentences = new ArrayList<>();
-
-        for (int i = 0; i < paragraphs.length; i++){
-            sentences.addAll(createBayesSentences(paragraphs[i]));
-        }
-
-        List<BayesSentence> summarySentences = createBayesSentences(summary);
-        MaxentTagger tagger = new MaxentTagger("src\\main\\resources\\StanfordPOS\\english-bidirectional-distsim.tagger");
-        for (BayesSentence sentence : sentences){
-            sentence.extractFeatures(tagger);
-
-            if (summarySentences.contains(sentence)){
-                sentence.setInSummary(true);
+        List<ClassificationSentence> sentences = ClassificationPreprocessor.preProcess(trainingText, summary);
+        model.addAll(sentences);
+        int in = 0;
+        for(ClassificationSentence sentence : model){
+            if(sentence.isInSummary()){
+                in++;
             }
         }
+        probabilityInSummary = ((double)in)/model.size();
 
-        model.addAll(sentences);
-
+        prepareMeansAndVariance();
         printBayesTable(model);
     }
 
-    private void printBayesTable(List<BayesSentence> sentences) {
+    private void prepareMeansAndVariance() {
+        for (int i = 0; i < model.get(0).getFeatures().length; i++){
+            if (i == 1 || i == 18){
+                Map<Double, Double> inSummary = calculateDiscreteProbability(i, true);
+                discreteProbabilityInSummary.put(i, inSummary);
+
+                Map<Double, Double> notInSummary = calculateDiscreteProbability(i, false);
+                discreteProbabilityNotInSummary.put(i, notInSummary);
+            }
+
+            double mean = calculateMean(i, true);
+            featuresMeanInSummary.put(i, mean);
+
+            mean = calculateMean(i, false);
+            featuresMeanNotInSummary.put(i, mean);
+
+            double variance = calculateVariance(i, true);
+            featuresVarianceInSummary.put(i, variance);
+
+            variance = calculateVariance(i, false);
+            featuresVarianceNotInSummary.put(i, variance);
+        }
+    }
+
+    private Map<Double, Double> calculateDiscreteProbability(int i, boolean summary) {
+        Map<Double, Integer> frequencies = new HashMap<>();
+        int n = 0;
+        for (ClassificationSentence sentence : model){
+            if (sentence.isInSummary() == summary){
+                if (frequencies.containsKey(sentence.getFeatures()[i])){
+                    int tmp = frequencies.get(sentence.getFeatures()[i]);
+                    frequencies.put(sentence.getFeatures()[i], tmp + 1);
+                } else {
+                    frequencies.put(sentence.getFeatures()[i], 1);
+                }
+
+                n++;
+            }
+        }
+
+        Map<Double, Double> ret = new HashMap<>();
+
+        for(Double val : frequencies.keySet()){
+             ret.put(val, frequencies.get(val)/(double)n);
+        }
+
+        return ret;
+    }
+
+    private double calculateVariance(int i, boolean summary) {
+        Map<Double, Integer> featureCount = new HashMap<>();
+        int n = 0;
+        for(ClassificationSentence sentence : model){
+            if (sentence.isInSummary() == summary){
+                if (featureCount.containsKey(sentence.getFeatures()[i])){
+                    featureCount.put(sentence.getFeatures()[i], featureCount.get(sentence.getFeatures()[i]) +1);
+                } else {
+                    featureCount.put(sentence.getFeatures()[i], 1);
+                }
+                n++;
+            }
+        }
+
+        double ret1 = 0;
+        double ret2 = 0;
+        for(Double value : featureCount.keySet()){
+            ret1 += (value*value) * (featureCount.get(value)/(double)n);
+            ret2 += (value) * (featureCount.get(value)/(double)n);
+
+        }
+
+        return ret1 - (ret2 * ret2);
+    }
+
+    private double calculateMean(int i, boolean summary) {
+        Map<Double, Integer> featureCount = new HashMap<>();
+        int n = 0;
+        for(ClassificationSentence sentence : model){
+            if (sentence.isInSummary() == summary){
+                if (featureCount.containsKey(sentence.getFeatures()[i])){
+                    featureCount.put(sentence.getFeatures()[i], featureCount.get(sentence.getFeatures()[i]) +1);
+                } else {
+                    featureCount.put(sentence.getFeatures()[i], 1);
+                }
+                n++;
+            }
+        }
+
+        double ret = 0;
+        for(Double value : featureCount.keySet()){
+            ret += value * (featureCount.get(value)/(double)n);
+        }
+
+        return ret;
+    }
+
+    private void printBayesTable(List<ClassificationSentence> sentences) {
         System.out.print("\t| ");
         for(int i = 0; i < sentences.get(0).getFeatures().length; i++){
             System.out.print((i < 10 ? i + " " : i) + "\t| ");
@@ -68,13 +153,49 @@ public class NaiveBayes implements Summarizer {
         System.out.println("In summary");
         int i = 0;
 
-        for (BayesSentence sentence : sentences){
+        for (ClassificationSentence sentence : sentences){
             printSentenceFeatures(sentence, i);
             i++;
         }
+
+        System.out.print("mean| ");
+
+        for (i = 0; i < model.get(0).getFeatures().length; i++){
+            System.out.print(featuresMeanInSummary.get(i) + "\t| ");
+        }
+        System.out.println();
+        System.out.print("mean2| ");
+
+        for (i = 0; i < model.get(0).getFeatures().length; i++){
+            System.out.print(featuresMeanNotInSummary.get(i) + "\t| ");
+        }
+        System.out.println();
+        System.out.print("var | ");
+
+        for (i = 0; i < model.get(0).getFeatures().length; i++){
+            Double var2 = featuresVarianceInSummary.get(i);
+            if (var2 == null){
+                System.out.print("\t|");
+            } else {
+                System.out.print(Math.sqrt(var2) + "\t| ");
+            }
+        }
+        System.out.println();
+        System.out.print("var2| ");
+
+        for (i = 0; i < model.get(0).getFeatures().length; i++){
+            Double var2 = featuresVarianceNotInSummary.get(i);
+            if (var2 == null){
+                System.out.print("\t|");
+            } else {
+                System.out.print(Math.sqrt(var2) + "\t| ");
+            }
+        }
+        System.out.println();
+        System.out.println("P(Summary=yes) = " + probabilityInSummary);
     }
 
-    private void printSentenceFeatures(BayesSentence sentence, int i) {
+    private void printSentenceFeatures(ClassificationSentence sentence, int i) {
         System.out.print("s" + i + "\t| ");
 
         for (Double feature : sentence.getFeatures()){
@@ -85,27 +206,79 @@ public class NaiveBayes implements Summarizer {
         System.out.println(sentence.isInSummary());
     }
 
-    private List<BayesSentence> createBayesSentences(String paragraph) {
-        List<String> sentences = SentenceUtils.splitToSentences(paragraph);
-        List<BayesSentence> ret = new ArrayList<>();
-        for (int i = 0; i < sentences.size(); i++){
-            int paragraphPosition = i == 0 ? 1 : i == sentences.size() - 1 ? 3 : 2;
-            ret.add(new BayesSentence(sentences.get(i), paragraphPosition));
+    private double normalProbabilityDensity(double value, int i, boolean inSummary) {
+        if (inSummary) {
+            if (featuresVarianceInSummary.get(i) != 0 || featuresMeanInSummary.get(i) != 0) {
+                double firstHalf = 1 / (2 * Math.PI * featuresVarianceInSummary.get(i));
+                double secondHalf = Math.exp((-Math.pow(value - featuresMeanInSummary.get(i), 2)) / (2 * featuresVarianceInSummary.get(i)));
+                //System.out.println(firstHalf + "   " + secondHalf);
+                return firstHalf * secondHalf;
+            }
+        } else {
+            if (featuresVarianceNotInSummary.get(i) != 0 || featuresMeanNotInSummary.get(i) != 0) {
+                double firstHalf = 1 / (2 * Math.PI * featuresVarianceNotInSummary.get(i));
+                double secondHalf = Math.exp((-Math.pow(value - featuresMeanNotInSummary.get(i), 2)) / (2 * featuresVarianceNotInSummary.get(i)));
+                //System.out.println(firstHalf + "   " + secondHalf);
+                return firstHalf * secondHalf;
+            }
+        }
+
+        return 1;
+    }
+
+    private BigDecimal calculatePosteriory(ClassificationSentence sentence, boolean inSummary) {
+        BigDecimal ret = new BigDecimal(inSummary ? probabilityInSummary : 1 - probabilityInSummary);
+
+        for(int i = 0; i < sentence.getFeatures().length; i++){
+            if (i == 1 || i == 18){
+                if (inSummary){
+                    double tmp = discreteProbabilityInSummary.get(i).get(sentence.getFeatures()[i]);
+                    ret = ret.multiply(new BigDecimal(tmp));
+                } else {
+                    double tmp = discreteProbabilityNotInSummary.get(i).get(sentence.getFeatures()[i]);
+                    ret = ret.multiply(new BigDecimal(tmp));
+                }
+            }
+
+            ret = ret.multiply(new BigDecimal(normalProbabilityDensity(sentence.getFeatures()[i], i, inSummary)));
         }
 
         return ret;
     }
 
-
-    private String[] splitParagraphs(String trainingText) {
-        String [] paragraphs = trainingText.split("\n\n+");
-
-        return paragraphs;
-    }
-
-
     @Override
     public String summarize(String input, double ratio, boolean stemming, boolean wordNet, boolean stopWords, boolean useNLP, String language) {
-        return null;
+        List<ClassificationSentence> sentences = ClassificationPreprocessor.preProcess(input, null);
+        System.out.println("==========================================================");
+
+        int i = 0;
+        int correct = 0;
+        for(ClassificationSentence sentence : sentences){
+            BigDecimal inSummary = calculatePosteriory(sentence, true);
+            BigDecimal notInSummary = calculatePosteriory(sentence, false);
+
+            if (inSummary.compareTo(notInSummary) > 0){
+                sentence.setInSummary(true);
+            } else {
+                sentence.setInSummary(false);
+            }
+
+            System.out.print("c" + i + "\t");
+            //System.out.print(inSummary + "\t");
+            //System.out.print(notInSummary + "\t");
+            System.out.println((inSummary.compareTo(notInSummary) > 0)+ "    " + model.get(i).isInSummary());
+            correct = (inSummary.compareTo(notInSummary) > 0) == model.get(i).isInSummary() ? correct + 1 : correct;
+            i++;
+        }
+        StringBuilder builder = new StringBuilder();
+        System.out.println("CORRECT: " + correct);
+        for(ClassificationSentence sentence : sentences){
+            if (sentence.isInSummary()){
+                builder.append(sentence.getText()).append(" ");
+            }
+        }
+        return builder.toString();
     }
+
+
 }

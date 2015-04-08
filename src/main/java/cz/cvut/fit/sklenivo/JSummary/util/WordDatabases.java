@@ -17,7 +17,6 @@ public class WordDatabases {
         UNITS_DATABASE.add("kg");
         UNITS_DATABASE.add("lbs");
         UNITS_DATABASE.add("m");
-        UNITS_DATABASE.add("in");
         UNITS_DATABASE.add("ft");
         UNITS_DATABASE.add("km");
         UNITS_DATABASE.add("miles");
