@@ -1,0 +1,13 @@
+Many academic and commercial research facilities want one, as do several countries.
+What I find interesting are the implications.
+Right now, a genome is akin to a novel written in an unknown language.
+And just as it usually takes several individuals to cause an incident, so it often takes several genetic variations, plus ambient factors, to cause a disease.
+That alone can be useful.
+We don’t know why, but the correlation is clear.
+The second challenge is to understand how the genes interact among themselves or with other factors to produce the condition, which should enable the development of new preventive measures or treatments based on the details of how the condition begins and how it progresses.
+Complete Genomics and its competitors are about to create huge amounts of data.
+While some researchers are looking for statistical correlations, others are studying how the individual genes interact.
+Much of the information is simply not recorded.
+And much is still on paper, or in scanned images, insurance company records, and pharmacy transactions.
+The current movement in many developed countries towards electronic medical records will improve health care directly, but it will also lead to much improved information liquidity to help genetic and other medical research.
+The challenge five years from now will be to turn all that knowledge into practice through better preventive measures, better drugs, and better care.

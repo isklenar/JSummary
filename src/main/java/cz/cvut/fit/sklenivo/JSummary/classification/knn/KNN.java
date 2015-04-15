@@ -4,6 +4,7 @@ import cz.cvut.fit.sklenivo.JSummary.SummarizationSettings;
 import cz.cvut.fit.sklenivo.JSummary.TrainableSummarizer;
 import cz.cvut.fit.sklenivo.JSummary.classification.ClassificationPreprocessor;
 import cz.cvut.fit.sklenivo.JSummary.classification.ClassificationSentence;
+import cz.cvut.fit.sklenivo.JSummary.testing.TestableSummarizer;
 
 import java.util.ArrayList;
 import java.util.Collections;
@@ -12,7 +13,7 @@ import java.util.List;
 /**
  * Created by ivo on 18.3.2015.
  */
-public class KNN implements TrainableSummarizer {
+public class KNN implements TrainableSummarizer, TestableSummarizer {
 
     private int k = 3;
 
@@ -94,5 +95,30 @@ public class KNN implements TrainableSummarizer {
         }
 
         return ret;
+    }
+
+    @Override
+    public List<String> summarizeToSentences(List<String> input, SummarizationSettings settings) {
+        StringBuilder builder = new StringBuilder();
+        for(String sentence : input){
+            builder.append(sentence).append(" ");
+        }
+
+        List<ClassificationSentence> inputSentences = ClassificationPreprocessor.preProcess(builder.toString(), null, settings);
+        classify(inputSentences);
+
+        List<String> ret = new ArrayList<>();
+        for (ClassificationSentence sentence : inputSentences){
+            if (sentence.isInSummary()){
+                ret.add(sentence.getText());
+            }
+        }
+
+        return ret;
+    }
+
+    @Override
+    public String toString() {
+        return k + "-NN";
     }
 }

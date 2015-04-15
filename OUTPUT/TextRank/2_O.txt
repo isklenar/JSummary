@@ -1,0 +1,15 @@
+The price was not specified, but the company said its goal is to offer the service for $5,000 within a year.
+What struck me was not the announcement itself, but the name of the CEO: Cliff Reid, the CEO when I knew him in the 1980’s of a text-search company called Verity.
+There is a huge amount of information in there, but we can’t understand it.
+Imagine getting a copy of Tolstoi’s War and Peace in Russian and (assuming you can’t read Russian) trying to figure out the story.
+One is simply detecting the genes, alone or in combination, that seem to lead to certain diseases.
+With enough data, we can then figure out that the same “disease” is in fact a variety of different disorders, some susceptible to particular known treatments and some susceptible to others or simply incurable.
+The second challenge is to understand how the genes interact among themselves or with other factors to produce the condition, which should enable the development of new preventive measures or treatments based on the details of how the condition begins and how it progresses.
+That, of course, is much more interesting – and harder to do.
+But the genomes mean little without the corresponding medical records, just as the Russian novel – in any language – means little without a corresponding knowledge of Russian history.
+It also requires a lot of data processing to make the records usable.
+Much of the information is simply not recorded.
+There is a standard language for representing diseases, but in many cases the records containing this language might as well be hidden in mattresses.
+The current movement in many developed countries towards electronic medical records will improve health care directly, but it will also lead to much improved information liquidity to help genetic and other medical research.
+There is, of course, still a huge amount of data to collect and process, and huge amounts of research and discovery to happen.
+The challenge five years from now will be to turn all that knowledge into practice through better preventive measures, better drugs, and better care.

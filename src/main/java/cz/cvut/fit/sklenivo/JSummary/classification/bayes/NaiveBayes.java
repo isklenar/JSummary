@@ -4,6 +4,7 @@ import cz.cvut.fit.sklenivo.JSummary.SummarizationSettings;
 import cz.cvut.fit.sklenivo.JSummary.TrainableSummarizer;
 import cz.cvut.fit.sklenivo.JSummary.classification.ClassificationPreprocessor;
 import cz.cvut.fit.sklenivo.JSummary.classification.ClassificationSentence;
+import cz.cvut.fit.sklenivo.JSummary.testing.TestableSummarizer;
 import opennlp.tools.sentdetect.SentenceDetectorME;
 import opennlp.tools.tokenize.TokenizerME;
 
@@ -13,7 +14,7 @@ import java.util.*;
 /**
  * Created by ivo on 20.10.14.
  */
-public class NaiveBayes implements TrainableSummarizer {
+public class NaiveBayes implements TrainableSummarizer, TestableSummarizer {
     private SentenceDetectorME sentenceDetector;
     private TokenizerME tokenizer;
 
@@ -257,7 +258,8 @@ public class NaiveBayes implements TrainableSummarizer {
     @Override
     public String summarize(List<String> input, SummarizationSettings settings){
         StringBuilder builder = new StringBuilder();
-        for(String sentence : input){
+
+        for (String sentence : input){
             builder.append(sentence).append(" ");
         }
 
@@ -280,16 +282,8 @@ public class NaiveBayes implements TrainableSummarizer {
             } else {
                 sentence.setInSummary(false);
             }
-
-            System.out.print("c" + i + "\t");
-            //System.out.print(inSummary + "\t");
-            //System.out.print(notInSummary + "\t");
-            System.out.println((inSummary.compareTo(notInSummary) > 0)+ "    " + model.get(i).isInSummary());
-            correct = (inSummary.compareTo(notInSummary) > 0) == model.get(i).isInSummary() ? correct + 1 : correct;
-            i++;
         }
         StringBuilder builder = new StringBuilder();
-        System.out.println("CORRECT: " + correct);
         for(ClassificationSentence sentence : sentences){
             if (sentence.isInSummary()){
                 builder.append(sentence.getText()).append(" ");
@@ -298,5 +292,38 @@ public class NaiveBayes implements TrainableSummarizer {
         return builder.toString();
     }
 
+    @Override
+    public List<String> summarizeToSentences(List<String> input, SummarizationSettings settings) {
+        StringBuilder builder = new StringBuilder();
 
+        for (String sentence : input){
+            builder.append(sentence).append(" ");
+        }
+
+        List<ClassificationSentence> sentences = ClassificationPreprocessor.preProcess(builder.toString(), null, settings);
+
+        for(ClassificationSentence sentence : sentences){
+            BigDecimal inSummary = calculatePosteriory(sentence, true);
+            BigDecimal notInSummary = calculatePosteriory(sentence, false);
+
+            if (inSummary.compareTo(notInSummary) > 0){
+                sentence.setInSummary(true);
+            } else {
+                sentence.setInSummary(false);
+            }
+        }
+
+        List<String> ret = new ArrayList<>();
+        for(ClassificationSentence sentence : sentences){
+            if (sentence.isInSummary()){
+                ret.add(sentence.getText());
+            }
+        }
+        return ret;
+    }
+
+    @Override
+    public String toString() {
+        return "NaiveBayes";
+    }
 }

@@ -1,0 +1,7 @@
+The 0.1% of the genome that was different (approximately 3,000,000 bases of DNA) was comprised of “single nucleotide polymorphisms” (SNPs are alterations of the individual bases of DNA) scattered throughout the genome.
+Their research identified hundreds of regions of the human genome where the number of copies of a particular DNA segment varied from individual to individual.
+That has changed over the last five or six years, with the development of a technique known as “array-based comparative genomic hybridization” (array-CGH), revolutionizing genetic research and diagnostics.
+When validation experiments were performed that compared the DNA from one “normal, healthy” individual with the DNA from another “normal, healthy” individual, we were astonished to find an average of 12 DNA fragments that showed copy number differences between the two individuals being compared.
+Using two complementary genome-wide technologies, with subsequent validation studies, a total of 1,447 CNVs were identified.
+Since they are being identified in normal individuals, CNVs may not necessarily be a direct cause of human disease, but many may confer susceptibility to certain diseases, serve as disease markers, and/or indicate potential regions of genomic instability.
+Indeed, some CNVs may turn out to explain why some people react differently to specific medications.

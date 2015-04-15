@@ -1,0 +1,7 @@
+Right now, a genome is akin to a novel written in an unknown language.
+Genes often work together, sometimes aided by factors such as a person’s diet or behavior, to cause a condition.
+One is simply detecting the genes, alone or in combination, that seem to lead to certain diseases.
+The second challenge is to understand how the genes interact among themselves or with other factors to produce the condition, which should enable the development of new preventive measures or treatments based on the details of how the condition begins and how it progresses.
+While some researchers are looking for statistical correlations, others are studying how the individual genes interact.
+We now have the ability to sequence genomes at increasingly lower costs, and we are slowly making the corresponding health information computer-readable.
+The challenge five years from now will be to turn all that knowledge into practice through better preventive measures, better drugs, and better care.

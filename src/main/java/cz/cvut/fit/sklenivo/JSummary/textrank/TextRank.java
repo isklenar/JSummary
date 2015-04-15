@@ -3,6 +3,7 @@ package cz.cvut.fit.sklenivo.JSummary.textrank;
 
 import cz.cvut.fit.sklenivo.JSummary.SummarizationSettings;
 import cz.cvut.fit.sklenivo.JSummary.Summarizer;
+import cz.cvut.fit.sklenivo.JSummary.testing.TestableSummarizer;
 import cz.cvut.fit.sklenivo.JSummary.util.SentenceUtils;
 
 import java.util.ArrayList;
@@ -13,7 +14,7 @@ import java.util.List;
 /**
  * Class for performing TextRank summarization
  */
-public class TextRank implements Summarizer {
+public class TextRank implements Summarizer, TestableSummarizer {
     private double ratio;
     private SentenceComparator sentenceComparator;
 
@@ -45,7 +46,6 @@ public class TextRank implements Summarizer {
         sentenceComparator = new SentenceComparator(settings);
 
         List<TextRankSentence> inputText = createSentences(input);
-        System.out.println("Summarizing " + inputText.size() + " sentences.");
 
         Graph graph = buildGraph(inputText);
 
@@ -59,6 +59,28 @@ public class TextRank implements Summarizer {
         }
 
         return builder.toString();
+    }
+
+    @Override
+    public List<String> summarizeToSentences(List<String> input, SummarizationSettings settings) {
+        this.ratio = settings.getRatio();
+
+        sentenceComparator = new SentenceComparator(settings);
+
+        List<TextRankSentence> inputText = createSentences(input);
+
+        Graph graph = buildGraph(inputText);
+
+        prepareScores(inputText, graph);
+
+        List<TextRankSentence> summary = createSummary(inputText);
+
+        List<String> ret = new ArrayList<>();
+        for (TextRankSentence textRankSentence : summary){
+            ret.add(textRankSentence.getSentence());
+        }
+
+        return ret;
     }
 
     /**
@@ -81,8 +103,6 @@ public class TextRank implements Summarizer {
         if (count == 0){
             count = 1;
         }
-
-        System.out.printf("Summarized to %d sentences; ratio %f%n", count, (double)count/ textRankSentences.size());
 
         for (int i = 0; i < count; i++) {
             summary.add(textRankSentences.get(i));
@@ -204,5 +224,10 @@ public class TextRank implements Summarizer {
         }
 
         return ret;
+    }
+
+    @Override
+    public String toString() {
+        return "TextRank";
     }
 }

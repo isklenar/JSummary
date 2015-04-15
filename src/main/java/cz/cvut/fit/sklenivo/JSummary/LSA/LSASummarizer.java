@@ -2,6 +2,7 @@ package cz.cvut.fit.sklenivo.JSummary.LSA;
 
 import cz.cvut.fit.sklenivo.JSummary.SummarizationSettings;
 import cz.cvut.fit.sklenivo.JSummary.Summarizer;
+import cz.cvut.fit.sklenivo.JSummary.testing.TestableSummarizer;
 import cz.cvut.fit.sklenivo.JSummary.util.SentenceUtils;
 import org.ejml.simple.SimpleMatrix;
 import org.ejml.simple.SimpleSVD;
@@ -11,7 +12,7 @@ import java.util.*;
 /**
  * Created by ivo on 15.4.2015.
  */
-public class LSASummarizer implements Summarizer {
+public class LSASummarizer implements Summarizer, TestableSummarizer {
     List<String> terms;
     List<String> sentences;
 
@@ -24,10 +25,7 @@ public class LSASummarizer implements Summarizer {
         SimpleSVD svd = LSAMatrix.svd();
         SimpleMatrix W = svd.getW();
         SimpleMatrix V = svd.getV();
-        System.out.println(W);
-        System.out.println();
-        System.out.println();
-        System.out.println(V);
+
         int summarySentencesCount = (int) (sentences.size() * settings.getRatio());
 
         List<String> summarySentences = new ArrayList<>();
@@ -49,6 +47,28 @@ public class LSASummarizer implements Summarizer {
     @Override
     public String summarize(String input, SummarizationSettings settings) {
         return summarize(SentenceUtils.splitToSentences(input), settings);
+    }
+
+    @Override
+    public List<String> summarizeToSentences(List<String> input, SummarizationSettings settings) {
+        sentences = new ArrayList<>(input);
+
+        SimpleMatrix LSAMatrix = createLSAMatrix(sentences);
+
+        SimpleSVD svd = LSAMatrix.svd();
+        SimpleMatrix W = svd.getW();
+        SimpleMatrix V = svd.getV();
+
+        int summarySentencesCount = (int) (sentences.size() * settings.getRatio());
+
+        List<String> summarySentences = new ArrayList<>();
+
+        for (int i = 0; i < summarySentencesCount; i++){
+            summarySentences.add(selectNextSentence(i, V));
+        }
+        sentences.retainAll(summarySentences);
+
+        return sentences;
     }
 
     private String selectNextSentence(int k, SimpleMatrix v) {
@@ -75,7 +95,6 @@ public class LSASummarizer implements Summarizer {
                 termFrequencyVector[i] = localWeighting(i, sentence) * globalWeighting(i);
             }
 
-            System.out.println(Arrays.toString(termFrequencyVector));
             matrix.setColumn(column++, 0, termFrequencyVector);
         }
 
@@ -118,5 +137,9 @@ public class LSASummarizer implements Summarizer {
         return ret;
     }
 
+    @Override
+    public String toString() {
+        return "LSA";
+    }
 
 }

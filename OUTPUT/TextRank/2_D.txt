@@ -1,0 +1,9 @@
+There are two key challenges in genomics.
+One is simply detecting the genes, alone or in combination, that seem to lead to certain diseases.
+With enough data, we can then figure out that the same “disease” is in fact a variety of different disorders, some susceptible to particular known treatments and some susceptible to others or simply incurable.
+The second challenge is to understand how the genes interact among themselves or with other factors to produce the condition, which should enable the development of new preventive measures or treatments based on the details of how the condition begins and how it progresses.
+In other words, for most research the questions revolve not around an entire genome, but around the relevant differences of any individual’s genome from the norm.
+While some researchers are looking for statistical correlations, others are studying how the individual genes interact.
+But the genomes mean little without the corresponding medical records, just as the Russian novel – in any language – means little without a corresponding knowledge of Russian history.
+The current movement in many developed countries towards electronic medical records will improve health care directly, but it will also lead to much improved information liquidity to help genetic and other medical research.
+The challenge five years from now will be to turn all that knowledge into practice through better preventive measures, better drugs, and better care.

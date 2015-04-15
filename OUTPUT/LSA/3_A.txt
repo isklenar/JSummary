@@ -1,0 +1,8 @@
+Their research identified hundreds of regions of the human genome where the number of copies of a particular DNA segment varied from individual to individual.
+When validation experiments were performed that compared the DNA from one “normal, healthy” individual with the DNA from another “normal, healthy” individual, we were astonished to find an average of 12 DNA fragments that showed copy number differences between the two individuals being compared.
+These became known as copy number variants, or CNVs.
+The data clearly demonstrate that individuals are not as genetically similar as once thought.
+Many of the regions in which the CNVs were identified overlapped known disease genes.
+Indeed, some CNVs may turn out to explain why some people react differently to specific medications.
+Overall, we anticipate that many of these CNVs will provide explanations to how we adapt and interact with our ever-changing environment.
+Indeed, as studies continue to identify and characterize CNVs, we anticipate achieving a better understanding of the relationship between these genetic variations, complex diseases, and human adaptability.
