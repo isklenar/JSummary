@@ -1,4 +1,4 @@
-package cz.cvut.fit.sklenivo.JSummary.knn;
+package cz.cvut.fit.sklenivo.JSummary.classification.knn;
 
 import cz.cvut.fit.sklenivo.JSummary.classification.ClassificationSentence;
 

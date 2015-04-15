@@ -35,11 +35,16 @@ public class TextRank implements Summarizer {
      */
     @Override
     public String summarize(String input, SummarizationSettings settings){
+        return summarize(SentenceUtils.splitToSentences(input), settings);
+    }
+
+    @Override
+    public String summarize(List<String> input, SummarizationSettings settings) {
         this.ratio = settings.getRatio();
 
         sentenceComparator = new SentenceComparator(settings);
 
-        List<TextRankSentence> inputText = splitSentences(input);
+        List<TextRankSentence> inputText = createSentences(input);
         System.out.println("Summarizing " + inputText.size() + " sentences.");
 
         Graph graph = buildGraph(inputText);
@@ -191,11 +196,10 @@ public class TextRank implements Summarizer {
     /**
      * Splits input into sentences, stores them in a ArrayList to be used for later.
      */
-    private List<TextRankSentence> splitSentences(String input) {
+    private List<TextRankSentence> createSentences(List<String> input) {
         List<TextRankSentence> ret = new ArrayList<>();
-        List<String> tmp = SentenceUtils.splitToSentences(input);
 
-        for(String sentence : tmp){
+        for(String sentence : input){
             ret.add(new TextRankSentence(sentence));
         }
 

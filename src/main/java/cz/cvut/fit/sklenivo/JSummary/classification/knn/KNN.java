@@ -1,4 +1,4 @@
-package cz.cvut.fit.sklenivo.JSummary.knn;
+package cz.cvut.fit.sklenivo.JSummary.classification.knn;
 
 import cz.cvut.fit.sklenivo.JSummary.SummarizationSettings;
 import cz.cvut.fit.sklenivo.JSummary.TrainableSummarizer;
@@ -27,6 +27,15 @@ public class KNN implements TrainableSummarizer {
         model = new ArrayList<>();
     }
 
+    @Override
+    public String summarize(List<String> input, SummarizationSettings settings){
+        StringBuilder builder = new StringBuilder();
+        for(String sentence : input){
+            builder.append(sentence).append(" ");
+        }
+
+        return summarize(builder.toString(), settings);
+    }
 
     @Override
     public String summarize(String input, SummarizationSettings settings) {

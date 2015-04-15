@@ -5,7 +5,7 @@ import java.util.ArrayList;
 /**
  * Created by ivo on 15.2.2015.
  */
-public class Chromosome {
+class Chromosome {
     private ArrayList<Integer> data;
 
     public Chromosome(ArrayList<Integer> data) {

@@ -6,7 +6,7 @@ import java.util.TreeSet;
 /**
  * Created by ivo on 15.2.2015.
  */
-public class EvolutionarySentence {
+class EvolutionarySentence {
     private TreeSet<String> terms;
 
     public EvolutionarySentence(ArrayList<String> terms) {

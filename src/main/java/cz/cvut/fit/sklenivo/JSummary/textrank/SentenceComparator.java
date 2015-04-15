@@ -17,7 +17,7 @@ import java.util.Set;
 /**
  * Utility class that compares senteces.
  */
-public class SentenceComparator {
+class SentenceComparator {
     private TokenizerME tokenizer;
 
 

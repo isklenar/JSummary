@@ -1,4 +1,4 @@
-package cz.cvut.fit.sklenivo.JSummary.bayes;
+package cz.cvut.fit.sklenivo.JSummary.classification.bayes;
 
 import cz.cvut.fit.sklenivo.JSummary.SummarizationSettings;
 import cz.cvut.fit.sklenivo.JSummary.TrainableSummarizer;
@@ -252,6 +252,16 @@ public class NaiveBayes implements TrainableSummarizer {
         }
 
         return ret;
+    }
+
+    @Override
+    public String summarize(List<String> input, SummarizationSettings settings){
+        StringBuilder builder = new StringBuilder();
+        for(String sentence : input){
+            builder.append(sentence).append(" ");
+        }
+
+        return summarize(builder.toString(), settings);
     }
 
     @Override

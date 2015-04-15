@@ -16,15 +16,52 @@ public class LSASummarizer implements Summarizer {
     List<String> sentences;
 
     @Override
-    public String summarize(String input, SummarizationSettings settings) {
-        sentences = SentenceUtils.splitToSentences(input);
+    public String summarize(List<String> input, SummarizationSettings settings){
+        sentences = new ArrayList<>(input);
 
         SimpleMatrix LSAMatrix = createLSAMatrix(sentences);
 
         SimpleSVD svd = LSAMatrix.svd();
+        SimpleMatrix W = svd.getW();
+        SimpleMatrix V = svd.getV();
+        System.out.println(W);
+        System.out.println();
+        System.out.println();
+        System.out.println(V);
+        int summarySentencesCount = (int) (sentences.size() * settings.getRatio());
 
+        List<String> summarySentences = new ArrayList<>();
 
-        return null;
+        for (int i = 0; i < summarySentencesCount; i++){
+            summarySentences.add(selectNextSentence(i, V));
+        }
+        sentences.retainAll(summarySentences);
+
+        StringBuilder builder = new StringBuilder();
+
+        for (String sentence : sentences) {
+            builder.append(sentence).append(" ");
+        }
+
+        return builder.toString();
+    }
+
+    @Override
+    public String summarize(String input, SummarizationSettings settings) {
+        return summarize(SentenceUtils.splitToSentences(input), settings);
+    }
+
+    private String selectNextSentence(int k, SimpleMatrix v) {
+        int maxIndex = -1;
+        double maxValue = -1;
+        for (int i = 0; i < v.numCols(); i++){
+            if (maxValue < v.get(k, i)){
+                maxValue = v.get(k, i);
+                maxIndex = i;
+            }
+        }
+
+        return sentences.get(maxIndex);
     }
 
     private SimpleMatrix createLSAMatrix(List<String> sentences) {
@@ -55,7 +92,7 @@ public class LSASummarizer implements Summarizer {
             }
         }
 
-        return count;
+        return Math.log(1 + count);
     }
 
     private double globalWeighting(int i) {

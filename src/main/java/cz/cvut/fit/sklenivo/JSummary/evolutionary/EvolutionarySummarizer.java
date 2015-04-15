@@ -4,15 +4,12 @@ import cz.cvut.fit.sklenivo.JSummary.SummarizationSettings;
 import cz.cvut.fit.sklenivo.JSummary.Summarizer;
 import org.tartarus.snowball.SnowballStemmer;
 
-import java.util.ArrayList;
-import java.util.Random;
-import java.util.Set;
-import java.util.TreeSet;
+import java.util.*;
 
 /**
  * Created by ivo on 15.2.2015.
  */
-public class EvolutionarySummarizer implements Summarizer {
+class EvolutionarySummarizer implements Summarizer {
 
     private Set<String> terms = new TreeSet<>();
     private ArrayList<EvolutionarySentence> documentSentences = new ArrayList<>();
@@ -27,6 +24,13 @@ public class EvolutionarySummarizer implements Summarizer {
 
     int populationSize;
     int clusterSize;
+
+    @Override
+    public String summarize(List<String> input, SummarizationSettings settings) {
+
+
+        return null;
+    }
 
     @Override
     public String summarize(String input, SummarizationSettings settings) {

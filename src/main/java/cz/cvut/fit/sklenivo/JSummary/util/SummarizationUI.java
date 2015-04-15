@@ -5,9 +5,8 @@ import cz.cvut.fit.sklenivo.JSummary.LSA.LSASummarizer;
 import cz.cvut.fit.sklenivo.JSummary.SummarizationSettings;
 import cz.cvut.fit.sklenivo.JSummary.SummarizationSettingsBuilder;
 import cz.cvut.fit.sklenivo.JSummary.Summarizer;
-import cz.cvut.fit.sklenivo.JSummary.bayes.NaiveBayes;
-import cz.cvut.fit.sklenivo.JSummary.evolutionary.EvolutionarySummarizer;
-import cz.cvut.fit.sklenivo.JSummary.knn.KNN;
+import cz.cvut.fit.sklenivo.JSummary.classification.bayes.NaiveBayes;
+import cz.cvut.fit.sklenivo.JSummary.classification.knn.KNN;
 import cz.cvut.fit.sklenivo.JSummary.textrank.TextRank;
 
 import javax.swing.*;
@@ -36,7 +35,7 @@ public class SummarizationUI extends JFrame {
         dispatch = new HashMap<>();
         dispatch.put("TextRank", new TextRank());
         dispatch.put("Naive Bayes", new NaiveBayes());
-        dispatch.put("Evolutionary", new EvolutionarySummarizer());
+        //dispatch.put("Evolutionary", new EvolutionarySummarizer());
         dispatch.put("kNN", new KNN());
         dispatch.put("LSA", new LSASummarizer());
 
@@ -76,7 +75,7 @@ public class SummarizationUI extends JFrame {
         algorithm.addItem("TextRank");
         algorithm.addItem("Naive Bayes");
         algorithm.addItem("kNN");
-        algorithm.addItem("Evolutionary");
+      //  algorithm.addItem("Evolutionary");
         algorithm.addItem("LSA");
 
         language = new JComboBox();

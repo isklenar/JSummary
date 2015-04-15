@@ -3,7 +3,7 @@ package cz.cvut.fit.sklenivo.JSummary.textrank;
 /**
  * Class for storing a single sentence. Contains raw sentence and it's TextRank score.
  */
-public class TextRankSentence {
+class TextRankSentence {
     private String sentence;
     private double score;
 
