@@ -3,7 +3,6 @@ package cz.cvut.fit.sklenivo.JSummary.textrank;
 
 import cz.cvut.fit.sklenivo.JSummary.SummarizationSettings;
 import cz.cvut.fit.sklenivo.JSummary.Summarizer;
-import cz.cvut.fit.sklenivo.JSummary.util.SentenceComparator;
 import cz.cvut.fit.sklenivo.JSummary.util.SentenceUtils;
 
 import java.util.ArrayList;
@@ -15,8 +14,6 @@ import java.util.List;
  * Class for performing TextRank summarization
  */
 public class TextRank implements Summarizer {
-    private String input;
-
     private double ratio;
     private SentenceComparator sentenceComparator;
 

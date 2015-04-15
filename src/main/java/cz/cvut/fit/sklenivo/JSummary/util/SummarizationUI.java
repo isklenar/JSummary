@@ -1,6 +1,7 @@
 package cz.cvut.fit.sklenivo.JSummary.util;
 
 
+import cz.cvut.fit.sklenivo.JSummary.LSA.LSASummarizer;
 import cz.cvut.fit.sklenivo.JSummary.SummarizationSettings;
 import cz.cvut.fit.sklenivo.JSummary.SummarizationSettingsBuilder;
 import cz.cvut.fit.sklenivo.JSummary.Summarizer;
@@ -37,6 +38,7 @@ public class SummarizationUI extends JFrame {
         dispatch.put("Naive Bayes", new NaiveBayes());
         dispatch.put("Evolutionary", new EvolutionarySummarizer());
         dispatch.put("kNN", new KNN());
+        dispatch.put("LSA", new LSASummarizer());
 
         initUI();
 
@@ -75,6 +77,7 @@ public class SummarizationUI extends JFrame {
         algorithm.addItem("Naive Bayes");
         algorithm.addItem("kNN");
         algorithm.addItem("Evolutionary");
+        algorithm.addItem("LSA");
 
         language = new JComboBox();
         language.addItem("CZECH");
@@ -154,6 +157,7 @@ public class SummarizationUI extends JFrame {
                     knn.train(input.getText(), output.getText(), settings);
                     System.out.println("Trained");
                 }
+
             }
         });
 

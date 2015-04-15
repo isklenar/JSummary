@@ -1,9 +1,8 @@
-package cz.cvut.fit.sklenivo.JSummary.util;
+package cz.cvut.fit.sklenivo.JSummary.textrank;
 
 
 
 import cz.cvut.fit.sklenivo.JSummary.SummarizationSettings;
-import cz.cvut.fit.sklenivo.JSummary.textrank.TextRankSentence;
 import opennlp.tools.tokenize.TokenizerME;
 import opennlp.tools.tokenize.TokenizerModel;
 import org.tartarus.snowball.SnowballStemmer;

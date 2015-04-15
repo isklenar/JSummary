@@ -207,24 +207,24 @@ public class NaiveBayes implements TrainableSummarizer {
         System.out.println(sentence.isInSummary());
     }
 
-    private double normalProbabilityDensity(double value, int i, boolean inSummary) {
+    private BigDecimal normalProbabilityDensity(double value, int i, boolean inSummary) {
         if (inSummary) {
             if (featuresVarianceInSummary.get(i) != 0 || featuresMeanInSummary.get(i) != 0) {
                 double firstHalf = 1 / (2 * Math.PI * featuresVarianceInSummary.get(i));
                 double secondHalf = Math.exp((-Math.pow(value - featuresMeanInSummary.get(i), 2)) / (2 * featuresVarianceInSummary.get(i)));
                 //System.out.println(firstHalf + "   " + secondHalf);
-                return firstHalf * secondHalf;
+                return new BigDecimal(firstHalf).multiply(new BigDecimal(secondHalf));
             }
         } else {
             if (featuresVarianceNotInSummary.get(i) != 0 || featuresMeanNotInSummary.get(i) != 0) {
                 double firstHalf = 1 / (2 * Math.PI * featuresVarianceNotInSummary.get(i));
                 double secondHalf = Math.exp((-Math.pow(value - featuresMeanNotInSummary.get(i), 2)) / (2 * featuresVarianceNotInSummary.get(i)));
                 //System.out.println(firstHalf + "   " + secondHalf);
-                return firstHalf * secondHalf;
+                return new BigDecimal(firstHalf).multiply(new BigDecimal(secondHalf));
             }
         }
 
-        return 1;
+        return BigDecimal.ONE;
     }
 
     private BigDecimal calculatePosteriory(ClassificationSentence sentence, boolean inSummary) {
@@ -233,15 +233,20 @@ public class NaiveBayes implements TrainableSummarizer {
         for(int i = 0; i < sentence.getFeatures().length; i++){
             if (i == 1 || i == 18){
                 if (inSummary){
-                    double tmp = discreteProbabilityInSummary.get(i).get(sentence.getFeatures()[i]);
-                    ret = ret.multiply(new BigDecimal(tmp));
+                    if (discreteProbabilityInSummary.get(i).containsKey(sentence.getFeatures()[i])){
+                        double tmp = discreteProbabilityInSummary.get(i).get(sentence.getFeatures()[i]);
+                        ret = ret.multiply(new BigDecimal(tmp));
+                    }
                 } else {
-                    double tmp = discreteProbabilityNotInSummary.get(i).get(sentence.getFeatures()[i]);
-                    ret = ret.multiply(new BigDecimal(tmp));
+                    if (discreteProbabilityNotInSummary.get(i).containsKey(sentence.getFeatures()[i])){
+                        double tmp = discreteProbabilityNotInSummary.get(i).get(sentence.getFeatures()[i]);
+                        ret = ret.multiply(new BigDecimal(tmp));
+                    }
                 }
             }
             else {
-                ret = ret.multiply(new BigDecimal(normalProbabilityDensity(sentence.getFeatures()[i], i, inSummary)));
+                BigDecimal tmp = normalProbabilityDensity(sentence.getFeatures()[i], i, inSummary);
+                ret = ret.multiply(tmp);
             }
 
         }

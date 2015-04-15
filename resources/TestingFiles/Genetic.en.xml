@@ -1,0 +1,423 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<cluster cid="Genetic" lang="English">
+
+<document did="genetic2" url="http://www.project-syndicate.org/commentary/psinger50/English">
+
+<s sid="1">﻿Selecting Our Children</s>
+
+<s sid="2">2009-07-14</s>
+
+<s sid="3" annotators="A B C">MELBOURNE – In April, Germany’s parliament placed limits on the use of genetic diagnosis.</s>
+
+<s sid="4" annotators="D">Is the new German law a model for other countries to follow as we grapple with the ethical issues posed by our growing knowledge of human genetics?</s>
+
+<s sid="5" annotators="B C">Some provisions of the German law draw on the widely shared ethical principles of respect for individual autonomy and privacy.</s>
+
+<s sid="6">No one can be tested without his or her consent.</s>
+
+<s sid="7" annotators="A">Neither employers, nor insurance companies, may require genetic testing.</s>
+
+<s sid="8" annotators="A C D">Individuals are granted both the right to know – to be informed of the results of any genetic test about themselves – and the right to choose to live in ignorance of what a genetic test may predict about their future.</s>
+
+<s sid="9">To discriminate against or stigmatize anyone on account of their genetic characteristics is prohibited.</s>
+
+<s sid="10" annotators="A B">Desirable as these provisions seem, they could impose a heavy cost on German companies.</s>
+
+<s sid="11" annotators="A C D">If insurance companies outside Germany are permitted to require genetic tests while German companies are prohibited from doing so, then people who know they have life-shortening genetic diagnoses will get their life insurance from German insurance companies.</s>
+
+<s sid="12">These companies will then find themselves making more payments for premature deaths relative to their competitors.</s>
+
+<s sid="13">To cover the increased costs, they will have to raise premiums, making themselves uncompetitive.</s>
+
+<s sid="14">In an attempt to mitigate this problem, the law specifies that anyone taking out an insurance policy valued at more than €300,000 may be required to disclose the results of prior genetic tests.</s>
+
+<s sid="15">But if people lie about whether they have previously been tested, that provision will be moot.</s>
+
+<s sid="16" annotators="A C D">As genetic testing becomes increasingly able to predict not only health, but also some cognitive and personality traits, the prohibition on employer testing may also put German employers at a disadvantage in the international marketplace.</s>
+
+<s sid="17">They will invest resources in training employees whom their competitors will exclude from the initial pool of recruits.</s>
+
+<s sid="18">This may be a humane thing to do, for it gives every individual a chance, irrespective of the genetic odds against their paying their way for the company.</s>
+
+<s sid="19" annotators="A C D">But, in the long term, if we are serious about prohibiting such tests, we need an international agreement – on both insurance and employment – to ensure a level playing field for all countries.</s>
+
+<s sid="20">That will not be easy to achieve in a globally competitive economy in which some nations have demonstrably less respect for individual human rights than others.</s>
+
+<s sid="21" annotators="B C D">The German law’s most controversial feature is a prohibition on prenatal genetic testing for diseases that will manifest themselves only in adulthood.</s>
+
+<s sid="22">Consider, for example, a woman who knows that her partner has the gene for Huntington’s disease.</s>
+
+<s sid="23">Any child of his has a 50% chance of inheriting the condition.</s>
+
+<s sid="24">If the child does inherit it, he or she will, at around 40, begin to suffer uncontrollable movements, personality changes, and a slow deterioration of cognitive capacities.</s>
+
+<s sid="25">People with Huntington’s disease usually die about 15 years after the onset of the symptoms.</s>
+
+<s sid="26">There is no cure.</s>
+
+<s sid="27">No parents could want this future for their children.</s>
+
+<s sid="28" annotators="A D">Prenatal testing of fetuses (or of in vitro embryos before transfer to the uterus) is now well established throughout the developed world.</s>
+
+<s sid="29" annotators="A">If the test is positive, the pregnancy can be terminated, or, in the case of pre-implantation diagnosis, the embryo will be discarded.</s>
+
+<s sid="30" annotators="D">The new German law makes such tests a crime.</s>
+
+<s sid="31">The same is true of tests for the genes that strongly predispose women to breast cancer.</s>
+
+<s sid="32">As genetics advances, more such late-onset conditions will become detectable prenatally.</s>
+
+<s sid="33">What could be the thinking behind such a law?</s>
+
+<s sid="34">One might take the view that 40 years of life before the onset of Huntington’s disease or breast cancer is better than no life at all.</s>
+
+<s sid="35" annotators="D">But if we take that into account, should we not also take into consideration the life of the child who the parents would have had, if they had been able to use prenatal diagnosis and be sure of having a child who does not carry the gene for the disease?</s>
+
+<s sid="36">Surely that child has better life prospects.</s>
+
+<s sid="37" annotators="B">When we have a choice between lives with such different prospects – and can make the choice before the embryo or fetus has any awareness at all – shouldn’t we be able to choose the child with the better prospects?</s>
+
+<s sid="38" annotators="A B">It is not surprising that questions about genetic tests should receive special attention in Germany, given the national imperative of avoiding any repetition of the crimes of the Nazi era.</s>
+
+<s sid="39" annotators="B D">But, in their laudable desire to distance themselves as much as possible from those atrocities, Germany’s legislators have enacted a law that makes it a crime to use modern science to avoid undoubted human tragedies.</s>
+
+<s sid="40" annotators="B">That is an absurd outcome.</s>
+
+<s sid="41">The pendulum has swung too far.</s>
+
+</document>
+
+<document did="genetic1" url="http://www.project-syndicate.org/commentary/singer15/English">
+
+<s sid="1">﻿The Mixed Blessing of Genetic Choice</s>
+
+<s sid="2">2006-09-14</s>
+
+<s sid="3" annotators="B">The advance of knowledge is often a mixed blessing.</s>
+
+<s sid="4">Over the past 60 years, nuclear physics has been one obvious example of this truth.</s>
+
+<s sid="5">Over the next 60 years, genetics may be another.</s>
+
+<s sid="6" annotators="A B C">Today, enterprising firms offer, for a fee, to tell you about your genes.</s>
+
+<s sid="7" annotators="A">They claim that this knowledge will help you live longer and better.</s>
+
+<s sid="8" annotators="A">You might, for example, have extra checkups to detect early signs of the diseases that you are most at risk of contracting, or you could alter your diet to reduce that risk.</s>
+
+<s sid="9" annotators="A D">If your chances of a long lifespan are not good, you might buy more life insurance, or even retire early to have enough time to do what you always wanted to do.</s>
+
+<s sid="10">Defenders of privacy have worked, with some success, to prevent insurance companies from requiring genetic testing before issuing life insurance.</s>
+
+<s sid="11" annotators="B D">But if individuals can do tests from which insurance companies are barred, and if those who receive adverse genetic information then buy additional life insurance without disclosing the tests that they have taken, they are cheating other holders of life insurance.</s>
+
+<s sid="12">Premiums will have to increase to cover the losses, and those with a good genetic prognosis may opt out of life insurance to avoid subsidizing the cheats, driving premiums higher still.</s>
+
+<s sid="13">We need not become too alarmed yet.</s>
+
+<s sid="14">The United States Government Accountability Office sent identical genetic samples to several of the testing companies, and got widely varying, and mostly useless, advice.</s>
+
+<s sid="15">But as the science improves, the insurance problem will have to be faced.</s>
+
+<s sid="16" annotators="A B D">Selecting our children raises more profound ethical problems.</s>
+
+<s sid="17">This is not new.</s>
+
+<s sid="18" annotators="A B C D">In developed countries, the routine testing of older pregnant women, combined with the availability of abortion, has significantly reduced the incidence of conditions like Down syndrome.</s>
+
+<s sid="19" annotators="A D">In some regions of India and China where couples are anxious to have a son, selective abortion has been the ultimate form of sexism, and has been practiced to such an extent that a generation is coming of age in which males face a shortage of female partners.</s>
+
+<s sid="20">Selection of children need not involve abortion.</s>
+
+<s sid="21" annotators="B C">For several years, some couples at risk of passing a genetic disease on to their children have used in vitro fertilization, producing several embryos that can be tested for the faulty gene and implanting in the woman’s uterus only those without it.</s>
+
+<s sid="22">Now couples are using this technique to avoid passing on genes that imply a significantly elevated risk of developing certain forms of cancer.</s>
+
+<s sid="23" annotators="C">Since everyone carries some adverse genes, there is no clear line between selecting against a child with above-average risks of contracting a disease and selecting for a child with unusually rosy health prospects.</s>
+
+<s sid="24">Thus, genetic selection will inevitably move towards genetic enhancement.</s>
+
+<s sid="25" annotators="A B">For many parents, nothing is more important than giving their child the best possible start in life.</s>
+
+<s sid="26" annotators="A B">They buy expensive toys to maximize their child’s learning potential and spend much more on private schools or after school tutoring in the hope that he or she will excel on the tests that determine entry to elite universities.</s>
+
+<s sid="27" annotators="A B">It may not be long before we can identify genes that improve the odds of success in this quest.</s>
+
+<s sid="28" annotators="A">Many will condemn this as a resurgence of “eugenics,” the view, especially popular in the early twentieth century, that hereditary traits should be improved through active intervention.</s>
+
+<s sid="29" annotators="C D">So it is, in a way, and in the hands of authoritarian regimes, genetic selection could resemble the evils of earlier forms of eugenics, with their advocacy of odious, pseudoscientific official policies, particularly concerning “racial hygiene.”</s>
+
+<s sid="30" annotators="C">In liberal, market driven societies, however, eugenics will not be coercively imposed by the state for the collective good.</s>
+
+<s sid="31">Instead, it will be the outcome of parental choice and the workings of the free market.</s>
+
+<s sid="32" annotators="A D">If it leads to healthier, smarter people with better problem-solving abilities, that will be a good thing.</s>
+
+<s sid="33" annotators="A">But even if parents make choices that are good for their children, there could be perils as well as blessings.</s>
+
+<s sid="34" annotators="C D">In the case of sex selection, it is easy to see that couples who independently choose the best for their own child can produce an outcome that makes all their children worse off than they would have been if no one could select the sex of their child.</s>
+
+<s sid="35">Something similar could happen with other forms of genetic selection.</s>
+
+<s sid="36">Since above-average height correlates with above-average income, and there is a clearly a genetic component to height, it is not fanciful to imagine couples choosing to have taller children.</s>
+
+<s sid="37">The outcome could be a genetic “arms race” that leads to taller and taller children, with significant environmental costs in the additional consumption required to fuel larger human beings.</s>
+
+<s sid="38" annotators="A C D">The most alarming implication of this mode of genetic selection, however, is that only the rich will be able to afford it.</s>
+
+<s sid="39">The gap between rich and poor, already a challenge to our ideas of social justice, will become a chasm that mere equality of opportunity will be powerless to bridge.</s>
+
+<s sid="40" annotators="B">That is not a future that any of us should approve.</s>
+
+<s sid="41" annotators="A D">But avoiding this outcome will not be easy, for it will require that selection for genetic enhancement is either available to no one or accessible to everyone.</s>
+
+<s sid="42">The first option would require coercion, and – since countries will not accept that others should gain a competitive edge – an international agreement to forego the benefits that genetic enhancement can bring.</s>
+
+<s sid="43">The second option, universal access, would require an unprecedented level of social assistance for the poor, and extraordinarily difficult decisions about what to subsidize.</s>
+
+</document>
+
+<document did="genetic4" url="http://www.project-syndicate.org/commentary/dyson12/English">
+
+<s sid="1">﻿The Language of Genomics</s>
+
+<s sid="2">2009-09-21</s>
+
+<s sid="3">DALIAN, CHINA – Last week, a company called Complete Genomics announced 10 new customers for its genome-sequencing service.</s>
+
+<s sid="4">The price was not specified, but the company said its goal is to offer the service for $5,000 within a year.</s>
+
+<s sid="5">What struck me was not the announcement itself, but the name of the CEO: Cliff Reid, the CEO when I knew him in the 1980’s of a text-search company called Verity.</s>
+
+<s sid="6">The connection hit me almost immediately.</s>
+
+<s sid="7" annotators="A">Genes are, in a sense, the instruction language for building humans (or any other living thing).</s>
+
+<s sid="8">And language is symbols that interact to build meaning.</s>
+
+<s sid="9">And, yes, of course, it was the same Cliff Reid I knew back in the late 1980’s.</s>
+
+<s sid="10">What Complete Genomics is doing with the $91 million it has raised so far is exciting.</s>
+
+<s sid="11">It has built a genome-sequencing factory and plans to build several more over the next few years.</s>
+
+<s sid="12">Many academic and commercial research facilities want one, as do several countries.</s>
+
+<s sid="13">What I find interesting are the implications.</s>
+
+<s sid="14" annotators="B C">Right now, a genome is akin to a novel written in an unknown language.</s>
+
+<s sid="15" annotators="B">There is a huge amount of information in there, but we can’t understand it.</s>
+
+<s sid="16">Imagine getting a copy of Tolstoi’s War and Peace in Russian and (assuming you can’t read Russian) trying to figure out the story.</s>
+
+<s sid="17">Impossible.</s>
+
+<s sid="18">That’s pretty much the situation of natural-language understanding at the time Reid joined Verity.</s>
+
+<s sid="19" annotators="A">On the other hand, we have started recognizing some words – specific genetic variants – that seem to correspond to certain incidents in history.</s>
+
+<s sid="20" annotators="A">In the case of genetics, those incidents are diseases and conditions.</s>
+
+<s sid="21" annotators="A B">And just as it usually takes several individuals to cause an incident, so it often takes several genetic variations, plus ambient factors, to cause a disease.</s>
+
+<s sid="22" annotators="A C">Genes often work together, sometimes aided by factors such as a person’s diet or behavior, to cause a condition.</s>
+
+<s sid="23" annotators="A B D">There are two key challenges in genomics.</s>
+
+<s sid="24" annotators="A B C D">One is simply detecting the genes, alone or in combination, that seem to lead to certain diseases.</s>
+
+<s sid="25">That alone can be useful.</s>
+
+<s sid="26" annotators="A D">With enough data, we can then figure out that the same “disease” is in fact a variety of different disorders, some susceptible to particular known treatments and some susceptible to others or simply incurable.</s>
+
+<s sid="27">For this, mere correlation is sufficient.</s>
+
+<s sid="28">People with BRCA-derived breast cancer benefit from treatment with herceptin, whereas those with other kinds of breast cancer do not.</s>
+
+<s sid="29">We don’t know why, but the correlation is clear.</s>
+
+<s sid="30" annotators="A B C D">The second challenge is to understand how the genes interact among themselves or with other factors to produce the condition, which should enable the development of new preventive measures or treatments based on the details of how the condition begins and how it progresses.</s>
+
+<s sid="31">That, of course, is much more interesting – and harder to do.</s>
+
+<s sid="32">In a sense, it’s the difference between matching words and understanding a piece of text.</s>
+
+<s sid="33">So, it is no surprise that Reid has found a role in this new marketplace.</s>
+
+<s sid="34">Complete Genomics and its competitors are about to create huge amounts of data.</s>
+
+<s sid="35">CGI’s edge is not just sequencing the genomes cheaply, but also refining the data into lists of variations.</s>
+
+<s sid="36" annotators="A D">In other words, for most research the questions revolve not around an entire genome, but around the relevant differences of any individual’s genome from the norm.</s>
+
+<s sid="37">There are common differences, like the differences between blue eyes and brown eyes, or even between people likely to have Crohn’s disease and those who are unlikely to have it.</s>
+
+<s sid="38">Then there are differences that result simply from a “broken” gene, which is not a variant but simply a mistake.</s>
+
+<s sid="39">Most of these are harmless; the really harmful ones don’t survive long enough to show up anywhere.</s>
+
+<s sid="40">The researchers’ task is to find meaning from all this data.</s>
+
+<s sid="41">We’re just at the beginning of this process, which will take many years.</s>
+
+<s sid="42" annotators="B C D">While some researchers are looking for statistical correlations, others are studying how the individual genes interact.</s>
+
+<s sid="43" annotators="B">For all of them, access to genome sequences is important.</s>
+
+<s sid="44" annotators="B D">But the genomes mean little without the corresponding medical records, just as the Russian novel – in any language – means little without a corresponding knowledge of Russian history.</s>
+
+<s sid="45">Obtaining that history requires consent from the individuals whose genomes are sequenced.</s>
+
+<s sid="46">It also requires a lot of data processing to make the records usable.</s>
+
+<s sid="47">Much of the information is simply not recorded.</s>
+
+<s sid="48">And much is still on paper, or in scanned images, insurance company records, and pharmacy transactions.</s>
+
+<s sid="49">There is a standard language for representing diseases, but in many cases the records containing this language might as well be hidden in mattresses.</s>
+
+<s sid="50" annotators="A B D">The current movement in many developed countries towards electronic medical records will improve health care directly, but it will also lead to much improved information liquidity to help genetic and other medical research.</s>
+
+<s sid="51" annotators="A C">We now have the ability to sequence genomes at increasingly lower costs, and we are slowly making the corresponding health information computer-readable.</s>
+
+<s sid="52">Companies such as Complete Genomics are developing software that can process the information.</s>
+
+<s sid="53">There is, of course, still a huge amount of data to collect and process, and huge amounts of research and discovery to happen.</s>
+
+<s sid="54">But it is hard not to be optimistic about our increasing medical knowledge.</s>
+
+<s sid="55" annotators="B C D">The challenge five years from now will be to turn all that knowledge into practice through better preventive measures, better drugs, and better care.</s>
+
+</document>
+
+<document did="genetic5" url="http://www.project-syndicate.org/commentary/freeman1/English">
+
+<s sid="1">﻿Your Genes or Mine, How Different Are We?</s>
+
+<s sid="2">2006-11-28</s>
+
+<s sid="3" annotators="B D">For some time, scientists have believed that individual human beings were 99.9% genetically identical.</s>
+
+<s sid="4" annotators="B">The 0.1% of the genome that was different (approximately 3,000,000 bases of DNA) was comprised of “single nucleotide polymorphisms” (SNPs are alterations of the individual bases of DNA) scattered throughout the genome.</s>
+
+<s sid="5" annotators="C">It was thought that some of these DNA alterations may in part explain some of the physical differences that exist between two different, but otherwise normal individuals.</s>
+
+<s sid="6" annotators="B D">In the summer of 2004, two groups of scientists working independently (one led by researchers at Harvard Medical School and Brigham and Women’s Hospital in Boston and the other led by researchers at Cold Spring Harbor Laboratories) called this scientific dogma into question.</s>
+
+<s sid="7" annotators="A C">Their research identified hundreds of regions of the human genome where the number of copies of a particular DNA segment varied from individual to individual.</s>
+
+<s sid="8" annotators="C">With only a few exceptions, all DNA segments were thought to exist in two copies (one copy inherited from your mother and one copy inherited from your father).</s>
+
+<s sid="9" annotators="B C">Both studies showed that there are hundreds of regions of the genome that could have more or less than the expected two copies.</s>
+
+<s sid="10">This alerted scientists to the existence of a larger source of genetic variation than was previously understood, and forced us to speculate on the implications of this discovery.</s>
+
+<s sid="11">This discovery was made recently because until now, the technology was not available to comprehensively assess genomic imbalances in a genome-wide fashion.</s>
+
+<s sid="12" annotators="C">That has changed over the last five or six years, with the development of a technique known as “array-based comparative genomic hybridization” (array-CGH), revolutionizing genetic research and diagnostics.</s>
+
+<s sid="13">About three years ago at Brigham and Women’s Hospital, when we were seeking a potential tool for high-resolution diagnostics, array-CGH offered the hope of providing a reliable and efficient genome-wide test that could detect gains or losses in an unbiased and non-subjective fashion.</s>
+
+<s sid="14" annotators="A B C">When validation experiments were performed that compared the DNA from one “normal, healthy” individual with the DNA from another “normal, healthy” individual, we were astonished to find an average of 12 DNA fragments that showed copy number differences between the two individuals being compared.</s>
+
+<s sid="15" annotators="A B">These became known as copy number variants, or CNVs.</s>
+
+<s sid="16">Combining the data from our study and the study from Cold Spring Harbor Laboratories, over 300 regions of the genome were found to exhibit CNVs among normal individuals.</s>
+
+<s sid="17">Since these two initial studies, many other groups, including ours, have confirmed and documented many more CNVs in other individuals studied.</s>
+
+<s sid="18" annotators="D">This is the goal of the Structural Genomic Variation Consortium’s Copy Number Variation Project, which aims at providing researchers the most comprehensive list and characterization of CNVs in humans.</s>
+
+<s sid="19">The Consortium recently assessed 270 individuals from four populations with ancestry in Africa, Asia or Europe (known as the HapMap collection) to construct a new map of the human genome.</s>
+
+<s sid="20" annotators="B D">Using two complementary genome-wide technologies, with subsequent validation studies, a total of 1,447 CNVs were identified.</s>
+
+<s sid="21" annotators="A B C">The data clearly demonstrate that individuals are not as genetically similar as once thought.</s>
+
+<s sid="22" annotators="A">Many of the regions in which the CNVs were identified overlapped known disease genes.</s>
+
+<s sid="23" annotators="D">Since they are being identified in normal individuals, CNVs may not necessarily be a direct cause of human disease, but many may confer susceptibility to certain diseases, serve as disease markers, and/or indicate potential regions of genomic instability.</s>
+
+<s sid="24">Some CNVs are also associated with genes involved in immune response and detoxification-related metabolism (some of the human body’s reactions to the environment that we live in).</s>
+
+<s sid="25" annotators="A">Indeed, some CNVs may turn out to explain why some people react differently to specific medications.</s>
+
+<s sid="26" annotators="D">Hopefully, a more comprehensive understanding of human genetic variation (i.e. single base pair changes and structural genomic variation, such as CNVs) will ultimately help physicians to prescribe medication in a more individualized manner, that would result in maximum therapeutic effects to each patient, with minimal side effects.</s>
+
+<s sid="27" annotators="A C">Overall, we anticipate that many of these CNVs will provide explanations to how we adapt and interact with our ever-changing environment.</s>
+
+<s sid="28" annotators="A B D">Indeed, as studies continue to identify and characterize CNVs, we anticipate achieving a better understanding of the relationship between these genetic variations, complex diseases, and human adaptability.</s>
+
+</document>
+
+<document did="genetic3" url="http://www.project-syndicate.org/commentary/singer6/English">
+
+<s sid="1">﻿The Revolutionary Ethics of Embryo Research</s>
+
+<s sid="2">2005-12-20</s>
+
+<s sid="3">What appeared to be the most momentous scientific advance of 2005 is currently under siege.</s>
+
+<s sid="4" annotators="A B C D">In June, the prestigious journal Science published an article by the South Korean scientist Woo-Suk Hwang and an international team of co-authors describing how they had developed what were, in effect, “made to order” lines of human stem cells cloned from an adult.</s>
+
+<s sid="5" annotators="B">Although the scientific validity of their research is now the subject of several separate investigations, it is no less important to examine its ethical implications.</s>
+
+<s sid="6" annotators="C">Hwang and his colleagues claimed to have replaced the nucleus of an unfertilized human egg with the nucleus of an ordinary cell taken from another person, developing stem-cell lines from the resulting embryo that matched the DNA of the person who supplied the ordinary cell.</s>
+
+<s sid="7" annotators="A">That achievement appeared to take us significantly closer to a world in which patients could be given cell or tissue transplants that their bodies would not reject, because the biological materials, cloned from the patients themselves, would be a perfect match.</s>
+
+<s sid="8">At the beginning of December, Hwang disclosed that some of the eggs came from two women working in his lab, and that other “donors” had been paid for their eggs – a breach of ethical guidelines that had nothing to do with the accuracy of the science.</s>
+
+<s sid="9">But then Hwang’s collaborators began questioning the validity of the experiment itself, and Hwang notified Science that he wished to withdraw the paper.</s>
+
+<s sid="10">At the time of this writing, he still defends the validity of his work, while admitting “human errors” in the preservation of the stem-cell lines, including contamination by a fungus.</s>
+
+<s sid="11">He has reportedly even suggested that some cells may have been tampered with.</s>
+
+<s sid="12">We will not know how close we are to the production of individually tailored stem-cell lines until the scientific investigations into Hwang’s research are completed.</s>
+
+<s sid="13" annotators="C">Nevertheless, few researchers doubt that what Hwang and his colleagues claimed to do is, in principle, achievable.</s>
+
+<s sid="14">If Hwang was not the first to do it, someone else eventually will.</s>
+
+<s sid="15">Once it can be done reliably, it will pave the way for important medical breakthroughs.</s>
+
+<s sid="16" annotators="C">But the ethical significance of such research goes far beyond the undoubted importance of saving critically ill patients.</s>
+
+<s sid="17" annotators="A B C D">Proving the possibility of cloning from the nucleus of an ordinary human cell would transform the debate about the value of potential human life, for we would find that “potential human life” was all around us, in every cell of our bodies.</s>
+
+<s sid="18">For example, when President George W. Bush announced in 2001 that the United States would not fund research into new stem-cell lines that are created from human embryos, he offered the following reason: “Like a snowflake, each of these embryos is unique, with the unique genetic potential of an individual human being.”</s>
+
+<s sid="19">But it is precisely this reasoning that is threatened by what Hwang and his team claimed to have achieved.</s>
+
+<s sid="20" annotators="A B C D">If it is the uniqueness of human embryos that makes it wrong to destroy them, then there is no compelling reason not to take one cell from an embryo and destroy the remainder of it to obtain stem cells, for the embryo’s “unique genetic potential” would be preserved.</s>
+
+<s sid="21" annotators="A B D">This possibility highlights the weakness of the argument that abortion, too, is wrong because it destroys a genetically unique human being.</s>
+
+<s sid="22" annotators="A">By this reasoning, a woman who finds herself pregnant at an inconvenient time could have an abortion, as long as she preserves a single cell from the fetus to ensure that its unique genetic potential is preserved.</s>
+
+<s sid="23">But it seems absurd that this should make any difference to the morality of aborting the fetus.</s>
+
+<s sid="24" annotators="D">If, at a later date, the woman wants to have a child, why should she use the DNA of her earlier, aborted fetus rather than conceiving another fetus in the usual way?</s>
+
+<s sid="25">Each fetus – the one she aborts and the one she later conceives through sexual intercourse – has its own “unique” DNA.</s>
+
+<s sid="26">In the absence of special reasons, like a change in sexual partners, there seems to be no reason to prefer the existence of one child to that of the other.</s>
+
+<s sid="27">Perhaps the assumption is that, as opponents of abortion sometimes say, the aborted fetus had the genetic potential to become a Beethoven or an Einstein.</s>
+
+<s sid="28">But, for all we know, it is the next fetus that the woman will conceive, not the one she aborted, that will turn out to be the Beethoven or Einstein.</s>
+
+<s sid="29">So why prefer one genetic potential over the other?</s>
+
+<s sid="30" annotators="B C D">Once we abandon arguments based on potential, the claim that it is wrong to kill embryos and fetuses must be based on the nature of those entities themselves – that they are actual human beings who already possess the characteristics that make killing wrong.</s>
+
+<s sid="31" annotators="B D">But, because fetuses, at least at the stage of development when most abortions are performed, have yet to develop any kind of consciousness, it seems reasonable to regard ending their lives as much less serious than killing a normal human being.</s>
+
+<s sid="32" annotators="B">If so, then this is all the more true of embryos.</s>
+
+</document>
+
+</cluster>

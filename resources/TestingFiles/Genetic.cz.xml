@@ -1,0 +1,423 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<cluster cid="Genetic" lang="Czech">
+
+<document did="genetic4" url="http://www.project-syndicate.org/commentary/dyson12/Czech">
+
+<s sid="1">﻿Jazyk genomiky</s>
+
+<s sid="2">2009-09-21</s>
+
+<s sid="3">TA-LIEN, ČÍNA – Společnost nazvaná Complete Genomics minulý týden oznámila, že pro svou službu sekvenování genomu má 10 nových zákazníků.</s>
+
+<s sid="4">Cena uvedena nebyla, ale společnost prohlásila, že jejím cílem je do roka službu nabízet za 5000 dolarů.</s>
+
+<s sid="5">Nezaujalo mě samotné oznámení, nýbrž jméno ředitele společnosti: Cliff Reid, jehož jsem v 80. letech znala jako ředitele Verity, společnosti zaměřené na prohledávání textu.</s>
+
+<s sid="6">Ta spojitost mě téměř okamžitě udeřila.</s>
+
+<s sid="7" annotators="A">Geny jsou v jistém smyslu jazykem instrukcí ke stavbě lidských bytostí (či jiných živých organismů).</s>
+
+<s sid="8">A jazyk tvoří symboly, které svou interakcí vytvářejí smysl.</s>
+
+<s sid="9">A ovšemže se jednalo o téhož Cliffa Reida, jehož jsem znala na konci 80. let.</s>
+
+<s sid="10">Práce, již Complete Genomics za doposud získaných 91 milionů dolarů odvádí, je vzrušující.</s>
+
+<s sid="11">Postavila továrnu k sekvenování genomu a v nadcházejících letech se chystá vybudovat ještě několik dalších.</s>
+
+<s sid="12">Mít takový provoz by si přála řada akademických i komerčních výzkumných ústavů a rovněž několik států.</s>
+
+<s sid="13">Co mě na tom zajímá, jsou důsledky.</s>
+
+<s sid="14" annotators="B C">V současnosti se genom podobá románu napsanému v neznámém jazyce.</s>
+
+<s sid="15" annotators="B">Obsahuje obrovské množství informací, ale my jim nerozumíme.</s>
+
+<s sid="16">Představte si, že máte v ruce výtisk Tolstého Vojny a míru v ruštině a (za předpokladu, že neumíte rusky) chcete příběhu porozumět.</s>
+
+<s sid="17">Je to beznadějné.</s>
+
+<s sid="18">Právě tak vypadala situace ohledně porozumění přirozenému jazyku v době, kdy Reid vstupoval do Verity.</s>
+
+<s sid="19" annotators="A">Na druhou stranu, začínáme už rozumět některým slovům – konkrétním genetickým variantám – která podle všeho odpovídají jistým událostem z minulosti.</s>
+
+<s sid="20" annotators="A">V případě genetiky jsou těmito událostmi choroby a zdravotní obtíže.</s>
+
+<s sid="21" annotators="A B">A právě tak jako je ke vzniku události obvykle zapotřebí několika osob, i vznik nemoci často vyžaduje několik genetických variant, plus vnější okolnosti.</s>
+
+<s sid="22" annotators="A C">Na vyvolání zdravotních potíží se často podílí společné působení genů, občas za přispění faktorů, jako jsou strava či návyky dané osoby.</s>
+
+<s sid="23" annotators="A B D">V genomice jsou dvě klíčové výzvy.</s>
+
+<s sid="24" annotators="A B C D">První je prostá detekce genů, samotných nebo v kombinacích, které pravděpodobně vedou k určitým chorobám.</s>
+
+<s sid="25">Už to samotné může být prospěšné.</s>
+
+<s sid="26" annotators="A D">S dostatkem údajů budeme schopni zjistit, že určitá „nemoc“ je ve skutečnosti škálou různých chorob, z nichž některé dokážou potlačit konkrétní známé léky a další zase potlačí jiné léky anebo jsou prostě nevyléčitelné.</s>
+
+<s sid="27">K tomu postačuje pouhá korelace.</s>
+
+<s sid="28">Osobám s rakovinou prsu zapříčiněnou genem BRCA prospívá léčba Herceptinem, kdežto osobám s jinými druhy rakoviny prsu tento přípravek nepomáhá.</s>
+
+<s sid="29">Nevíme sice proč, ale souvztažnost je jasná.</s>
+
+<s sid="30" annotators="A B C D">Druhou výzvou je porozumět tomu, jak vzájemným působením genů či vlivem dalších faktorů chorobný stav vzniká, což by mělo umožnit vývoj nových preventivních opatření či terapií vycházejících z podrobností o tom, jak daná zdravotní komplikace vzniká a jak se vyvíjí.</s>
+
+<s sid="31">To je samozřejmě mnohem zajímavější – a mnohem těžší.</s>
+
+<s sid="32">V jistém smyslu jde o rozdíl mezi odhadováním významu slov a porozuměním textu.</s>
+
+<s sid="33">Není tedy divu, že si Reid našel úlohu právě na tomto novém trhu.</s>
+
+<s sid="34">Complete Genomics a její konkurenti se chystají vytvářet obrovská množství dat.</s>
+
+<s sid="35">Předností Complete Genomics je nejen levné sekvenování genomů, ale i schopnost pročistit data do výčtů variací.</s>
+
+<s sid="36" annotators="A D">Jinými slovy, u většiny výzkumů se otázky netočí kolem celého genomu, nýbrž kolem relevantních odlišností genomu konkrétního jedince od normy.</s>
+
+<s sid="37">Existují běžné odlišnosti, třeba rozdíly mezi modrýma a hnědýma očima, nebo dokonce mezi lidmi s náchylností ke Crohnově chorobě a bez takového sklonu.</s>
+
+<s sid="38">Pak existují odlišnosti, které jsou důsledkem „rozbitého“ genu, jenž není variantní, ale prostě chybný.</s>
+
+<s sid="39">Ty jsou většinou neškodné; ty skutečně zhoubné nepřežijí tak dlouho, aby se někde projevily.</s>
+
+<s sid="40">Úkolem výzkumníků je odhalit význam všech těchto dat.</s>
+
+<s sid="41">Jsme na samém počátku tohoto procesu, který bude trvat mnoho let.</s>
+
+<s sid="42" annotators="B C D">Zatímco někteří badatelé hledají statistické korelace, jiní se zabývají způsobem interakce konkrétních genů.</s>
+
+<s sid="43" annotators="B">Pro všechny je důležité mít přístup k sekvencím genomů.</s>
+
+<s sid="44" annotators="B D">Bez souvisejících lékařských anamnéz ale genomy neznamenají mnoho, tak jako ruský román – v jakémkoli jazyce – neznamená mnoho bez odpovídajících znalostí ruských dějin.</s>
+
+<s sid="45">Získat tyto anamnézy vyžaduje souhlas jedinců, jejichž genomy se sekvenují.</s>
+
+<s sid="46">Dále je zapotřebí tato data rozsáhle zpracovávat, aby byly záznamy přínosné.</s>
+
+<s sid="47">Mnoho informací zaznamenáno není.</s>
+
+<s sid="48">A mnoho jich je stále na papíře nebo na skenovaných obrázcích, v záznamech pojišťoven a ve výpisech lékárenských transakcí.</s>
+
+<s sid="49">K označování nemocí se používá zavedený jazyk, ale záznamy psané touto řečí se v mnoha případech mohou ukrývat pod matracemi.</s>
+
+<s sid="50" annotators="A B D">Současné směřování k elektronickým lékařským záznamům v mnoha vyspělých zemích zlepší jednak přímo zdravotní péči, ale významně posílí i likviditu informací, jež pomohou genetickému a dalšímu lékařskému výzkumu.</s>
+
+<s sid="51" annotators="A C">Dnes už dokážeme čím dál laciněji sekvenovat genomy a odpovídající zdravotnické informace pomalu převádíme do podoby čitelné pro počítače.</s>
+
+<s sid="52">Společnosti jako Complete Genomics vyvíjejí software, který tyto informace dokáže zpracovat.</s>
+
+<s sid="53">Ovšemže před sebou stále máme obrovská množství dat, která je třeba shromáždit a zpracovat, a obrovský rozsah výzkumu a řadu objevů, k nimž dojde.</s>
+
+<s sid="54">Je však těžké se při pohledu na narůstající lékařské znalosti ubránit optimismu.</s>
+
+<s sid="55" annotators="B C D">Za pět let budeme čelit výzvě jak všechny tyto poznatky prostřednictvím lepších preventivních opatření, dokonalejších léků a kvalitnější péče promítnout do praxe.</s>
+
+</document>
+
+<document did="genetic2" url="http://www.project-syndicate.org/commentary/psinger50/Czech">
+
+<s sid="1">﻿Mít možnost vybrat si potomka</s>
+
+<s sid="2">2009-07-14</s>
+
+<s sid="3" annotators="A B C">MELBOURNE – Německý parlament v dubnu stanovil meze využívání genetické diagnostiky.</s>
+
+<s sid="4" annotators="D">Je nový německý zákon vzorem, který by ostatní země měly následovat ve snaze vypořádat se s etickými otazníky, jež přibývající znalosti lidské genetiky přinášejí?</s>
+
+<s sid="5" annotators="B C">Některá ustanovení německého zákona čerpají z obecně sdílených etických zásad úcty k autonomii a soukromí jedince.</s>
+
+<s sid="6">Nikoho nelze vyšetřit bez jeho souhlasu.</s>
+
+<s sid="7" annotators="A">Ani zaměstnavatelé, ani pojišťovny nesmějí genetické testy požadovat.</s>
+
+<s sid="8" annotators="A C D">Jednotlivci získávají jednak právo vědět – tedy být informován o výsledcích všech svých genetických testů – a jednak právo žít s neznalostí toho, co by o jejich budoucnosti mohl genetický test napovědět.</s>
+
+<s sid="9">Diskriminovat nebo stigmatizovat kohokoli na základě jeho genetických vlastností je zakázáno.</s>
+
+<s sid="10" annotators="A B">Navzdory dojmu vhodnosti, který tato ustanovení vyvolávají, mohou vyjít draho pro německé firmy.</s>
+
+<s sid="11" annotators="A C D">Bude-li pojišťovnám mimo Německo dovoleno požadovat genetické testy, kdežto těm německým to bude zakázáno, lidé, kteří budou vědět o své život zkracující genetické diagnóze, si u německé pojišťovny pořídí životní pojištění.</s>
+
+<s sid="12">Tyto pojišťovací ústavy pak zjistí, že oproti svým konkurentům častěji platí za předčasná úmrtí.</s>
+
+<s sid="13">Aby pokryly vyšší náklady, budou nuceny zvýšit pojistné, čímž ztratí konkurenční schopnost.</s>
+
+<s sid="14">Ve snaze zmírnit tento problém zákon ukládá, že od každého, kdo uzavírá pojistnou smlouvu v hodnotě převyšující 300 tisíc eur, může být požadováno předložení výsledků předchozích genetických testů.</s>
+
+<s sid="15">Budou-li ale lidé lhát a dříve podstoupené testy zapřou, ustanovení bude bezzubé.</s>
+
+<s sid="16" annotators="A C D">Jelikož genetické zkoušky dokážou rostoucí měrou předpovídat nejen zdraví, ale i některé kognitivní a osobnostní rysy, zákaz prověřování zaměstnanců může německé zaměstnavatele znevýhodňovat na mezinárodním trhu.</s>
+
+<s sid="17">Budou investovat prostředky do výcviku zaměstnanců, které jejich konkurenti vyřadí už z prvotní skupiny uchazečů o práci.</s>
+
+<s sid="18">Jedná se sice snad o humánní opatření, neboť dává šanci každému jedinci, bez ohledu na jeho genetické dispozice a potenciál vyplatit se firmě.</s>
+
+<s sid="19" annotators="A C D">Jenže myslíme-li zákaz takových testů vážně, z dlouhodobého hlediska budeme potřebovat mezinárodní úmluvu, jak o pojišťovnictví, tak o zaměstnávání, abychom zajistili rovné podmínky pro všechny země.</s>
+
+<s sid="20">V celosvětově soutěživé ekonomice, kde některé státy mají vůči lidským právům jedince prokazatelně méně respektu, jí nebude snadné dosáhnout.</s>
+
+<s sid="21" annotators="B C D">Nejkontroverznějším rysem německého zákona je zákaz prenatálních genetických testů na nemoci, které se projeví až v dospělosti.</s>
+
+<s sid="22">Vezměme si například ženu, která ví, že její partner má gen Huntingtonovy choroby.</s>
+
+<s sid="23">Každé jeho dítě bude mít 50% šanci, že nemoc zdědí.</s>
+
+<s sid="24">Pokud ji potomek zdědí, zhruba ve 40 letech začne trpět nezvladatelnými pohyby, změnami osobnosti a pomalým zhoršováním kognitivních schopností.</s>
+
+<s sid="25">Lidé s Huntingtonovou chorobou obvykle umírají 15 let po propuknutí symptomů.</s>
+
+<s sid="26">Lék neexistuje.</s>
+
+<s sid="27">Takovou budoucnost pro své děti nemohou chtít žádní rodiče.</s>
+
+<s sid="28" annotators="A D">Prenatální testy plodů (nebo uměle oplodněných embryí před vložením do dělohy) jsou dnes už v celém vyspělém světě dobře zvládnuté.</s>
+
+<s sid="29" annotators="A">Je-li výsledek testu pozitivní, těhotenství lze přerušit anebo v případě diagnózy před implantací embryo vyřadit.</s>
+
+<s sid="30" annotators="D">Nový německý zákon takové testy staví mimo zákon.</s>
+
+<s sid="31">Totéž platí pro testy genů, které u žen způsobují náchylnost k rakovině prsu.</s>
+
+<s sid="32">Jak se genetika rozvíjí, časem bude možné před narozením zjišťovat další takovéto zdravotní potíže, které se projeví až s přibývajícím věkem.</s>
+
+<s sid="33">Z jakých úvah může takový zákon vycházet?</s>
+
+<s sid="34">Lze zastávat názor, že mít 40 let života před propuknutím Huntingtonovy choroby nebo rakoviny prsu je lepší než nežít vůbec.</s>
+
+<s sid="35" annotators="D">Budeme-li ale takové úvahy zohledňovat, neměli bychom také brát v potaz život dítěte, které by rodiče měli, kdyby mohli využít prenatální diagnostiky a ujistit se, že budou mít potomka, který si neponese gen způsobující nemoc?</s>
+
+<s sid="36">Takový potomek má dozajista lepší vyhlídky do života.</s>
+
+<s sid="37" annotators="B">Když máme na výběr mezi životy s takto odlišnými vyhlídkami – a můžeme se rozhodnout dřív, než zárodek nebo plod získá jakékoli vědomí –, neměli bychom mít možnost rozhodnout se pro dítě s lepšími vyhlídkami?</s>
+
+<s sid="38" annotators="A B">Není divu, že otázkám ohledně genetických testů se dostává zvláštní pozornosti právě v Německu, vzhledem k národnímu imperativu vyhýbat se jakémukoli opakování zločinů nacistické éry.</s>
+
+<s sid="39" annotators="B D">Němečtí zákonodárci však ve své chvályhodné touze co nejvíc se těmto zvěrstvům vzdálit přijali zákon, který kriminalizuje využití moderní vědy k předcházení nepochybným lidským tragédiím.</s>
+
+<s sid="40" annotators="B">To je absurdní výsledek.</s>
+
+<s sid="41">Kyvadlo se vychýlilo přespříliš.</s>
+
+</document>
+
+<document did="genetic3" url="http://www.project-syndicate.org/commentary/singer6/Czech">
+
+<s sid="1">﻿Revoluční etika embryonálního výzkumu</s>
+
+<s sid="2">2005-12-20</s>
+
+<s sid="3">Co se ještě před nedávnem jevilo jako nejvýznamnější vědecký pokrok roku 2005, je nyní pod palbou.</s>
+
+<s sid="4" annotators="A B C D">Prestižní časopis Science v červnu otiskl článek jihokorejského vědce Wu-Suk Hwana a mezinárodního týmu spoluautorů, který popisoval, jak připravili to, co fakticky představovalo „na zakázku vytvořené“ linie lidských kmenových buněk klonovaných z dospělého jedince.</s>
+
+<s sid="5" annotators="B">Přestože vědecká platnost jejich výzkumu je teď předmětem několika samostatných šetření, nijak to nesnižuje důležitost potřeby uvážit jeho etické důsledky.</s>
+
+<s sid="6" annotators="C">Hwang a jeho kolegové tvrdili, že nahradili jádro neoplodněného lidského vajíčka jádrem běžné buňky odebrané jiné osobě a že z výsledného embrya vyvinuli linie kmenových buněk, jež se shodovaly s DNA osoby, která dodala běžnou buňku.</s>
+
+<s sid="7" annotators="A">Zdálo se, že nás tento úspěch přivádí podstatně blíž ke světu, v němž pacienti budou moci dostávat buněčné nebo tkáňové transplantáty, které jejich tělo neodmítne, protože použitý biologický materiál, klonovaný ze samotných pacientů, bude dokonalou náhradou.</s>
+
+<s sid="8">Na počátku prosince Hwang přiznal, že některá z vajíček pocházela od dvou žen, které pracují v laboratoři, a že dalším „dárkyním“ bylo za vajíčka zaplaceno – což bylo porušení etických zásad, které se nikterak nedotýkalo správnosti vědeckých výsledků.</s>
+
+<s sid="9">Hwangovi spolupracovníci však začali zpochybňovat validitu samotného pokusu a Hwang oznámil redakci Science, že by rád studii odvolal.</s>
+
+<s sid="10">Ve chvíli, kdy toto píši, správnost své práce stále ještě obhajuje, avšak připouští „selhání lidského faktoru“ při uchovávání linií kmenových buněk, mimo jiné kontaminaci plísní.</s>
+
+<s sid="11">Údajně dokonce naznačil, že s některými buňkami mohlo být manipulováno.</s>
+
+<s sid="12">Jak blízko jsme k zakázkové výrobě linií kmenových buněk pro konkrétní jedince, se nedozvíme, dokud nebudou dokončena vědecká prošetření Hwangova výzkumu.</s>
+
+<s sid="13" annotators="C">Nicméně jen nemnoho badatelů pochybuje o tom, že to, o čem Hwang a jeho kolegové prohlásili, že se jim zdařilo, je v zásadě uskutečnitelné.</s>
+
+<s sid="14">Jestliže Hwang nebyl prvním, komu se to podařilo, někdo jiný nakonec uspěje.</s>
+
+<s sid="15">Až bude postup možné spolehlivě provádět, připraví cestu významným lékařským průlomům.</s>
+
+<s sid="16" annotators="C">Etický význam tohoto výzkumu ovšem dalece přesahuje jeho nepochybnou důležitost pro záchranu vážně nemocných pacientů.</s>
+
+<s sid="17" annotators="A B C D">Důkaz o možnosti klonovat z jádra obyčejné lidské buňky by proměnil debatu o hodnotě potenciálního lidského života, neboť bychom zjistili, že „potenciální lidský život“ je všude kolem nás, v každé buňce našeho těla.</s>
+
+<s sid="18">Když například prezident George W. Bush v roce 2001 oznámil, že Spojené státy nebudou financovat výzkum v oblasti nových linií kmenových buněk, jež vznikají z lidských zárodků, předložil následující důvod: „Tak jako vločka sněhu, každé z těchto embryí je jedinečné, s jedinečným genetickým potenciálem individuální lidské bytosti.“</s>
+
+<s sid="19">Avšak právě tuto argumentaci ohrožuje to, co podle svých tvrzení dokázal Hwang a jeho tým.</s>
+
+<s sid="20" annotators="A B C D">Jestliže nesprávnost zničení lidského zárodku spočívá v jeho jedinečnosti, pak neexistuje jediný přesvědčivý důvod, proč bychom z embrya neměli odebrat jedinou buňku a v zájmu získání kmenových buněk zničit jeho zbytek, neboť „jedinečný genetický potenciál“ zárodku by tak byl zachován.</s>
+
+<s sid="21" annotators="A B D">Tato možnost rovněž jasně poukazuje na slabinu argumentu, že nemorální jsou potraty, protože ničí geneticky jedinečné lidské bytosti.</s>
+
+<s sid="22" annotators="A">Podle této úvahy by žena, která v nevhodný čas otěhotní, mohla podstoupit potrat za předpokladu, že zachová jedinou buňku plodu, aby tak zajistila uchování jeho jedinečného genetického potenciálu.</s>
+
+<s sid="23">Zdá se ale absurdní, že by to mohlo mít nějaký vliv na mravnost umělého přerušení vývoje plodu.</s>
+
+<s sid="24" annotators="D">Jestliže si tato žena někdy později bude přát mít dítě, proč by neměla přirozeným způsobem počít jiný plod, ale raději použít DNA svého dřívějšího plodu, jehož vývoj ukončil potrat?</s>
+
+<s sid="25">Oba plody – ten, jehož se zbavila umělým přerušením, i ten, který později počne při pohlavním styku – mají svou „jedinečnou“ DNA.</s>
+
+<s sid="26">Ponecháme-li stranou zvláštní důvody, jako je změna sexuálního partnera, zdá se, že neexistuje důvod, proč dávat přednost existenci jednoho dítěte oproti existenci druhého.</s>
+
+<s sid="27">Možná se předpokládá, jak odpůrci potratů občas říkají, že plod, jehož vývoj se uměle zastaví, měl genetický potenciál stát se druhým Beethovenem nebo Einsteinem.</s>
+
+<s sid="28">Pokud však víme, Beethovenem či Einsteinem se stává onen další plod, který žena počne, nikoliv ten, jehož vývin byl přerušen.</s>
+
+<s sid="29">Takže proč dávat přednost jednomu genetickému potenciálu před jiným?</s>
+
+<s sid="30" annotators="B C D">Jestliže opustíme argumenty založené na potenciálu, tvrzení, že zabíjení embryí a fétů je nesprávné, se musí zakládat na podstatě těchto entit samotných – na tom, že jsou skutečnými lidskými bytostmi, které již mají vlastnosti, kvůli nimž je zabíjení nemorální.</s>
+
+<s sid="31" annotators="B D">Avšak vzhledem k tomu, že u plodů, přinejmenším ve vývojové fázi, kdy se provádí většina potratů, se teprve musí vyvinout vůbec nějaké vědomí, zdá se rozumné považovat ukončení jejich životů za mnohem méně závažné než zabití normální lidské bytosti.</s>
+
+<s sid="32" annotators="B">Je-li tomu tak, tím spíš to platí o embryích.</s>
+
+</document>
+
+<document did="genetic1" url="http://www.project-syndicate.org/commentary/singer15/Czech">
+
+<s sid="1">﻿Rub a líc genetického výběru</s>
+
+<s sid="2">2006-09-14</s>
+
+<s sid="3" annotators="B">Pokrok ve znalostech má často svůj rub i líc.</s>
+
+<s sid="4">V posledních 60 letech byla jedním zřetelným příkladem této pravdy jaderná fyzika.</s>
+
+<s sid="5">V příštích 60 letech se takovým příkladem může stát genetika.</s>
+
+<s sid="6" annotators="A B C">Podnikavé firmy dnes nabízejí, že vám za poplatek povědí něco o vašich genech.</s>
+
+<s sid="7" annotators="A">Tvrdí, že tyto poznatky vám pomohou žít déle a lépe.</s>
+
+<s sid="8" annotators="A">Můžete si například zařídit mimořádná vyšetření, která by odhalila příznaky nemocí, u nichž hrozí největší riziko, že jimi onemocníte, anebo ve snaze toto riziko snížit můžete upravit svůj jídelníček.</s>
+
+<s sid="9" annotators="A D">Jestliže vaše vyhlídky na dlouhověkost nejsou dobré, můžete si sjednat další životní pojištění, nebo dokonce odejít do předčasného důchodu, abyste měli dost času na to, co jste vždycky chtěli dělat.</s>
+
+<s sid="10">Obhájci soukromí už s jistým úspěchem vyvíjejí snahu zabránit pojišťovnám, aby před uzavřením životního pojištění požadovaly genetická vyšetření.</s>
+
+<s sid="11" annotators="B D">Avšak jestliže jedinci mohou podstupovat testy, které jsou pojišťovacím společnostem zapovězeny, a jestliže ti, kdo získají nepříznivé genetické informace, si pak přikoupí dodatečnou životní pojistku, aniž by se zmínili o testech, jimiž prošli, podvádějí ostatní vlastníky životního pojištění.</s>
+
+<s sid="12">K úhradě ztrát bude potřeba zvýšit pojistné a ti, kdo mají dobrou genetickou prognózu, mohou od životního pojištění odstoupit, aby se vyhnuli dotování podvodníků, což opět požene pojistné výš.</s>
+
+<s sid="13">Není ještě potřeba se příliš děsit.</s>
+
+<s sid="14">Government Accountability Office, kontrolní úřad Kongresu USA, zaslal několika testovacím společnostem tytéž genetické vzorky a obdržel propastně odlišné a převážně bezcenné rady.</s>
+
+<s sid="15">Jak se však věda bude zdokonalovat, s tímto pojišťovacím problémem bude nezbytné se vypořádat.</s>
+
+<s sid="16" annotators="A B D">Hlubší etické problémy přináší možnost vybírat si děti.</s>
+
+<s sid="17">To není nové.</s>
+
+<s sid="18" annotators="A B C D">Ve vyspělých zemích rutinní testování starších těhotných žen společně s dostupností potratu výrazně snížilo výskyt vad, jako je Downův syndrom.</s>
+
+<s sid="19" annotators="A D">V některých oblastech Indie a Číny, kde páry zoufale touží po synovi, se nejkrajnější podobou sexismu staly selektivní potraty a provádějí se v takovém rozsahu, že dospívá generace, v níž se mladí muži potýkají s nedostatkem partnerek.</s>
+
+<s sid="20">Výběr dětí nemusí zahrnovat přerušení těhotenství.</s>
+
+<s sid="21" annotators="B C">Některé páry, u nichž hrozí přenos genetického onemocnění na potomky, už několik let využívají mimoděložního oplodnění, při němž se vytvoří několik embryí, která lze testovat na přítomnost vadného genu, a pak se do dělohy usadí jen ta embrya, která jej nemají.</s>
+
+<s sid="22">V současnosti páry této techniky využívají, aby zabránily předání genů, z nichž plyne zvýšené riziko vzniku některých druhů rakoviny.</s>
+
+<s sid="23" annotators="C">Vzhledem k tomu, že si každý nese nějaké nepříznivé geny, neexistuje jasná hranice mezi rozhodnutím proti dítěti s nadprůměrným rizikem přenosu nemoci a rozhodnutím pro dítě s mimořádně růžovými zdravotními vyhlídkami.</s>
+
+<s sid="24">Genetický výběr tudíž bude nevyhnutelně směřovat ke genetickému zdokonalování.</s>
+
+<s sid="25" annotators="A B">Pro mnoho rodičů není nic důležitějšího než zajistit svému dítěti nejlepší start do života.</s>
+
+<s sid="26" annotators="A B">Kupují drahé hračky, aby co možná nejvíc zvýšili schopnost dítěte se učit, a ještě mnohem víc peněz vydají za soukromé školy nebo za mimoškolní doučování, s nadějí, že jejich potomek vynikne u zkoušek, které rozhodují o přijetí na elitní univerzity.</s>
+
+<s sid="27" annotators="A B">Nejsme možná daleko od doby, kdy dokážeme poznat geny, jež v tomto úsilí zvyšují šance na úspěch.</s>
+
+<s sid="28" annotators="A">To mnozí odsoudí jako vzkříšení „eugeniky“, názoru, obzvlášť populárního na počátku dvacátého století, že by bylo dobře aktivními zásahy vylepšovat dědičné vlastnosti.</s>
+
+<s sid="29" annotators="C D">V jistém smyslu tomu tak je a v rukou autoritářských režimů by genetická selekce mohla připomínat hrůzy dřívějších forem eugeniky, s jejich obhajobou odporných pseudovědeckých politických přístupů, zejména ve vztahu k „rasové hygieně“.</s>
+
+<s sid="30" annotators="C">V liberálních, tržně motivovaných společnostech však eugenika nebude nátlakově prosazována státem v zájmu kolektivního dobra.</s>
+
+<s sid="31">Namísto toho půjde o důsledek rodičovského rozhodování a činnosti svobodného trhu.</s>
+
+<s sid="32" annotators="A D">Budou-li výsledkem zdravější a bystřejší lidé s lepšími schopnostmi řešit problémy, půjde o dobrou věc.</s>
+
+<s sid="33" annotators="A">Ale i když se rodiče budou rozhodovat pro dobro svých dětí, vedle přínosů mohou také číhat nebezpečí.</s>
+
+<s sid="34" annotators="C D">V případě výběru podle pohlaví je zřejmé, že páry, které si nezávisle vybírají to nejlepší pro své dítě, mohou zapříčinit stav, kdy postavení jejich potomků bude horší, než by bylo, kdyby o pohlaví dítěte nemohl nikdo rozhodovat.</s>
+
+<s sid="35">Něco podobného by se mohlo stát i s dalšími formami genetického výběru.</s>
+
+<s sid="36">Poněvadž nadprůměrná výška koreluje s nadprůměrným příjmem a výška zřetelně má genetickou složku, není fantazírováním si představit, že se páry budou rozhodovat pro vyšší děti.</s>
+
+<s sid="37">Důsledkem by mohl být genetický „závod ve zbrojení“, který povede ke stále vyšším dětem, což by významně zatížilo životní prostředí zvýšenou spotřebou, nezbytnou k nasycení větších lidských bytostí.</s>
+
+<s sid="38" annotators="A C D">Nejznepokojivějším důsledkem tohoto režimu genetické selekce je ovšem to, že si ji budou moci dovolit pouze majetní lidé.</s>
+
+<s sid="39">Trhlina mezi bohatými a chudými, už dnes rukavice hozená našim ideálům sociální spravedlnosti, se promění v propast, již nedokáže přemostit pouhá rovnost příležitostí.</s>
+
+<s sid="40" annotators="B">Takovou budoucnost by nikdo z nás neměl schvalovat.</s>
+
+<s sid="41" annotators="A D">Vyhnout se tomuto vyústění ovšem nebude snadné, neboť to bude vyžadovat, aby genetické zdokonalování buď nebylo dostupné nikomu, nebo aby bylo dostupné všem.</s>
+
+<s sid="42">První možnost by vyžadovala donucování a – vzhledem k tomu, že jednotlivé země nepřijmou, aby ostatní získali konkurenční náskok – mezinárodní úmluvu o zřeknutí se přínosů, jež by genetické zdokonalování mohlo přinést.</s>
+
+<s sid="43">Druhá možnost, všeobecná dostupnost, by vyžadovala bezprecedentní míru sociální pomoci chudým a mimořádně těžká rozhodnutí ohledně toho, co vlastně dotovat.</s>
+
+</document>
+
+<document did="genetic5" url="http://www.project-syndicate.org/commentary/freeman1/Czech">
+
+<s sid="1">﻿Vaše geny nebo moje, nakolik se lišíme?</s>
+
+<s sid="2">2006-11-28</s>
+
+<s sid="3" annotators="B D">Po jistý čas byli vědci přesvědčeni, že jednotlivé lidské bytosti jsou z 99,9% geneticky identické.</s>
+
+<s sid="4" annotators="B">Oněch 0,1% genomu, které se lišily (zhruba 3 miliony bází DNA), tvořily „jednonukleotidové polymorfismy“ (modifikace individuálních bází DNA) rozptýlené po celém genomu.</s>
+
+<s sid="5" annotators="C">Myslelo se, že některé z těchto modifikací DNA mohou částečně vysvětlovat některé tělesné odlišnosti mezi dvěma různými, ale jinak běžnými jedinci.</s>
+
+<s sid="6" annotators="B D">V létě roku 2004 dvě skupiny vědců pracující nezávisle na sobě (jedna vedená výzkumníky lékařské fakulty Harvardovy univerzity a Brighamovy a ženské nemocnice v Bostonu a druhá pod vedením výzkumníků Cold Spring Harbor Laboratories) toto dogma zpochybnily.</s>
+
+<s sid="7" annotators="A C">Jejich výzkum určil stovky oblastí lidského genomu, kde se jedinec od jedince lišila celá řada kopií konkrétního segmentu DNA.</s>
+
+<s sid="8" annotators="C">Až na několik málo výjimek se myslelo, že segmenty DNA existují ve dvou kopiích (jedna kopie zděděná po matce, druhá kopie zděděná po otci).</s>
+
+<s sid="9" annotators="B C">Obě studie prokázaly, že existují stovky oblastí genomu, které mohou mít více nebo méně kopií než očekávané dvě.</s>
+
+<s sid="10">To vědce upozornilo na existenci většího zdroje genetické variace, než se dříve myslelo, a přimělo nás to spekulovat o důsledcích tohoto objevu.</s>
+
+<s sid="11">Tento objev byl učiněn nedávno, protože až dosud nebyla dostupná technika, která by umožňovala uceleně určovat genomické nevyváženosti způsobem zahrnujícím celou šíři genomu.</s>
+
+<s sid="12" annotators="C">To se za posledních pět šest let změnilo, díky rozvoji techniky známé jako „array-based comparative genomic hybridization“ (array-CGH) čili „maticová komparativní genomová hybridizace“, která v genetickém výzkumu a diagnostice způsobila revoluci.</s>
+
+<s sid="13">Asi před třemi lety jsme v Brighamově a ženské nemocnici sháněli možný nástroj pro diagnostiku s vysokým rozlišením a technika array-CGH nám dala naději na provedení spolehlivého a efektivního testu celého genomu, který by dokázal nezkresleně a bez subjektivního zabarvení určit přírůstky a úbytky.</s>
+
+<s sid="14" annotators="A B C">Když byly provedeny validační experimenty, které porovnávaly DNA od jednoho „normálního, zdravého“ jedince s DNA od jiného „normálního, zdravého“ jedince, zaskočilo nás zjištění, že v průměru 12 fragmentů DNA vykazovalo mezi danými dvěma porovnávanými jednotlivci rozdíly v počtu kopií.</s>
+
+<s sid="15" annotators="A B">Ty vešly ve známost jako „copy number variants“ (CNVs) neboli variace v počtu kopií.</s>
+
+<s sid="16">Sloučením dat z naší studie a ze studie Cold Spring Harbor Laboratories bylo zjištěno přes 300 oblastí genomu, které mezi běžnými jedinci prokazují CNVs.</s>
+
+<s sid="17">Od těchto dvou prvotních studií mnohé další skupiny, včetně té naší, potvrdily a zdokumentovaly mnohem víc CNVs u dalších zkoumaných jedinců.</s>
+
+<s sid="18" annotators="D">Právě to je cílem Projektu variací v počtu kopií Konsorcia strukturální variace genomu, který se snaží poskytnout výzkumníkům nejucelenější seznam a charakteristiku CNVs u lidí.</s>
+
+<s sid="19">Konsorcium nedávno posoudilo 270 jedinců čtyř populací s předky v Africe, Asii nebo Evropě (známých jako soubor HapMap), aby sestavilo novou mapu lidského genomu.</s>
+
+<s sid="20" annotators="B D">Za použití dvou komplementárních celogenomových technologií a s následnými validačními studiemi bylo zjištěno celkem 1447 CNVs.</s>
+
+<s sid="21" annotators="A B C">Data jednoznačně prokazují, že jedinci si nejsou natolik geneticky podobní, jak se kdysi myslelo.</s>
+
+<s sid="22" annotators="A">Mnohé oblasti, kde byly rozpoznány CNVs, se překrývají se známými geny nemocí.</s>
+
+<s sid="23" annotators="D">Poněvadž se zjišťují u běžných jedinců, CNVs nemusí být nutně přímou příčinou lidských chorob, ale mnohé mohou způsobovat náchylnost k jistým nemocím, sloužit jako předzvěst onemocnění nebo naznačovat potenciální oblasti genomické nestability.</s>
+
+<s sid="24">Některé CNVs se rovněž spojují s geny podílejícími se na imunitní reakci a metabolismu souvisejícím s detoxifikací (jde o některé reakce lidského těla na prostředí, v němž žijeme).</s>
+
+<s sid="25" annotators="A">Některé CNVs by se mohly ukázat jako vysvětlení toho, proč někteří lidé reagují na určitá léčiva odlišně.</s>
+
+<s sid="26" annotators="D">Doufejme, že ucelenější porozumění lidské genetické variaci (například změnám jednotlivých párů bází a strukturním genomickým odchylkám, jako jsou CNVs) nakonec pomůže lékařům předepisovat léky individualizovanějším způsobem, který by u každého pacienta vyústil v maximální terapeutický účinek při minimálních vedlejších účincích.</s>
+
+<s sid="27" annotators="A C">Celkově očekáváme, že mnohé z těchto CNVs nám přinesou vysvětlení, jak se adaptujeme na neustále se měnící životní prostředí a jak s ním interagujeme.</s>
+
+<s sid="28" annotators="A B D">Ba jak studie nadále CNVs určují a charakterově popisují, očekáváme dosažení lepšího porozumění vztahu mezi těmito genetickými variacemi, složitými nemocemi a lidskou adaptabilitou.</s>
+
+</document>
+
+</cluster>

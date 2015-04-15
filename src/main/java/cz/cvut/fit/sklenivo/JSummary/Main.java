@@ -1,5 +1,6 @@
 package cz.cvut.fit.sklenivo.JSummary;
 
+import cz.cvut.fit.sklenivo.JSummary.testing.TestEvaluator;
 import cz.cvut.fit.sklenivo.JSummary.util.SummarizationUI;
 
 /**
@@ -8,6 +9,11 @@ import cz.cvut.fit.sklenivo.JSummary.util.SummarizationUI;
 public class Main {
 
     public static void main(String [] args){
+        TestEvaluator evaluator = new TestEvaluator();
+        evaluator.readDocument("resources/TestingFiles/Genetic.en.xml");
+        evaluator.readDocument("resources/TestingFiles/Genetic.cz.xml");
+
+
         SummarizationUI ui = new SummarizationUI();
     }
 }

@@ -1,5 +1,6 @@
 package cz.cvut.fit.sklenivo.JSummary.util;
 
+import CzechLemma.CzechLemma;
 import edu.stanford.nlp.tagger.maxent.MaxentTagger;
 import org.w3c.dom.Document;
 import org.w3c.dom.Element;
@@ -18,14 +19,18 @@ import java.util.Map;
 import java.util.TreeMap;
 
 public class POSTagger {
-    String fileName;
-    MaxentTagger tagger = null;
-    Map<String, String> database = null;
+    private String fileName;
+    private MaxentTagger tagger = null;
+    private Map<String, String> database = null;
+
+    private CzechLemma lemma;
+
     public POSTagger(String language) {
         if (language.equals("english")){
             tagger = new MaxentTagger("resources/StanfordPOS/english-bidirectional-distsim.tagger");
         } else {
             this.fileName = "resources/POS/gwg-cze-latest.xml";
+            lemma = new CzechLemma();
             loadDatabase(); // czech
         }
 
@@ -48,8 +53,8 @@ public class POSTagger {
             return tagger.tagString(word);
         }
 
-        if (database.containsKey(word.toLowerCase())){
-            return word + "_" + database.get(word.toLowerCase());
+        if (database.containsKey(lemma.lemmatizeWord(word).toLowerCase())){
+            return word + "_" + database.get(lemma.lemmatizeWord(word).toLowerCase());
         }
 
         return word;
@@ -80,7 +85,7 @@ public class POSTagger {
                             case "v" : pos = "VB"; break;
                             case "a" : pos = "JJ"; break;
                         }
-                        database.put(word.toLowerCase(), pos);
+                        database.put(lemma.lemmatizeWord(word.toLowerCase()), pos);
                     }
                 }
             }

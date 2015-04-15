@@ -38,8 +38,11 @@ public class EvolutionarySummarizer implements Summarizer {
         for (int i = 0; i < chromosomes.size(); i++){
             System.out.println(chromosomes.get(i).getData());
         }
+        Chromosome offspring = createTrialOffspring(chromosomes.get(0), 0);
 
-        System.out.println("T: " + createTrialOffspring(chromosomes.get(0)).getData());
+        double f = objectiveFunction();
+
+        System.out.println("T: " + offspring.getData());
 
         return null;
     }
@@ -47,10 +50,12 @@ public class EvolutionarySummarizer implements Summarizer {
     private void initPopulation() {
         Random random = new Random();
         populationSize = random.nextInt(documentSentences.size()/2) + documentSentences.size()/2;
-        clusterSize = populationSize;
+        clusterSize = random.nextInt(populationSize / 2) + 1;
+
         for (int i = 0; i < populationSize; i++){
             chromosomes.add(randomChromosome(clusterSize));
         }
+
         randomValues = new double[documentSentences.size()];
 
         for (int i = 0; i < randomValues.length; i++){
@@ -58,13 +63,14 @@ public class EvolutionarySummarizer implements Summarizer {
         }
     }
 
-    private Chromosome createTrialOffspring(Chromosome parent){
+    private Chromosome createTrialOffspring(Chromosome parent, int index){
         Random random = new Random();
         int firstIndex = random.nextInt(chromosomes.size());
         int secondIndex = random.nextInt(chromosomes.size());
         int thirdIndex = random.nextInt(chromosomes.size());
 
-        while (firstIndex == secondIndex || secondIndex == thirdIndex || firstIndex == thirdIndex){
+        while (index == firstIndex || index == secondIndex || index == secondIndex ||
+                firstIndex == secondIndex || secondIndex == thirdIndex || firstIndex == thirdIndex){
             firstIndex = random.nextInt(chromosomes.size());
             secondIndex = random.nextInt(chromosomes.size());
             thirdIndex = random.nextInt(chromosomes.size());
@@ -73,7 +79,6 @@ public class EvolutionarySummarizer implements Summarizer {
         ArrayList<Integer> data = new ArrayList<>();
         int i = 0;
         for (Integer item : parent.getData()){
-            double chance = random.nextDouble();
             if (randomValues[i] < crossRate){
                 int result = chromosomes.get(firstIndex).getData().get(i);
                 int scaled = (int) (scalingFactor *
