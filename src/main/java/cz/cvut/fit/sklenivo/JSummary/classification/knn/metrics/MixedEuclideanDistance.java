@@ -22,4 +22,9 @@ public class MixedEuclideanDistance implements KNNMetric {
 
         return Math.sqrt(ret);
     }
+
+    @Override
+    public String toString() {
+        return "MixedEuclideanDistance";
+    }
 }

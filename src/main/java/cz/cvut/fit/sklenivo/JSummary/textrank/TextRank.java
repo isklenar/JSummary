@@ -142,7 +142,6 @@ public class TextRank implements Summarizer, TestableSummarizer {
 
             //we converged, break
             if (breakLoop){
-                System.out.println(i + " iterations to converge");
                 break;
             }
         }

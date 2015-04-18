@@ -5,5 +5,5 @@ package cz.cvut.fit.sklenivo.JSummary;
  */
 public interface TrainableSummarizer extends Summarizer {
     public void train(SummarizationSettings settings);
-    public void addTrainingData(String trainingText, String summary);
+    public TrainableSummarizer addTrainingData(String trainingText, String summary);
 }

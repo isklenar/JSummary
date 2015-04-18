@@ -60,8 +60,10 @@ public class NaiveBayes implements TrainableSummarizer, TestableSummarizer {
     }
 
     @Override
-    public void addTrainingData(String trainingText, String summary) {
+    public TrainableSummarizer addTrainingData(String trainingText, String summary) {
         trainingData.add(new TrainingData(trainingText, summary));
+
+        return this;
     }
 
     private void prepareMeansAndVariance() {
