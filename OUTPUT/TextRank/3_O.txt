@@ -1,7 +1,12 @@
-About three years ago at Brigham and Women’s Hospital, when we were seeking a potential tool for high-resolution diagnostics, array-CGH offered the hope of providing a reliable and efficient genome-wide test that could detect gains or losses in an unbiased and non-subjective fashion.
-When validation experiments were performed that compared the DNA from one “normal, healthy” individual with the DNA from another “normal, healthy” individual, we were astonished to find an average of 12 DNA fragments that showed copy number differences between the two individuals being compared.
-The Consortium recently assessed 270 individuals from four populations with ancestry in Africa, Asia or Europe (known as the HapMap collection) to construct a new map of the human genome.
-Since they are being identified in normal individuals, CNVs may not necessarily be a direct cause of human disease, but many may confer susceptibility to certain diseases, serve as disease markers, and/or indicate potential regions of genomic instability.
-Some CNVs are also associated with genes involved in immune response and detoxification-related metabolism (some of the human body’s reactions to the environment that we live in).
-Hopefully, a more comprehensive understanding of human genetic variation (i.e. single base pair changes and structural genomic variation, such as CNVs) will ultimately help physicians to prescribe medication in a more individualized manner, that would result in maximum therapeutic effects to each patient, with minimal side effects.
-Indeed, as studies continue to identify and characterize CNVs, we anticipate achieving a better understanding of the relationship between these genetic variations, complex diseases, and human adaptability.
+To není nové.
+Pro mnoho rodičů není nic důležitějšího než zajistit svému dítěti nejlepší start do života.
+Kupují drahé hračky, aby co možná nejvíc zvýšili schopnost dítěte se učit, a ještě mnohem víc peněz vydají za soukromé školy nebo za mimoškolní doučování, s nadějí, že jejich potomek vynikne u zkoušek, které rozhodují o přijetí na elitní univerzity.
+To mnozí odsoudí jako vzkříšení „eugeniky“, názoru, obzvlášť populárního na počátku dvacátého století, že by bylo dobře aktivními zásahy vylepšovat dědičné vlastnosti.
+Ale i když se rodiče budou rozhodovat pro dobro svých dětí, vedle přínosů mohou také číhat nebezpečí.
+V případě výběru podle pohlaví je zřejmé, že páry, které si nezávisle vybírají to nejlepší pro své dítě, mohou zapříčinit stav, kdy postavení jejich potomků bude horší, než by bylo, kdyby o pohlaví dítěte nemohl nikdo rozhodovat.
+Něco podobného by se mohlo stát i s dalšími formami genetického výběru.
+Poněvadž nadprůměrná výška koreluje s nadprůměrným příjmem a výška zřetelně má genetickou složku, není fantazírováním si představit, že se páry budou rozhodovat pro vyšší děti.
+Nejznepokojivějším důsledkem tohoto režimu genetické selekce je ovšem to, že si ji budou moci dovolit pouze majetní lidé.
+Takovou budoucnost by nikdo z nás neměl schvalovat.
+Vyhnout se tomuto vyústění ovšem nebude snadné, neboť to bude vyžadovat, aby genetické zdokonalování buď nebylo dostupné nikomu, nebo aby bylo dostupné všem.
+První možnost by vyžadovala donucování a – vzhledem k tomu, že jednotlivé země nepřijmou, aby ostatní získali konkurenční náskok – mezinárodní úmluvu o zřeknutí se přínosů, jež by genetické zdokonalování mohlo přinést.

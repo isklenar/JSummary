@@ -1,8 +1,8 @@
 package cz.cvut.fit.sklenivo.JSummary.textrank;
 
 
-
 import cz.cvut.fit.sklenivo.JSummary.SummarizationSettings;
+import cz.cvut.fit.sklenivo.JSummary.util.WordDatabases;
 import opennlp.tools.tokenize.TokenizerME;
 import opennlp.tools.tokenize.TokenizerModel;
 import org.tartarus.snowball.SnowballStemmer;
@@ -10,9 +10,7 @@ import org.tartarus.snowball.SnowballStemmer;
 import java.io.FileInputStream;
 import java.io.IOException;
 import java.io.InputStream;
-import java.util.Arrays;
-import java.util.HashSet;
-import java.util.Set;
+import java.util.*;
 
 /**
  * Utility class that compares senteces.
@@ -54,8 +52,8 @@ class SentenceComparator {
         if (sentence1 == sentence2 || sentence1.equals(sentence2)){
             return 0;
         }
-        Set<String> s1set = new HashSet<>(Arrays.asList(tokenize(sentence1.getSentence())));
-        Set<String> s2set = new HashSet<>(Arrays.asList(tokenize(sentence2.getSentence())));
+        Set<String> s1set = new HashSet<>(tokenize(sentence1.getSentence()));
+        Set<String> s2set = new HashSet<>(tokenize(sentence2.getSentence()));
 
         int s1size = s1set.size();
         int s2size = s2set.size();
@@ -114,22 +112,29 @@ class SentenceComparator {
      * WordNet will get the first meaning of every word.
      *
      * @param s1 String to be tokenized
-     * @return Array of tokenized words
+     * @return list of tokenized words
      */
-    private String [] tokenize(String s1) {
-        String [] ret;
+    private List<String> tokenize(String s1) {
+        List<String> ret;
         if (settings.isUseNLP() && tokenizer != null){
-            ret = tokenizer.tokenize(s1); //using openNLP's tokenizer
+            ret = Arrays.asList(tokenizer.tokenize(s1)); //using openNLP's tokenizer
         } else {
-            ret = s1.split(" ");
+            ret = Arrays.asList(s1.split(" "));
         }
 
+        if (settings.isStopWords() && settings.getLanguage().equals(WordDatabases.CZECH_LANGUAGE)){
+            ret.removeAll(WordDatabases.CZECH_STOP_WORDS);
+        }
+
+        if (settings.isStopWords() && settings.getLanguage().equals(WordDatabases.ENGLISH_LANGUAGE)){
+            ret.removeAll(WordDatabases.ENGLISH_STOP_WORDS);
+        }
 
         if (settings.isStemming() && stemmer != null){
-            for (int i = 0; i < ret.length; i++){
-                stemmer.setCurrent(ret[i]);
+            for (int i = 0; i < ret.size(); i++){
+                stemmer.setCurrent(ret.get(i));
                 stemmer.stem();
-                ret[i] = stemmer.getCurrent();
+                ret.set(i, stemmer.getCurrent());
             }
         }
 

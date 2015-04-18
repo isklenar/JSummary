@@ -1,10 +1,12 @@
-MELBOURNE – In April, Germany’s parliament placed limits on the use of genetic diagnosis.
-Neither employers, nor insurance companies, may require genetic testing.
-Individuals are granted both the right to know – to be informed of the results of any genetic test about themselves – and the right to choose to live in ignorance of what a genetic test may predict about their future.
-Desirable as these provisions seem, they could impose a heavy cost on German companies.
-If insurance companies outside Germany are permitted to require genetic tests while German companies are prohibited from doing so, then people who know they have life-shortening genetic diagnoses will get their life insurance from German insurance companies.
-As genetic testing becomes increasingly able to predict not only health, but also some cognitive and personality traits, the prohibition on employer testing may also put German employers at a disadvantage in the international marketplace.
-But, in the long term, if we are serious about prohibiting such tests, we need an international agreement – on both insurance and employment – to ensure a level playing field for all countries.
-Prenatal testing of fetuses (or of in vitro embryos before transfer to the uterus) is now well established throughout the developed world.
-If the test is positive, the pregnancy can be terminated, or, in the case of pre-implantation diagnosis, the embryo will be discarded.
-It is not surprising that questions about genetic tests should receive special attention in Germany, given the national imperative of avoiding any repetition of the crimes of the Nazi era.
+Geny jsou v jistém smyslu jazykem instrukcí ke stavbě lidských bytostí (či jiných živých organismů).
+Na druhou stranu, začínáme už rozumět některým slovům – konkrétním genetickým variantám – která podle všeho odpovídají jistým událostem z minulosti.
+V případě genetiky jsou těmito událostmi choroby a zdravotní obtíže.
+A právě tak jako je ke vzniku události obvykle zapotřebí několika osob, i vznik nemoci často vyžaduje několik genetických variant, plus vnější okolnosti.
+Na vyvolání zdravotních potíží se často podílí společné působení genů, občas za přispění faktorů, jako jsou strava či návyky dané osoby.
+V genomice jsou dvě klíčové výzvy.
+První je prostá detekce genů, samotných nebo v kombinacích, které pravděpodobně vedou k určitým chorobám.
+S dostatkem údajů budeme schopni zjistit, že určitá „nemoc“ je ve skutečnosti škálou různých chorob, z nichž některé dokážou potlačit konkrétní známé léky a další zase potlačí jiné léky anebo jsou prostě nevyléčitelné.
+Druhou výzvou je porozumět tomu, jak vzájemným působením genů či vlivem dalších faktorů chorobný stav vzniká, což by mělo umožnit vývoj nových preventivních opatření či terapií vycházejících z podrobností o tom, jak daná zdravotní komplikace vzniká a jak se vyvíjí.
+Jinými slovy, u většiny výzkumů se otázky netočí kolem celého genomu, nýbrž kolem relevantních odlišností genomu konkrétního jedince od normy.
+Současné směřování k elektronickým lékařským záznamům v mnoha vyspělých zemích zlepší jednak přímo zdravotní péči, ale významně posílí i likviditu informací, jež pomohou genetickému a dalšímu lékařskému výzkumu.
+Dnes už dokážeme čím dál laciněji sekvenovat genomy a odpovídající zdravotnické informace pomalu převádíme do podoby čitelné pro počítače.

@@ -1,12 +1,6 @@
-Genes are, in a sense, the instruction language for building humans (or any other living thing).
-On the other hand, we have started recognizing some words – specific genetic variants – that seem to correspond to certain incidents in history.
-In the case of genetics, those incidents are diseases and conditions.
-And just as it usually takes several individuals to cause an incident, so it often takes several genetic variations, plus ambient factors, to cause a disease.
-Genes often work together, sometimes aided by factors such as a person’s diet or behavior, to cause a condition.
-There are two key challenges in genomics.
-One is simply detecting the genes, alone or in combination, that seem to lead to certain diseases.
-With enough data, we can then figure out that the same “disease” is in fact a variety of different disorders, some susceptible to particular known treatments and some susceptible to others or simply incurable.
-The second challenge is to understand how the genes interact among themselves or with other factors to produce the condition, which should enable the development of new preventive measures or treatments based on the details of how the condition begins and how it progresses.
-In other words, for most research the questions revolve not around an entire genome, but around the relevant differences of any individual’s genome from the norm.
-The current movement in many developed countries towards electronic medical records will improve health care directly, but it will also lead to much improved information liquidity to help genetic and other medical research.
-We now have the ability to sequence genomes at increasingly lower costs, and we are slowly making the corresponding health information computer-readable.
+Prestižní časopis Science v červnu otiskl článek jihokorejského vědce Wu-Suk Hwana a mezinárodního týmu spoluautorů, který popisoval, jak připravili to, co fakticky představovalo „na zakázku vytvořené“ linie lidských kmenových buněk klonovaných z dospělého jedince.
+Zdálo se, že nás tento úspěch přivádí podstatně blíž ke světu, v němž pacienti budou moci dostávat buněčné nebo tkáňové transplantáty, které jejich tělo neodmítne, protože použitý biologický materiál, klonovaný ze samotných pacientů, bude dokonalou náhradou.
+Důkaz o možnosti klonovat z jádra obyčejné lidské buňky by proměnil debatu o hodnotě potenciálního lidského života, neboť bychom zjistili, že „potenciální lidský život“ je všude kolem nás, v každé buňce našeho těla.
+Jestliže nesprávnost zničení lidského zárodku spočívá v jeho jedinečnosti, pak neexistuje jediný přesvědčivý důvod, proč bychom z embrya neměli odebrat jedinou buňku a v zájmu získání kmenových buněk zničit jeho zbytek, neboť „jedinečný genetický potenciál“ zárodku by tak byl zachován.
+Tato možnost rovněž jasně poukazuje na slabinu argumentu, že nemorální jsou potraty, protože ničí geneticky jedinečné lidské bytosti.
+Podle této úvahy by žena, která v nevhodný čas otěhotní, mohla podstoupit potrat za předpokladu, že zachová jedinou buňku plodu, aby tak zajistila uchování jeho jedinečného genetického potenciálu.

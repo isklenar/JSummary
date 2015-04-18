@@ -1,12 +1,11 @@
-Today, enterprising firms offer, for a fee, to tell you about your genes.
-Selecting our children raises more profound ethical problems.
-This is not new.
-In developed countries, the routine testing of older pregnant women, combined with the availability of abortion, has significantly reduced the incidence of conditions like Down syndrome.
-In some regions of India and China where couples are anxious to have a son, selective abortion has been the ultimate form of sexism, and has been practiced to such an extent that a generation is coming of age in which males face a shortage of female partners.
-Since everyone carries some adverse genes, there is no clear line between selecting against a child with above-average risks of contracting a disease and selecting for a child with unusually rosy health prospects.
-For many parents, nothing is more important than giving their child the best possible start in life.
-Many will condemn this as a resurgence of “eugenics,” the view, especially popular in the early twentieth century, that hereditary traits should be improved through active intervention.
-Something similar could happen with other forms of genetic selection.
-The most alarming implication of this mode of genetic selection, however, is that only the rich will be able to afford it.
-The gap between rich and poor, already a challenge to our ideas of social justice, will become a chasm that mere equality of opportunity will be powerless to bridge.
-But avoiding this outcome will not be easy, for it will require that selection for genetic enhancement is either available to no one or accessible to everyone.
+MELBOURNE – Německý parlament v dubnu stanovil meze využívání genetické diagnostiky.
+Některá ustanovení německého zákona čerpají z obecně sdílených etických zásad úcty k autonomii a soukromí jedince.
+Ani zaměstnavatelé, ani pojišťovny nesmějí genetické testy požadovat.
+Jelikož genetické zkoušky dokážou rostoucí měrou předpovídat nejen zdraví, ale i některé kognitivní a osobnostní rysy, zákaz prověřování zaměstnanců může německé zaměstnavatele znevýhodňovat na mezinárodním trhu.
+Nejkontroverznějším rysem německého zákona je zákaz prenatálních genetických testů na nemoci, které se projeví až v dospělosti.
+Vezměme si například ženu, která ví, že její partner má gen Huntingtonovy choroby.
+Pokud ji potomek zdědí, zhruba ve 40 letech začne trpět nezvladatelnými pohyby, změnami osobnosti a pomalým zhoršováním kognitivních schopností.
+Lidé s Huntingtonovou chorobou obvykle umírají 15 let po propuknutí symptomů.
+Totéž platí pro testy genů, které u žen způsobují náchylnost k rakovině prsu.
+Lze zastávat názor, že mít 40 let života před propuknutím Huntingtonovy choroby nebo rakoviny prsu je lepší než nežít vůbec.
+Není divu, že otázkám ohledně genetických testů se dostává zvláštní pozornosti právě v Německu, vzhledem k národnímu imperativu vyhýbat se jakémukoli opakování zločinů nacistické éry.

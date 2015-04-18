@@ -2,13 +2,11 @@ package cz.cvut.fit.sklenivo.JSummary.classification.knn;
 
 import cz.cvut.fit.sklenivo.JSummary.SummarizationSettings;
 import cz.cvut.fit.sklenivo.JSummary.TrainableSummarizer;
-import cz.cvut.fit.sklenivo.JSummary.classification.ClassificationPreprocessor;
-import cz.cvut.fit.sklenivo.JSummary.classification.ClassificationSentence;
+import cz.cvut.fit.sklenivo.JSummary.classification.*;
+import cz.cvut.fit.sklenivo.JSummary.classification.knn.metrics.KNNMetric;
 import cz.cvut.fit.sklenivo.JSummary.testing.TestableSummarizer;
 
-import java.util.ArrayList;
-import java.util.Collections;
-import java.util.List;
+import java.util.*;
 
 /**
  * Created by ivo on 18.3.2015.
@@ -19,9 +17,15 @@ public class KNN implements TrainableSummarizer, TestableSummarizer {
 
     private List<ClassificationSentence> model;
 
-    public KNN(int k) {
+    private KNNMetric metric;
+
+    private List<TrainingData> trainingData = new ArrayList<>();
+    private List<MeanAndVariance> normalizationData;
+
+    public KNN(int k, KNNMetric metric) {
         this.k = k;
         model = new ArrayList<>();
+        this.metric = metric;
     }
 
     public KNN(){
@@ -54,18 +58,28 @@ public class KNN implements TrainableSummarizer, TestableSummarizer {
     }
 
     @Override
-    public void train(String trainingText, String summary, SummarizationSettings settings) {
-        List<ClassificationSentence> sentences = ClassificationPreprocessor.preProcess(trainingText, summary, settings);
+    public void train(SummarizationSettings settings) {
+        for (TrainingData data : trainingData){
+            List<ClassificationSentence> sentences = ClassificationPreprocessor.preProcess(data.getText(), data.getSummary(), settings);
+            model.addAll(sentences);
+        }
+        this.normalizationData = ClassificationUtils.normalize(model);
 
-        model.addAll(sentences);
     }
 
+    @Override
+    public void addTrainingData(String trainingText, String summary){
+        trainingData.add(new TrainingData(trainingText, summary));
+    }
+
+
     private void classify(List<ClassificationSentence> input){
+        ClassificationUtils.normalize(input, normalizationData);
         for (ClassificationSentence sentence : input) {
             List<KNNTuple> distances = new ArrayList<>();
 
             for (ClassificationSentence modelSentence : model) {
-                double d = manhattanDistance(sentence, modelSentence);
+                double d = metric.evaluate(sentence, modelSentence);
                 distances.add(new KNNTuple(modelSentence, d));
             }
 
@@ -85,16 +99,6 @@ public class KNN implements TrainableSummarizer, TestableSummarizer {
         if (inSummaryCount > k/2){
             sentence.setInSummary(true);
         }
-    }
-
-    private double manhattanDistance(ClassificationSentence s1, ClassificationSentence s2){
-        double ret = 0;
-
-        for (int i =0; i < s1.getFeatures().length; i++){
-            ret += Math.abs(s1.getFeatures()[i] - s2.getFeatures()[i]);
-        }
-
-        return ret;
     }
 
     @Override

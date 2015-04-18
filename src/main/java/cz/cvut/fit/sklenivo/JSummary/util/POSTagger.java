@@ -26,7 +26,7 @@ public class POSTagger {
     private CzechLemma lemma;
 
     public POSTagger(String language) {
-        if (language.equals("english")){
+        if (language.equals(WordDatabases.ENGLISH_LANGUAGE)){
             tagger = new MaxentTagger("resources/StanfordPOS/english-bidirectional-distsim.tagger");
         } else {
             this.fileName = "resources/POS/gwg-cze-latest.xml";
@@ -36,6 +36,14 @@ public class POSTagger {
 
     }
 
+    /**
+     * Tags input text by each words part of speach.
+     *
+     * Tags: _NN noun, _VB verb, _JJ adjective.
+     *
+     * @param text input text
+     * @return tagged text
+     */
     public String tagText(String text) {
         String [] words = text.split(" ");
         StringBuilder builder = new StringBuilder();
@@ -48,8 +56,13 @@ public class POSTagger {
         return builder.toString();
     }
 
+    /**
+     * Tags a single word.
+     * @param word word to tag
+     * @return tagged word
+     */
     private String tag(String word){
-        if (database == null){
+        if (database == null){ //tagging english
             return tagger.tagString(word);
         }
 

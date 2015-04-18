@@ -4,12 +4,17 @@ import cz.cvut.fit.sklenivo.JSummary.SummarizationSettings;
 import cz.cvut.fit.sklenivo.JSummary.TrainableSummarizer;
 import cz.cvut.fit.sklenivo.JSummary.classification.ClassificationPreprocessor;
 import cz.cvut.fit.sklenivo.JSummary.classification.ClassificationSentence;
+import cz.cvut.fit.sklenivo.JSummary.classification.ClassificationUtils;
+import cz.cvut.fit.sklenivo.JSummary.classification.TrainingData;
 import cz.cvut.fit.sklenivo.JSummary.testing.TestableSummarizer;
 import opennlp.tools.sentdetect.SentenceDetectorME;
 import opennlp.tools.tokenize.TokenizerME;
 
 import java.math.BigDecimal;
-import java.util.*;
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
 
 /**
  * Created by ivo on 20.10.14.
@@ -27,6 +32,7 @@ public class NaiveBayes implements TrainableSummarizer, TestableSummarizer {
     private Map<Integer, Map<Double, Double>> discreteProbabilityInSummary = new HashMap<>();
     private Map<Integer, Map<Double, Double>> discreteProbabilityNotInSummary = new HashMap<>();
 
+    private List<TrainingData> trainingData = new ArrayList<>();
 
     private double probabilityInSummary;
 
@@ -36,9 +42,12 @@ public class NaiveBayes implements TrainableSummarizer, TestableSummarizer {
 
 
     @Override
-    public void train(String trainingText, String summary, SummarizationSettings settings) {
-        List<ClassificationSentence> sentences = ClassificationPreprocessor.preProcess(trainingText, summary, settings);
-        model.addAll(sentences);
+    public void train(SummarizationSettings settings) {
+        for (TrainingData data : trainingData){
+            List<ClassificationSentence> sentences = ClassificationPreprocessor.preProcess(data.getText(), data.getSummary(), settings);
+            model.addAll(sentences);
+        }
+
         int in = 0;
         for(ClassificationSentence sentence : model){
             if(sentence.isInSummary()){
@@ -48,7 +57,11 @@ public class NaiveBayes implements TrainableSummarizer, TestableSummarizer {
         probabilityInSummary = ((double)in)/model.size();
 
         prepareMeansAndVariance();
-        printBayesTable(model);
+    }
+
+    @Override
+    public void addTrainingData(String trainingText, String summary) {
+        trainingData.add(new TrainingData(trainingText, summary));
     }
 
     private void prepareMeansAndVariance() {
@@ -61,16 +74,16 @@ public class NaiveBayes implements TrainableSummarizer, TestableSummarizer {
                 discreteProbabilityNotInSummary.put(i, notInSummary);
             }
 
-            double mean = calculateMean(i, true);
+            double mean = ClassificationUtils.calculateMean(i, true, model);
             featuresMeanInSummary.put(i, mean);
 
-            mean = calculateMean(i, false);
+            mean = ClassificationUtils.calculateMean(i, false, model);
             featuresMeanNotInSummary.put(i, mean);
 
-            double variance = calculateVariance(i, true);
+            double variance = ClassificationUtils.calculateVariance(i, true, model);
             featuresVarianceInSummary.put(i, variance);
 
-            variance = calculateVariance(i, false);
+            variance = ClassificationUtils.calculateVariance(i, false, model);
             featuresVarianceNotInSummary.put(i, variance);
         }
     }
@@ -100,52 +113,7 @@ public class NaiveBayes implements TrainableSummarizer, TestableSummarizer {
         return ret;
     }
 
-    private double calculateVariance(int i, boolean summary) {
-        Map<Double, Integer> featureCount = new HashMap<>();
-        int n = 0;
-        for(ClassificationSentence sentence : model){
-            if (sentence.isInSummary() == summary){
-                if (featureCount.containsKey(sentence.getFeatures()[i])){
-                    featureCount.put(sentence.getFeatures()[i], featureCount.get(sentence.getFeatures()[i]) +1);
-                } else {
-                    featureCount.put(sentence.getFeatures()[i], 1);
-                }
-                n++;
-            }
-        }
 
-        double ret1 = 0;
-        double ret2 = 0;
-        for(Double value : featureCount.keySet()){
-            ret1 += (value*value) * (featureCount.get(value)/(double)n);
-            ret2 += (value) * (featureCount.get(value)/(double)n);
-
-        }
-
-        return ret1 - (ret2 * ret2);
-    }
-
-    private double calculateMean(int i, boolean summary) {
-        Map<Double, Integer> featureCount = new HashMap<>();
-        int n = 0;
-        for(ClassificationSentence sentence : model){
-            if (sentence.isInSummary() == summary){
-                if (featureCount.containsKey(sentence.getFeatures()[i])){
-                    featureCount.put(sentence.getFeatures()[i], featureCount.get(sentence.getFeatures()[i]) +1);
-                } else {
-                    featureCount.put(sentence.getFeatures()[i], 1);
-                }
-                n++;
-            }
-        }
-
-        double ret = 0;
-        for(Double value : featureCount.keySet()){
-            ret += value * (featureCount.get(value)/(double)n);
-        }
-
-        return ret;
-    }
 
     private void printBayesTable(List<ClassificationSentence> sentences) {
         System.out.print("\t| ");
@@ -269,7 +237,6 @@ public class NaiveBayes implements TrainableSummarizer, TestableSummarizer {
     @Override
     public String summarize(String input, SummarizationSettings settings) {
         List<ClassificationSentence> sentences = ClassificationPreprocessor.preProcess(input, null, settings);
-        System.out.println("==========================================================");
 
         int i = 0;
         int correct = 0;
@@ -326,4 +293,5 @@ public class NaiveBayes implements TrainableSummarizer, TestableSummarizer {
     public String toString() {
         return "NaiveBayes";
     }
+
 }

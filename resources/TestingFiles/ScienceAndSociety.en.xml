@@ -1,0 +1,383 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<cluster cid="ScienceAndSociety" lang="English">
+
+<document did="scienceAndSocietyHC5" url="http://www.project-syndicate.org/commentary/duve1/English">
+
+<s sid="1">The Origin of Life</s>
+
+<s sid="2">2006-10-06</s>
+
+<s sid="3" annotators="B D">According to modern science’s version of Genesis -- less colorful than the biblical story, but no less wonderful -- Earth was born, together with the Sun and the other planets, in a whirlwind of gas and dust, some 4.5 billion years ago, a little more than nine billion years after the Big Bang.</s>
+
+<s sid="4" annotators="D">A half-billion years later, our planet had recovered sufficiently from the pangs of its violent birth to become physically capable of harboring life.</s>
+
+<s sid="5" annotators="D">After less than another half-billion years, it did indeed harbor life, in particular an entity, called the last universal common ancestor (LUCA), that gave rise through evolution to all known living creatures, including microbes of various kinds, plants, fungi, animals, and humans.</s>
+
+<s sid="6">Primitive organisms arose from nonliving matter in what were probably hot, sulfurous, metal-laden, volcanic waters.</s>
+
+<s sid="7">This unsavory brew was likely “spiced” with abundant small organic molecules such as amino acids, sugars, nitrogenous bases, and other typical components of biological constituents.</s>
+
+<s sid="8" annotators="A B D">One of the most astonishing discoveries of the last decades, revealed by exploration of space, nearby celestial objects, and especially meteorites that fell to Earth, is that many of the chemical building blocks of life form spontaneously throughout the universe.</s>
+
+<s sid="9">Organic chemistry, so named because it was believed to be a prerogative of living organisms, has turned out to be the most widespread and banal chemistry: the chemistry of carbon.</s>
+
+<s sid="10" annotators="B D">How this “cosmic chemistry” gave rise to the first living cells is not known in detail, but the process may be summed up in two words.</s>
+
+<s sid="11" annotators="B D">The first is chemistry, the essence of life.</s>
+
+<s sid="12" annotators="D">Living beings continually manufacture their own constituents from small inorganic and organic building blocks, with the help of catalysts called enzymes and of energy derived from sunlight, mineral sources, or foodstuffs made by other organisms.</s>
+
+<s sid="13">Something similar happened in the origin of life, but along pathways, by the action of catalysts, and with sources of energy that remain to be identified.</s>
+
+<s sid="14">Enormous research efforts have already been devoted to this problem.</s>
+
+<s sid="15">Much has been learned, but no solution is in sight.</s>
+
+<s sid="16" annotators="C">All that can be said is that the processes involved must, being chemical, have been highly deterministic and reproducible, that is, bound to occur under prevailing conditions.</s>
+
+<s sid="17">If chemistry admitted even a small element of chance, there could be no chemical laboratories, no chemical factories.</s>
+
+<s sid="18" annotators="B C D">The second key word is replicability, the ability of certain information-bearing molecules to induce the making of (complementary) copies of themselves by the machineries responsible for the synthesis of their kind.</s>
+
+<s sid="19">This function, fulfilled mostly by DNA today, was probably first carried out by RNA, a close relative of DNA.</s>
+
+<s sid="20">In the beginning, replication concerned only RNA molecules.</s>
+
+<s sid="21">Soon, RNA molecules became involved in the synthesis of proteins according to RNA-supplied blueprints, so that replication extended to proteins, by way of RNA (eventually DNA).</s>
+
+<s sid="22">In turn, replication came to affect, by way of proteins, increasingly complex objects, up to cells and multi-cellular organisms.</s>
+
+<s sid="23" annotators="C D">Replication allowed the endless reproduction of the same entities, generation after generation, which is the basis of genetic continuity.</s>
+
+<s sid="24" annotators="D">Furthermore, because of the inevitable failures in the fidelity of the process, replication necessarily led also to variation (in replicable form), hence to competition among variant lineages for available resources.</s>
+
+<s sid="25" annotators="C">The necessary outcome, as first divined by Charles Darwin, was the selection of those lineages most apt to survive and, especially, produce progeny under existing conditions.</s>
+
+<s sid="26">This process became added to chemistry as soon as replicability appeared, operating first on molecules and, subsequently, on increasingly complex assemblages, until the present day.</s>
+
+<s sid="27" annotators="B C">With replication, chance made its appearance, by way of the variations, or mutations, that were offered to the screening action of natural selection.</s>
+
+<s sid="28" annotators="D">According to all we know, these variations are strictly accidental, totally devoid of any intentionality or foresight – hence the widespread notion that the history of life was ruled by contingency.</s>
+
+<s sid="29" annotators="B D">But this view ignores the possibility that the array of choices offered by chance to natural selection may be sufficiently extensive to allow an optimal or near-optimal solution to emerge, in which case the process is actually close to obligatory and reproducible under the prevailing conditions.</s>
+
+<s sid="30" annotators="D">Indeed, there are strong reasons to believe that optimizing selection may have occurred in the origin and evolution of life more often than is generally assumed.</s>
+
+<s sid="31" annotators="D">This implies that life, to the extent that it is the product of deterministic chemistry and of optimizing selection, is likely to arise, in a form similar to life as we know it, wherever conditions mimic those that surrounded its birth on Earth, thus justifying today’s interest in extraterrestrial life.</s>
+
+<s sid="32" annotators="D">But this optimizing selection during evolution is nothing like proof of intelligent design.</s>
+
+<s sid="33" annotators="A C D">Irrespective of the arguments put forward in support of ID, which have been abundantly refuted, let it simply be stated that a theory based on an a priori declaration that things are not naturally explainable is not a scientific theory.</s>
+
+<s sid="34" annotators="A B C">By definition, the science is based on the idea that the object of study is naturally explainable.</s>
+
+<s sid="35">Why look for an explanation otherwise?</s>
+
+<s sid="36">What is truly wonderful is how much of nature, including the fundamental features of life, has already proven to be explainable.</s>
+
+</document>
+
+<document did="scienceAndSocietyHC4" url="http://www.project-syndicate.org/commentary/lederman2/English">
+
+<s sid="1">Transforming Science Education</s>
+
+<s sid="2">2008-10-09</s>
+
+<s sid="3" annotators="A B C D">CHICAGO – Throughout the West, declining standards in science education are threatening future prosperity.</s>
+
+<s sid="4" annotators="C">Since the mid-nineteenth century, the West has depended on technical innovation and scientific derring-do for its influence and growth.</s>
+
+<s sid="5" annotators="A D">But the West now faces serious competition from the rising nations of Asia, where education in math and science is flourishing.</s>
+
+<s sid="6" annotators="A C">In general, competition in science and technology is a blessing – the more advanced a nation is, the better a customer it is.</s>
+
+<s sid="7">And collaboration and exchange of people make for profitable businesses and higher standards of living.</s>
+
+<s sid="8" annotators="A">But it must be recognized that falling educational standards will eventually hit economic growth.</s>
+
+<s sid="9">The West, particularly the United States, has lived through such a moment of recognition before, when the USSR launched Sputnik in 1957.</s>
+
+<s sid="10" annotators="C">The so-called “Sputnik shock” convinced America and the West of the need for radical reform of science education, particularly recruitment, training, and retention of teachers.</s>
+
+<s sid="11" annotators="B">One reform that demands priority today concerns high school science.</s>
+
+<s sid="12">Mathematics, the foundation for all science, depends on its concise language and logical ordering.</s>
+
+<s sid="13">Physics, once the subject most dependent on mathematics, provides knowledge about the structure of atoms, and the use of mathematics there has now spread to chemistry and biology.</s>
+
+<s sid="14">Essentially all phenomena in chemistry find explanations in the quantum atom, while chemistry and physics undergird molecular biology, which, since the discovery of DNA in the 1950s, dominates modern biology.</s>
+
+<s sid="15" annotators="B">All other sciences – geology, astronomy, neuroscience, oceanography, and myriad hyphenated subjects – depend upon overlapping combinations of biology, chemistry, and physics.</s>
+
+<s sid="16" annotators="B D">Yet today, the vast majority of high schools start the study of science with biology.</s>
+
+<s sid="17" annotators="D">In America, the requirement is usually for three years of science study, and, today, most U.S. students take science in this order: biology, chemistry, physics.</s>
+
+<s sid="18">This sequence of study was devised in 1893.</s>
+
+<s sid="19" annotators="D">I believe that it is obsolete, pedagogically disastrous, and ignores the tremendous scientific advances of the twentieth century.</s>
+
+<s sid="20">Other industrial nations may cycle through pieces of the disciplines, missing the essential coherence of the P-C-B sequence.</s>
+
+<s sid="21" annotators="B D">Studying science should begin with physics, not biology.</s>
+
+<s sid="22">In studying physics, students study algebra simultaneously, motivating them with a sense of the power of mathematics.</s>
+
+<s sid="23">Moreover, physics begins with everyday phenomena requiring few new words (as opposed to conventional ninth-grade biology): motion, velocity, acceleration, falling objects, a sense of gravity as a force, and some new concepts, e.g. mass, momentum, and energy, but with crisp definitions.</s>
+
+<s sid="24" annotators="D">Ninth-grade physics, unlike ninth-grade biology, illustrates the grand sweep of the laws of nature, and the power of an equation to describe a vast number of different phenomena can be taught at this level.</s>
+
+<s sid="25">Classroom experiments make use of simple laboratory devices: inclined planes, pulleys, springs, simple pendulums, but the rules that are revealed have validity out in the real world.</s>
+
+<s sid="26">The fall of a weight (or an apple!) can be connected to the moon’s orbit around the earth and even to the structure of galaxies holding billions of solar systems.</s>
+
+<s sid="27">Indeed, we can study, on a convenient classroom scale, the same forces that move atoms and planets.</s>
+
+<s sid="28">The last month or more of ninth-grade physics introduces atoms, invisible to the naked eye but with strong indirect support.</s>
+
+<s sid="29">Here physics introduces scales of distances, atoms to galaxies, scales of time, nanoseconds to centuries, and scales of energy from electron volts to megajoules.</s>
+
+<s sid="30">These orders of magnitude require metaphors and repetition, but they serve as crucial concepts in our world, especially in cosmology and in evolutionary biology.</s>
+
+<s sid="31" annotators="D">Tenth-grade chemistry makes use of ninth-grade physics, deepening and enriching the student’s grasp, but no basic chemical or biological principles are required for ninth-grade physics.</s>
+
+<s sid="32">Instead, qualitative applications of physics to chemistry and biology heighten interest and emphasize the connections.</s>
+
+<s sid="33">Chemistry is largely a study of molecules, and when they are complex, there is the mysterious transition to life and biology.</s>
+
+<s sid="34" annotators="B">At all stages of the science curriculum, basic questions must be asked.</s>
+
+<s sid="35" annotators="B">How does something work?</s>
+
+<s sid="36" annotators="B">How do we know?</s>
+
+<s sid="37" annotators="B">What are the common laws?</s>
+
+<s sid="38">It was not a physicist, but a biologist, Julius Meyer, who first proposed the law of conservation of energy from a study of biological energy processes.</s>
+
+<s sid="39">The chemist Dalton first gave a proof of the existence of atoms and the engineer Sadi Carnot first gave a proof of the Second Law of Thermodynamics.</s>
+
+<s sid="40" annotators="C">The sequence Physics-Chemistry-Biology implies that continuous collegial professional development for teachers is essential.</s>
+
+<s sid="41" annotators="B C D">Teachers (including those in mathematics) should meet regularly to plot the evolution of their courses, their essential coherence, and the inclusion of stories that illustrate how science works.</s>
+
+<s sid="42">Teachers need time to talk together.</s>
+
+<s sid="43">I know of more than 1,000 high schools that have implemented the P-C-B sequence.</s>
+
+<s sid="44">There is almost universal joy as students begin to grasp the whole picture.</s>
+
+<s sid="45">Elective science courses zoom up in popularity.</s>
+
+<s sid="46">Because this sequence is for all students, what will be retained in the future are the stories and, most importantly, a scientific way of thinking.</s>
+
+<s sid="47">There is no job, no profession, civic activity that will not profit from this kind of education.</s>
+
+<s sid="48" annotators="A C D">But to restore the vitality of science, we need to look at the entire educational system: teachers from pre-school through high school, state and national standards, productive and educationally reinforcing assessments, teaching materials and educational technology, and progress in the neurosciences, cognitive psychology, developmental biology, and nutrition.</s>
+
+<s sid="49" annotators="A">And leadership for this huge revolutionary effort will probably have to come from visionary business executives whose profits depend on education and rationality.</s>
+
+</document>
+
+<document did="scienceAndSocietyHC9" url="http://www.project-syndicate.org/commentary/alberts1/English">
+
+<s sid="1">The Globalization of Science</s>
+
+<s sid="2">2008-04-08</s>
+
+<s sid="3" annotators="B C D">SAN FRANCISCO – Science provides an invaluable source of guidance to individuals and governments.</s>
+
+<s sid="4" annotators="B">This is true, in part, because scientists can often predict the future consequences of current actions.</s>
+
+<s sid="5">For example, we know that someone who smokes two packs of cigarettes a day is likely to have a serious problem with cancer some 40 years later.</s>
+
+<s sid="6">And science predicts that, unless we severely constrain consumption of oil and coal around the world, the climate will continue to warm, increasing ocean volume and melting huge amounts of ice in the Arctic and Antarctic – thereby causing disastrous rises in sea level.</s>
+
+<s sid="7" annotators="A">These are but two examples of thousands of instances in which it makes good sense for decision-makers to take into account what science can predict about the future.</s>
+
+<s sid="8" annotators="C D">And yet, what science knows is far too often overlooked when high-stakes decisions are made.</s>
+
+<s sid="9" annotators="D">This is not to say that scientists should dominate the government decision-making process.</s>
+
+<s sid="10" annotators="C">It is the business of politicians, not scientists, to consider the relative costs and benefits of the options before them, weighing them as they see fit in reaching their conclusions.</s>
+
+<s sid="11">But many such judgments will be poor ones without effective scientific input.</s>
+
+<s sid="12" annotators="B D">For example, the United States government is well-served by an organization called the National Academies, based on three honorary organizations composed of the nation’s most distinguished scientists, engineers, and health professionals (the National Academy of Sciences, National Academy of Engineering, and Institute of Medicine, respectively).</s>
+
+<s sid="13">This independent, non-governmental organization produces more than 200 reports a year, most in response to specific requests from the US government.</s>
+
+<s sid="14">These requests range from questions about the health hazards of trace amounts of arsenic in drinking water, to questions about how best to support various forms of scientific research.</s>
+
+<s sid="15" annotators="C D">Through a rigorous review process, the Academies insist that each report be limited to what science can say about the subject based on evidence and logic, without preempting the decisions that need to be made by others.</s>
+
+<s sid="16">Thus, for example, the report on drinking water predicted the frequency of bladder cancers that would eventually occur in a population exposed to levels of five, 10, or 20 parts per billion of arsenic.</s>
+
+<s sid="17">But it did not say what maximum arsenic concentration the government should legislate.</s>
+
+<s sid="18">The full text of some 3,000 reports by the Academies are available online (at www.nap.edu), and each can be downloaded for free in any of 146 countries.</s>
+
+<s sid="19">The dangers of arsenic are the same across the globe, and in this case a US-based report can help all nations.</s>
+
+<s sid="20" annotators="A B C D">However, there are other important science-based issues that require study by internationally-based organizations in order to be widely accepted.</s>
+
+<s sid="21" annotators="A B D">To meet this need, the InterAcademy Council (IAC) in Amsterdam was founded in 2000 by a worldwide organization of science academies called the InterAcademy Panel (IAP).</s>
+
+<s sid="22" annotators="B C">The IAC is governed by a Board that includes a rotating group of 15 Academy presidents from around the world, representing nations at a range of economic development levels, and its reports present a truly international perspective backed by the world’s best scientists and engineers.</s>
+
+<s sid="23" annotators="B">The IAC provides advice on subjects requested by the United Nations and other international organizations, all of which is freely available at www.interacademycouncil.net.</s>
+
+<s sid="24">The first IAC report was entitled Inventing a Better Future: A Strategy for Building Worldwide Capacities in Science and Technology.</s>
+
+<s sid="25" annotators="A">It argued convincingly for the importance of supporting science and technology institutions in every nation that focus on harnessing the increasing store of international scientific and technical knowledge to meet that nation’s needs.</s>
+
+<s sid="26" annotators="D">Inventing a Better Future also provided detailed guidance to governments and international organizations on how to build institutional capacities for science and technology in both developing and industrialized countries.</s>
+
+<s sid="27">The IAC’s most recent effort, entitled Lighting the Way: Toward a Sustainable Energy Future, presents an ambitious science-based agenda for meeting the world’s enormously challenging energy requirements.</s>
+
+<s sid="28">An important audience for each IAC report are the 100 academies of science that belong to the IAP.</s>
+
+<s sid="29">Each has a special responsibility for disseminating a report’s recommendations throughout its own country, which can considerably enhance the academy’s effectiveness in influencing national policies.</s>
+
+<s sid="30" annotators="A B C D">The combination of the IAP and the IAC is an important new experiment for providing international scientific advice – an experiment that has only just begun to demonstrate its potential effectiveness for spreading the benefits of science and technology to all humanity.</s>
+
+</document>
+
+<document did="scienceAndSocietyHC7" url="http://www.project-syndicate.org/commentary/wieman1/English">
+
+<s sid="1">Reinventing Science Education</s>
+
+<s sid="2">2008-02-05</s>
+
+<s sid="3" annotators="A B C D">VANCOUVER – Despite the growing importance of science in the modern world, science education remains a remote and minor issue for most people.</s>
+
+<s sid="4">This is both short-sighted and hazardous.</s>
+
+<s sid="5" annotators="A B C">After all, science and technology are not only the primary drivers of growth in the modern economy; they are also increasingly central to many major public policy issues, most notably those surrounding climate change and health care.</s>
+
+<s sid="6" annotators="B C">To be sure, the need for more and better science education has not been entirely ignored.</s>
+
+<s sid="7" annotators="B">But little of this attention has been aimed at post-secondary science education, the only level for which there is data showing how to make substantial improvements without enormous costs.</s>
+
+<s sid="8" annotators="C D">Moreover, it is doubtful that great progress can be made at the primary and secondary levels until a higher standard of science learning is set at the post-secondary level.</s>
+
+<s sid="9">The conventional view is that there is little problem with post-secondary science education.</s>
+
+<s sid="10" annotators="C">Scientists and engineers are being produced at rates comparable or higher than in the past, and, while few non-science students find their required science courses enjoyable or useful, that is considered to be inherent to the subject.</s>
+
+<s sid="11" annotators="B C">However, the past 20 years or so have witnessed the emergence of research on science education at the university level carried out by scientists in their respective disciplines.</s>
+
+<s sid="12" annotators="A B D">The results of this research, and the dramatically improved gains in learning and interest achieved in associated teaching experiments, show that there are tremendous opportunities to improve university science education.</s>
+
+<s sid="13" annotators="A B D">Realizing these opportunities, however, will require a different pedagogical approach, one that treats science education as a science, with rigorous standards for teaching effectiveness.</s>
+
+<s sid="14">It also requires abandoning the longstanding and widespread assumption that understanding science means simply learning a requisite body of facts and problem-solving recipes, and that mastery of those facts is the sole qualification needed to be a science teacher.</s>
+
+<s sid="15" annotators="C">Science education research clearly shows that a true understanding of science, as demonstrated by how it is practiced, is not merely about learning information.</s>
+
+<s sid="16" annotators="C">Rather, it is about developing a way of thinking about a discipline that reflects a particular perception of how “knowledge” is established, its extent and limitations, how it describes nature, and how it can be usefully applied in a variety of contexts.</s>
+
+<s sid="17">Developing such a way of thinking is a profoundly different experience from learning a set of facts, and requires very different teaching skills.</s>
+
+<s sid="18" annotators="D">In many respects, science education today is similar to medicine during the mid-1800’s, when a new level of scientific rigor confronted long-held beliefs and well-respected traditional medical practices.</s>
+
+<s sid="19">For example, bloodletting had been in use for thousands of years, with detailed theories explaining its effectiveness.</s>
+
+<s sid="20">And there was convincing evidence that bloodletting worked: most people recovered from their illness after being treated, just as many students (though a smaller percentage) thrive in our traditional lecture-based university science courses and go on to become scientists.</s>
+
+<s sid="21">Over the course of several decades, however, an enormous intellectual shift occurred in how people came to think about the practice of medicine.</s>
+
+<s sid="22">Rigorous scientific standards were adopted, a better understanding of the complexities of the human body was developed, and a higher standard of evidence for the efficacy of treatments was established.</s>
+
+<s sid="23">The fact that some patients survived bloodletting was no longer good enough.</s>
+
+<s sid="24">While this shift led to far more effective medical treatments, it did not come quickly or naturally to people.</s>
+
+<s sid="25">Even today, a large number of people are willing to reject medical science in favor of home remedies supported only by an anecdote offered by a neighbor or relative.</s>
+
+<s sid="26">There is little reason to think that the adoption of a more scientific approach to science education will be much easier.</s>
+
+<s sid="27">Yet it has begun, and completing it offers the hope of moving from the educational equivalent of bloodletting to vaccines and antibiotics.</s>
+
+<s sid="28" annotators="A C D">With continued research and effective implementation of new findings about science education, it will be possible to achieve far more meaningful science learning for all university students.</s>
+
+<s sid="29">Giving students a deeper understanding of the world around them is inherently enriching.</s>
+
+<s sid="30" annotators="A">It will also enable them to make wiser decisions on critically important matters of public policy, and to be far more creative and effective members of the work force.</s>
+
+</document>
+
+<document did="scienceAndSocietyHC8" url="http://www.project-syndicate.org/commentary/nowotny1/English">
+
+<s sid="1">Enlightenment on Trial</s>
+
+<s sid="2">2005-10-07</s>
+
+<s sid="3" annotators="A B">Ugly debates about religion and science usually seem to be confined to the United States.</s>
+
+<s sid="4" annotators="A B">In recent months, however, such debates have begun to spread – first to Europe and then around the world.</s>
+
+<s sid="5" annotators="B C D">Science, it seems, is drifting into political dangers it has not faced since before the Enlightenment.</s>
+
+<s sid="6" annotators="C D">Europe began its own American-style debate on the origins of life when Cardinal Christoph Schönborn of Vienna cast doubt on the acceptability of Darwinism and evolutionary theory to people who see themselves as faithful Roman Catholics.</s>
+
+<s sid="7">The Cardinal argued that evolution is the work of God and that evolutionary theory should be interpreted in that light and no other.</s>
+
+<s sid="8">With Cardinal Schönborn’s intervention, the peace between science and religion that in Old Europe had held almost since the Enlightenment – and at least since the historically hard-won eviction of the Church from politics in the late nineteenth and early twentieth centuries – seemed suddenly to have been broken.</s>
+
+<s sid="9">Revealed truth, the Cardinal seemed to say, must be accorded primacy over the truths science reveals through reason.</s>
+
+<s sid="10">This is not to say that religious sentiment or, in the case of Germany, bitter historical experience stemming from the Nazi era, had not informed other European debates, say, on the ethics of stem-cell research.</s>
+
+<s sid="11" annotators="C D">Indeed, the religious background of Europe’s nations clearly manifested itself in various European laws on such research, with the United Kingdom and Sweden being the most liberal and Italy, Austria, and Poland the most restrictive.</s>
+
+<s sid="12" annotators="A D">But none of these debates directly challenged the role of science in society or posed, as Cardinal Schönborn did, the idea that religion and science are potentially incompatible.</s>
+
+<s sid="13">Following the Cardinal’s declaration, many pointed to the US as a warning sign of the dangers inherent in politicizing science through religion.</s>
+
+<s sid="14">They noted that President Bush had sided openly with those who want to make evolutionary theory optional in schools’ science curricula.</s>
+
+<s sid="15">The reason that such pseudo-science has prevailed in so many American schools is directly related to America’s tremendously decentralized school system, which allows committed local groups of the religious-minded to reshape the curriculum.</s>
+
+<s sid="16">The power of faith-based movements in the US is undeniable, and their influence in other areas where science and politics meet, including the availability of certain drugs – the so-called “morning after” pill being one example – is growing.</s>
+
+<s sid="17">It is unlikely that European schools, because of their structure, can be invaded by “creationism.” Yet Europe should not think itself immune to this problem.</s>
+
+<s sid="18" annotators="D">When dogmatic faith enters politics, compromises on controversial issues, which are indispensable in a democracy, become difficult to achieve.</s>
+
+<s sid="19">This is because fundamental values – as opposed to, say, the distribution of material resources – are seen as being non-negotiable.</s>
+
+<s sid="20" annotators="B C">The danger is that scientific decisions with a scientific-technical component are no longer subject to study or rational argument, but instead are fought over by various interest groups, with some invariably claiming that their taxes should be used to fund only research that is compatible with their values.</s>
+
+<s sid="21" annotators="A">Debates about the nature and benefits of science are not confined to the US and Europe.</s>
+
+<s sid="22">When South Korea’s National University announced the first-ever successful cloning of a dog, the news triggered arguments about science and society throughout Asia.</s>
+
+<s sid="23" annotators="B D">Although the language of religion was not used overtly, the debate in Asia reflected the same fears that science is somehow “out of control” and far too powerful.</s>
+
+<s sid="24">One key reason for this is the fact that China is pouring vast resources into research and development.</s>
+
+<s sid="25">Between 1995 and 2002, it doubled the percentage of its rapidly growing GDP that it invests in R&amp;D, with biotechnology and other high-tech fields enjoying the highest priority.</s>
+
+<s sid="26">Science, it seems, is becoming a partner in the unnerving development of a new global superpower.</s>
+
+<s sid="27" annotators="C">Today, science belongs to a rapidly globalizing world.</s>
+
+<s sid="28" annotators="A D">It is perceived as a motor of economic growth, but also as a threat to our security and beliefs.</s>
+
+<s sid="29" annotators="A B C">Cultural worldviews and religion, of course, will continue to shape the overall cultural and value context within which science and technology interact.</s>
+
+<s sid="30">But values are subject to change, often in response to past experience and fears about the future.</s>
+
+<s sid="31" annotators="B">It took centuries for science to carve out its sphere of autonomy, always a relative one, from politics and religion alike.</s>
+
+<s sid="32" annotators="B D">This autonomy has served science well, and independent and accountable science has served society and the economy well.</s>
+
+<s sid="33" annotators="B D">If this beneficial relationship is to be maintained, scientific independence – from both religious dogmatism and governmental intervention – must be defended.</s>
+
+<s sid="34">Who would have thought that, at the dawn of the twenty-first century, the old Enlightenment debates would still be so potent?</s>
+
+</document>
+
+</cluster>

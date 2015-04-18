@@ -1,26 +1,41 @@
-For some time, scientists have believed that individual human beings were 99.9% genetically identical.
-The 0.1% of the genome that was different (approximately 3,000,000 bases of DNA) was comprised of “single nucleotide polymorphisms” (SNPs are alterations of the individual bases of DNA) scattered throughout the genome.
-It was thought that some of these DNA alterations may in part explain some of the physical differences that exist between two different, but otherwise normal individuals.
-In the summer of 2004, two groups of scientists working independently (one led by researchers at Harvard Medical School and Brigham and Women’s Hospital in Boston and the other led by researchers at Cold Spring Harbor Laboratories) called this scientific dogma into question.
-Their research identified hundreds of regions of the human genome where the number of copies of a particular DNA segment varied from individual to individual.
-With only a few exceptions, all DNA segments were thought to exist in two copies (one copy inherited from your mother and one copy inherited from your father).
-Both studies showed that there are hundreds of regions of the genome that could have more or less than the expected two copies.
-This alerted scientists to the existence of a larger source of genetic variation than was previously understood, and forced us to speculate on the implications of this discovery.
-This discovery was made recently because until now, the technology was not available to comprehensively assess genomic imbalances in a genome-wide fashion.
-That has changed over the last five or six years, with the development of a technique known as “array-based comparative genomic hybridization” (array-CGH), revolutionizing genetic research and diagnostics.
-About three years ago at Brigham and Women’s Hospital, when we were seeking a potential tool for high-resolution diagnostics, array-CGH offered the hope of providing a reliable and efficient genome-wide test that could detect gains or losses in an unbiased and non-subjective fashion.
-When validation experiments were performed that compared the DNA from one “normal, healthy” individual with the DNA from another “normal, healthy” individual, we were astonished to find an average of 12 DNA fragments that showed copy number differences between the two individuals being compared.
-These became known as copy number variants, or CNVs.
-Combining the data from our study and the study from Cold Spring Harbor Laboratories, over 300 regions of the genome were found to exhibit CNVs among normal individuals.
-Since these two initial studies, many other groups, including ours, have confirmed and documented many more CNVs in other individuals studied.
-This is the goal of the Structural Genomic Variation Consortium’s Copy Number Variation Project, which aims at providing researchers the most comprehensive list and characterization of CNVs in humans.
-The Consortium recently assessed 270 individuals from four populations with ancestry in Africa, Asia or Europe (known as the HapMap collection) to construct a new map of the human genome.
-Using two complementary genome-wide technologies, with subsequent validation studies, a total of 1,447 CNVs were identified.
-The data clearly demonstrate that individuals are not as genetically similar as once thought.
-Many of the regions in which the CNVs were identified overlapped known disease genes.
-Since they are being identified in normal individuals, CNVs may not necessarily be a direct cause of human disease, but many may confer susceptibility to certain diseases, serve as disease markers, and/or indicate potential regions of genomic instability.
-Some CNVs are also associated with genes involved in immune response and detoxification-related metabolism (some of the human body’s reactions to the environment that we live in).
-Indeed, some CNVs may turn out to explain why some people react differently to specific medications.
-Hopefully, a more comprehensive understanding of human genetic variation (i.e. single base pair changes and structural genomic variation, such as CNVs) will ultimately help physicians to prescribe medication in a more individualized manner, that would result in maximum therapeutic effects to each patient, with minimal side effects.
-Overall, we anticipate that many of these CNVs will provide explanations to how we adapt and interact with our ever-changing environment.
-Indeed, as studies continue to identify and characterize CNVs, we anticipate achieving a better understanding of the relationship between these genetic variations, complex diseases, and human adaptability.
+Pokrok ve znalostech má často svůj rub i líc.
+V posledních 60 letech byla jedním zřetelným příkladem této pravdy jaderná fyzika.
+V příštích 60 letech se takovým příkladem může stát genetika.
+Podnikavé firmy dnes nabízejí, že vám za poplatek povědí něco o vašich genech.
+Tvrdí, že tyto poznatky vám pomohou žít déle a lépe.
+Můžete si například zařídit mimořádná vyšetření, která by odhalila příznaky nemocí, u nichž hrozí největší riziko, že jimi onemocníte, anebo ve snaze toto riziko snížit můžete upravit svůj jídelníček.
+Jestliže vaše vyhlídky na dlouhověkost nejsou dobré, můžete si sjednat další životní pojištění, nebo dokonce odejít do předčasného důchodu, abyste měli dost času na to, co jste vždycky chtěli dělat.
+Obhájci soukromí už s jistým úspěchem vyvíjejí snahu zabránit pojišťovnám, aby před uzavřením životního pojištění požadovaly genetická vyšetření.
+Avšak jestliže jedinci mohou podstupovat testy, které jsou pojišťovacím společnostem zapovězeny, a jestliže ti, kdo získají nepříznivé genetické informace, si pak přikoupí dodatečnou životní pojistku, aniž by se zmínili o testech, jimiž prošli, podvádějí ostatní vlastníky životního pojištění.
+K úhradě ztrát bude potřeba zvýšit pojistné a ti, kdo mají dobrou genetickou prognózu, mohou od životního pojištění odstoupit, aby se vyhnuli dotování podvodníků, což opět požene pojistné výš.
+Není ještě potřeba se příliš děsit.
+Government Accountability Office, kontrolní úřad Kongresu USA, zaslal několika testovacím společnostem tytéž genetické vzorky a obdržel propastně odlišné a převážně bezcenné rady.
+Jak se však věda bude zdokonalovat, s tímto pojišťovacím problémem bude nezbytné se vypořádat.
+Hlubší etické problémy přináší možnost vybírat si děti.
+To není nové.
+Ve vyspělých zemích rutinní testování starších těhotných žen společně s dostupností potratu výrazně snížilo výskyt vad, jako je Downův syndrom.
+V některých oblastech Indie a Číny, kde páry zoufale touží po synovi, se nejkrajnější podobou sexismu staly selektivní potraty a provádějí se v takovém rozsahu, že dospívá generace, v níž se mladí muži potýkají s nedostatkem partnerek.
+Výběr dětí nemusí zahrnovat přerušení těhotenství.
+Některé páry, u nichž hrozí přenos genetického onemocnění na potomky, už několik let využívají mimoděložního oplodnění, při němž se vytvoří několik embryí, která lze testovat na přítomnost vadného genu, a pak se do dělohy usadí jen ta embrya, která jej nemají.
+V současnosti páry této techniky využívají, aby zabránily předání genů, z nichž plyne zvýšené riziko vzniku některých druhů rakoviny.
+Vzhledem k tomu, že si každý nese nějaké nepříznivé geny, neexistuje jasná hranice mezi rozhodnutím proti dítěti s nadprůměrným rizikem přenosu nemoci a rozhodnutím pro dítě s mimořádně růžovými zdravotními vyhlídkami.
+Genetický výběr tudíž bude nevyhnutelně směřovat ke genetickému zdokonalování.
+Pro mnoho rodičů není nic důležitějšího než zajistit svému dítěti nejlepší start do života.
+Kupují drahé hračky, aby co možná nejvíc zvýšili schopnost dítěte se učit, a ještě mnohem víc peněz vydají za soukromé školy nebo za mimoškolní doučování, s nadějí, že jejich potomek vynikne u zkoušek, které rozhodují o přijetí na elitní univerzity.
+Nejsme možná daleko od doby, kdy dokážeme poznat geny, jež v tomto úsilí zvyšují šance na úspěch.
+To mnozí odsoudí jako vzkříšení „eugeniky“, názoru, obzvlášť populárního na počátku dvacátého století, že by bylo dobře aktivními zásahy vylepšovat dědičné vlastnosti.
+V jistém smyslu tomu tak je a v rukou autoritářských režimů by genetická selekce mohla připomínat hrůzy dřívějších forem eugeniky, s jejich obhajobou odporných pseudovědeckých politických přístupů, zejména ve vztahu k „rasové hygieně“.
+V liberálních, tržně motivovaných společnostech však eugenika nebude nátlakově prosazována státem v zájmu kolektivního dobra.
+Namísto toho půjde o důsledek rodičovského rozhodování a činnosti svobodného trhu.
+Budou-li výsledkem zdravější a bystřejší lidé s lepšími schopnostmi řešit problémy, půjde o dobrou věc.
+Ale i když se rodiče budou rozhodovat pro dobro svých dětí, vedle přínosů mohou také číhat nebezpečí.
+V případě výběru podle pohlaví je zřejmé, že páry, které si nezávisle vybírají to nejlepší pro své dítě, mohou zapříčinit stav, kdy postavení jejich potomků bude horší, než by bylo, kdyby o pohlaví dítěte nemohl nikdo rozhodovat.
+Něco podobného by se mohlo stát i s dalšími formami genetického výběru.
+Poněvadž nadprůměrná výška koreluje s nadprůměrným příjmem a výška zřetelně má genetickou složku, není fantazírováním si představit, že se páry budou rozhodovat pro vyšší děti.
+Důsledkem by mohl být genetický „závod ve zbrojení“, který povede ke stále vyšším dětem, což by významně zatížilo životní prostředí zvýšenou spotřebou, nezbytnou k nasycení větších lidských bytostí.
+Nejznepokojivějším důsledkem tohoto režimu genetické selekce je ovšem to, že si ji budou moci dovolit pouze majetní lidé.
+Trhlina mezi bohatými a chudými, už dnes rukavice hozená našim ideálům sociální spravedlnosti, se promění v propast, již nedokáže přemostit pouhá rovnost příležitostí.
+Takovou budoucnost by nikdo z nás neměl schvalovat.
+Vyhnout se tomuto vyústění ovšem nebude snadné, neboť to bude vyžadovat, aby genetické zdokonalování buď nebylo dostupné nikomu, nebo aby bylo dostupné všem.
+První možnost by vyžadovala donucování a – vzhledem k tomu, že jednotlivé země nepřijmou, aby ostatní získali konkurenční náskok – mezinárodní úmluvu o zřeknutí se přínosů, jež by genetické zdokonalování mohlo přinést.
+Druhá možnost, všeobecná dostupnost, by vyžadovala bezprecedentní míru sociální pomoci chudým a mimořádně těžká rozhodnutí ohledně toho, co vlastně dotovat.

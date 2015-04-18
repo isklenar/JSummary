@@ -1,30 +1,26 @@
-What appeared to be the most momentous scientific advance of 2005 is currently under siege.
-In June, the prestigious journal Science published an article by the South Korean scientist Woo-Suk Hwang and an international team of co-authors describing how they had developed what were, in effect, “made to order” lines of human stem cells cloned from an adult.
-Although the scientific validity of their research is now the subject of several separate investigations, it is no less important to examine its ethical implications.
-Hwang and his colleagues claimed to have replaced the nucleus of an unfertilized human egg with the nucleus of an ordinary cell taken from another person, developing stem-cell lines from the resulting embryo that matched the DNA of the person who supplied the ordinary cell.
-That achievement appeared to take us significantly closer to a world in which patients could be given cell or tissue transplants that their bodies would not reject, because the biological materials, cloned from the patients themselves, would be a perfect match.
-At the beginning of December, Hwang disclosed that some of the eggs came from two women working in his lab, and that other “donors” had been paid for their eggs – a breach of ethical guidelines that had nothing to do with the accuracy of the science.
-But then Hwang’s collaborators began questioning the validity of the experiment itself, and Hwang notified Science that he wished to withdraw the paper.
-At the time of this writing, he still defends the validity of his work, while admitting “human errors” in the preservation of the stem-cell lines, including contamination by a fungus.
-He has reportedly even suggested that some cells may have been tampered with.
-We will not know how close we are to the production of individually tailored stem-cell lines until the scientific investigations into Hwang’s research are completed.
-Nevertheless, few researchers doubt that what Hwang and his colleagues claimed to do is, in principle, achievable.
-If Hwang was not the first to do it, someone else eventually will.
-Once it can be done reliably, it will pave the way for important medical breakthroughs.
-But the ethical significance of such research goes far beyond the undoubted importance of saving critically ill patients.
-Proving the possibility of cloning from the nucleus of an ordinary human cell would transform the debate about the value of potential human life, for we would find that “potential human life” was all around us, in every cell of our bodies.
-For example, when President George W. Bush announced in 2001 that the United States would not fund research into new stem-cell lines that are created from human embryos, he offered the following reason: “Like a snowflake, each of these embryos is unique, with the unique genetic potential of an individual human being.”
-But it is precisely this reasoning that is threatened by what Hwang and his team claimed to have achieved.
-If it is the uniqueness of human embryos that makes it wrong to destroy them, then there is no compelling reason not to take one cell from an embryo and destroy the remainder of it to obtain stem cells, for the embryo’s “unique genetic potential” would be preserved.
-This possibility highlights the weakness of the argument that abortion, too, is wrong because it destroys a genetically unique human being.
-By this reasoning, a woman who finds herself pregnant at an inconvenient time could have an abortion, as long as she preserves a single cell from the fetus to ensure that its unique genetic potential is preserved.
-But it seems absurd that this should make any difference to the morality of aborting the fetus.
-If, at a later date, the woman wants to have a child, why should she use the DNA of her earlier, aborted fetus rather than conceiving another fetus in the usual way?
-Each fetus – the one she aborts and the one she later conceives through sexual intercourse – has its own “unique” DNA.
-In the absence of special reasons, like a change in sexual partners, there seems to be no reason to prefer the existence of one child to that of the other.
-Perhaps the assumption is that, as opponents of abortion sometimes say, the aborted fetus had the genetic potential to become a Beethoven or an Einstein.
-But, for all we know, it is the next fetus that the woman will conceive, not the one she aborted, that will turn out to be the Beethoven or Einstein.
-So why prefer one genetic potential over the other?
-Once we abandon arguments based on potential, the claim that it is wrong to kill embryos and fetuses must be based on the nature of those entities themselves – that they are actual human beings who already possess the characteristics that make killing wrong.
-But, because fetuses, at least at the stage of development when most abortions are performed, have yet to develop any kind of consciousness, it seems reasonable to regard ending their lives as much less serious than killing a normal human being.
-If so, then this is all the more true of embryos.
+Po jistý čas byli vědci přesvědčeni, že jednotlivé lidské bytosti jsou z 99,9% geneticky identické.
+Oněch 0,1% genomu, které se lišily (zhruba 3 miliony bází DNA), tvořily „jednonukleotidové polymorfismy“ (modifikace individuálních bází DNA) rozptýlené po celém genomu.
+Myslelo se, že některé z těchto modifikací DNA mohou částečně vysvětlovat některé tělesné odlišnosti mezi dvěma různými, ale jinak běžnými jedinci.
+V létě roku 2004 dvě skupiny vědců pracující nezávisle na sobě (jedna vedená výzkumníky lékařské fakulty Harvardovy univerzity a Brighamovy a ženské nemocnice v Bostonu a druhá pod vedením výzkumníků Cold Spring Harbor Laboratories) toto dogma zpochybnily.
+Jejich výzkum určil stovky oblastí lidského genomu, kde se jedinec od jedince lišila celá řada kopií konkrétního segmentu DNA.
+Až na několik málo výjimek se myslelo, že segmenty DNA existují ve dvou kopiích (jedna kopie zděděná po matce, druhá kopie zděděná po otci).
+Obě studie prokázaly, že existují stovky oblastí genomu, které mohou mít více nebo méně kopií než očekávané dvě.
+To vědce upozornilo na existenci většího zdroje genetické variace, než se dříve myslelo, a přimělo nás to spekulovat o důsledcích tohoto objevu.
+Tento objev byl učiněn nedávno, protože až dosud nebyla dostupná technika, která by umožňovala uceleně určovat genomické nevyváženosti způsobem zahrnujícím celou šíři genomu.
+To se za posledních pět šest let změnilo, díky rozvoji techniky známé jako „array-based comparative genomic hybridization“ (array-CGH) čili „maticová komparativní genomová hybridizace“, která v genetickém výzkumu a diagnostice způsobila revoluci.
+Asi před třemi lety jsme v Brighamově a ženské nemocnici sháněli možný nástroj pro diagnostiku s vysokým rozlišením a technika array-CGH nám dala naději na provedení spolehlivého a efektivního testu celého genomu, který by dokázal nezkresleně a bez subjektivního zabarvení určit přírůstky a úbytky.
+Když byly provedeny validační experimenty, které porovnávaly DNA od jednoho „normálního, zdravého“ jedince s DNA od jiného „normálního, zdravého“ jedince, zaskočilo nás zjištění, že v průměru 12 fragmentů DNA vykazovalo mezi danými dvěma porovnávanými jednotlivci rozdíly v počtu kopií.
+Ty vešly ve známost jako „copy number variants“ (CNVs) neboli variace v počtu kopií.
+Sloučením dat z naší studie a ze studie Cold Spring Harbor Laboratories bylo zjištěno přes 300 oblastí genomu, které mezi běžnými jedinci prokazují CNVs.
+Od těchto dvou prvotních studií mnohé další skupiny, včetně té naší, potvrdily a zdokumentovaly mnohem víc CNVs u dalších zkoumaných jedinců.
+Právě to je cílem Projektu variací v počtu kopií Konsorcia strukturální variace genomu, který se snaží poskytnout výzkumníkům nejucelenější seznam a charakteristiku CNVs u lidí.
+Konsorcium nedávno posoudilo 270 jedinců čtyř populací s předky v Africe, Asii nebo Evropě (známých jako soubor HapMap), aby sestavilo novou mapu lidského genomu.
+Za použití dvou komplementárních celogenomových technologií a s následnými validačními studiemi bylo zjištěno celkem 1447 CNVs.
+Data jednoznačně prokazují, že jedinci si nejsou natolik geneticky podobní, jak se kdysi myslelo.
+Mnohé oblasti, kde byly rozpoznány CNVs, se překrývají se známými geny nemocí.
+Poněvadž se zjišťují u běžných jedinců, CNVs nemusí být nutně přímou příčinou lidských chorob, ale mnohé mohou způsobovat náchylnost k jistým nemocím, sloužit jako předzvěst onemocnění nebo naznačovat potenciální oblasti genomické nestability.
+Některé CNVs se rovněž spojují s geny podílejícími se na imunitní reakci a metabolismu souvisejícím s detoxifikací (jde o některé reakce lidského těla na prostředí, v němž žijeme).
+Některé CNVs by se mohly ukázat jako vysvětlení toho, proč někteří lidé reagují na určitá léčiva odlišně.
+Doufejme, že ucelenější porozumění lidské genetické variaci (například změnám jednotlivých párů bází a strukturním genomickým odchylkám, jako jsou CNVs) nakonec pomůže lékařům předepisovat léky individualizovanějším způsobem, který by u každého pacienta vyústil v maximální terapeutický účinek při minimálních vedlejších účincích.
+Celkově očekáváme, že mnohé z těchto CNVs nám přinesou vysvětlení, jak se adaptujeme na neustále se měnící životní prostředí a jak s ním interagujeme.
+Ba jak studie nadále CNVs určují a charakterově popisují, očekáváme dosažení lepšího porozumění vztahu mezi těmito genetickými variacemi, složitými nemocemi a lidskou adaptabilitou.

@@ -43,4 +43,16 @@ public class SummarizationSettings {
     public String getLanguage() {
         return language;
     }
+
+    @Override
+    public String toString() {
+        return "SummarizationSettings{" +
+                "ratio=" + ratio +
+                ", stemming=" + stemming +
+                ", wordNet=" + wordNet +
+                ", stopWords=" + stopWords +
+                ", useNLP=" + useNLP +
+                ", language='" + language + '\'' +
+                '}';
+    }
 }

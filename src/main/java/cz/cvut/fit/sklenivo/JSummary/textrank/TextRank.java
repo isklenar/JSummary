@@ -123,7 +123,7 @@ public class TextRank implements Summarizer, TestableSummarizer {
 
         //max 30 iterations, that is enough for majority of texts
         //the longer the text is, the faster it converges
-        for (int i = 0; i < 30; i++) {
+        for (int i = 0; i < 3000; i++) {
             previousScores.clear();
             for (TextRankSentence textRankSentence : textRankSentences) {
                 previousScores.add(textRankSentence.getScore());

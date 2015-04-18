@@ -1,7 +1,7 @@
-MELBOURNE – In April, Germany’s parliament placed limits on the use of genetic diagnosis.
-Some provisions of the German law draw on the widely shared ethical principles of respect for individual autonomy and privacy.
-Individuals are granted both the right to know – to be informed of the results of any genetic test about themselves – and the right to choose to live in ignorance of what a genetic test may predict about their future.
-If insurance companies outside Germany are permitted to require genetic tests while German companies are prohibited from doing so, then people who know they have life-shortening genetic diagnoses will get their life insurance from German insurance companies.
-As genetic testing becomes increasingly able to predict not only health, but also some cognitive and personality traits, the prohibition on employer testing may also put German employers at a disadvantage in the international marketplace.
-But, in the long term, if we are serious about prohibiting such tests, we need an international agreement – on both insurance and employment – to ensure a level playing field for all countries.
-The German law’s most controversial feature is a prohibition on prenatal genetic testing for diseases that will manifest themselves only in adulthood.
+V současnosti se genom podobá románu napsanému v neznámém jazyce.
+Na vyvolání zdravotních potíží se často podílí společné působení genů, občas za přispění faktorů, jako jsou strava či návyky dané osoby.
+První je prostá detekce genů, samotných nebo v kombinacích, které pravděpodobně vedou k určitým chorobám.
+Druhou výzvou je porozumět tomu, jak vzájemným působením genů či vlivem dalších faktorů chorobný stav vzniká, což by mělo umožnit vývoj nových preventivních opatření či terapií vycházejících z podrobností o tom, jak daná zdravotní komplikace vzniká a jak se vyvíjí.
+Zatímco někteří badatelé hledají statistické korelace, jiní se zabývají způsobem interakce konkrétních genů.
+Dnes už dokážeme čím dál laciněji sekvenovat genomy a odpovídající zdravotnické informace pomalu převádíme do podoby čitelné pro počítače.
+Za pět let budeme čelit výzvě jak všechny tyto poznatky prostřednictvím lepších preventivních opatření, dokonalejších léků a kvalitnější péče promítnout do praxe.

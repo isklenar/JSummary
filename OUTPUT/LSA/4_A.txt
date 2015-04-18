@@ -1,6 +1,8 @@
-In June, the prestigious journal Science published an article by the South Korean scientist Woo-Suk Hwang and an international team of co-authors describing how they had developed what were, in effect, “made to order” lines of human stem cells cloned from an adult.
-That achievement appeared to take us significantly closer to a world in which patients could be given cell or tissue transplants that their bodies would not reject, because the biological materials, cloned from the patients themselves, would be a perfect match.
-Proving the possibility of cloning from the nucleus of an ordinary human cell would transform the debate about the value of potential human life, for we would find that “potential human life” was all around us, in every cell of our bodies.
-If it is the uniqueness of human embryos that makes it wrong to destroy them, then there is no compelling reason not to take one cell from an embryo and destroy the remainder of it to obtain stem cells, for the embryo’s “unique genetic potential” would be preserved.
-This possibility highlights the weakness of the argument that abortion, too, is wrong because it destroys a genetically unique human being.
-By this reasoning, a woman who finds herself pregnant at an inconvenient time could have an abortion, as long as she preserves a single cell from the fetus to ensure that its unique genetic potential is preserved.
+Jejich výzkum určil stovky oblastí lidského genomu, kde se jedinec od jedince lišila celá řada kopií konkrétního segmentu DNA.
+Když byly provedeny validační experimenty, které porovnávaly DNA od jednoho „normálního, zdravého“ jedince s DNA od jiného „normálního, zdravého“ jedince, zaskočilo nás zjištění, že v průměru 12 fragmentů DNA vykazovalo mezi danými dvěma porovnávanými jednotlivci rozdíly v počtu kopií.
+Ty vešly ve známost jako „copy number variants“ (CNVs) neboli variace v počtu kopií.
+Data jednoznačně prokazují, že jedinci si nejsou natolik geneticky podobní, jak se kdysi myslelo.
+Mnohé oblasti, kde byly rozpoznány CNVs, se překrývají se známými geny nemocí.
+Některé CNVs by se mohly ukázat jako vysvětlení toho, proč někteří lidé reagují na určitá léčiva odlišně.
+Celkově očekáváme, že mnohé z těchto CNVs nám přinesou vysvětlení, jak se adaptujeme na neustále se měnící životní prostředí a jak s ním interagujeme.
+Ba jak studie nadále CNVs určují a charakterově popisují, očekáváme dosažení lepšího porozumění vztahu mezi těmito genetickými variacemi, složitými nemocemi a lidskou adaptabilitou.

@@ -1,7 +1,8 @@
-In June, the prestigious journal Science published an article by the South Korean scientist Woo-Suk Hwang and an international team of co-authors describing how they had developed what were, in effect, “made to order” lines of human stem cells cloned from an adult.
-Hwang and his colleagues claimed to have replaced the nucleus of an unfertilized human egg with the nucleus of an ordinary cell taken from another person, developing stem-cell lines from the resulting embryo that matched the DNA of the person who supplied the ordinary cell.
-Nevertheless, few researchers doubt that what Hwang and his colleagues claimed to do is, in principle, achievable.
-But the ethical significance of such research goes far beyond the undoubted importance of saving critically ill patients.
-Proving the possibility of cloning from the nucleus of an ordinary human cell would transform the debate about the value of potential human life, for we would find that “potential human life” was all around us, in every cell of our bodies.
-If it is the uniqueness of human embryos that makes it wrong to destroy them, then there is no compelling reason not to take one cell from an embryo and destroy the remainder of it to obtain stem cells, for the embryo’s “unique genetic potential” would be preserved.
-Once we abandon arguments based on potential, the claim that it is wrong to kill embryos and fetuses must be based on the nature of those entities themselves – that they are actual human beings who already possess the characteristics that make killing wrong.
+Myslelo se, že některé z těchto modifikací DNA mohou částečně vysvětlovat některé tělesné odlišnosti mezi dvěma různými, ale jinak běžnými jedinci.
+Jejich výzkum určil stovky oblastí lidského genomu, kde se jedinec od jedince lišila celá řada kopií konkrétního segmentu DNA.
+Až na několik málo výjimek se myslelo, že segmenty DNA existují ve dvou kopiích (jedna kopie zděděná po matce, druhá kopie zděděná po otci).
+Obě studie prokázaly, že existují stovky oblastí genomu, které mohou mít více nebo méně kopií než očekávané dvě.
+To se za posledních pět šest let změnilo, díky rozvoji techniky známé jako „array-based comparative genomic hybridization“ (array-CGH) čili „maticová komparativní genomová hybridizace“, která v genetickém výzkumu a diagnostice způsobila revoluci.
+Když byly provedeny validační experimenty, které porovnávaly DNA od jednoho „normálního, zdravého“ jedince s DNA od jiného „normálního, zdravého“ jedince, zaskočilo nás zjištění, že v průměru 12 fragmentů DNA vykazovalo mezi danými dvěma porovnávanými jednotlivci rozdíly v počtu kopií.
+Data jednoznačně prokazují, že jedinci si nejsou natolik geneticky podobní, jak se kdysi myslelo.
+Celkově očekáváme, že mnohé z těchto CNVs nám přinesou vysvětlení, jak se adaptujeme na neustále se měnící životní prostředí a jak s ním interagujeme.

@@ -1,53 +1,30 @@
-DALIAN, CHINA – Last week, a company called Complete Genomics announced 10 new customers for its genome-sequencing service.
-The price was not specified, but the company said its goal is to offer the service for $5,000 within a year.
-What struck me was not the announcement itself, but the name of the CEO: Cliff Reid, the CEO when I knew him in the 1980’s of a text-search company called Verity.
-The connection hit me almost immediately.
-Genes are, in a sense, the instruction language for building humans (or any other living thing).
-And language is symbols that interact to build meaning.
-And, yes, of course, it was the same Cliff Reid I knew back in the late 1980’s.
-What Complete Genomics is doing with the $91 million it has raised so far is exciting.
-It has built a genome-sequencing factory and plans to build several more over the next few years.
-Many academic and commercial research facilities want one, as do several countries.
-What I find interesting are the implications.
-Right now, a genome is akin to a novel written in an unknown language.
-There is a huge amount of information in there, but we can’t understand it.
-Imagine getting a copy of Tolstoi’s War and Peace in Russian and (assuming you can’t read Russian) trying to figure out the story.
-Impossible.
-That’s pretty much the situation of natural-language understanding at the time Reid joined Verity.
-On the other hand, we have started recognizing some words – specific genetic variants – that seem to correspond to certain incidents in history.
-In the case of genetics, those incidents are diseases and conditions.
-And just as it usually takes several individuals to cause an incident, so it often takes several genetic variations, plus ambient factors, to cause a disease.
-Genes often work together, sometimes aided by factors such as a person’s diet or behavior, to cause a condition.
-There are two key challenges in genomics.
-One is simply detecting the genes, alone or in combination, that seem to lead to certain diseases.
-That alone can be useful.
-With enough data, we can then figure out that the same “disease” is in fact a variety of different disorders, some susceptible to particular known treatments and some susceptible to others or simply incurable.
-For this, mere correlation is sufficient.
-People with BRCA-derived breast cancer benefit from treatment with herceptin, whereas those with other kinds of breast cancer do not.
-We don’t know why, but the correlation is clear.
-The second challenge is to understand how the genes interact among themselves or with other factors to produce the condition, which should enable the development of new preventive measures or treatments based on the details of how the condition begins and how it progresses.
-That, of course, is much more interesting – and harder to do.
-In a sense, it’s the difference between matching words and understanding a piece of text.
-So, it is no surprise that Reid has found a role in this new marketplace.
-Complete Genomics and its competitors are about to create huge amounts of data.
-CGI’s edge is not just sequencing the genomes cheaply, but also refining the data into lists of variations.
-In other words, for most research the questions revolve not around an entire genome, but around the relevant differences of any individual’s genome from the norm.
-There are common differences, like the differences between blue eyes and brown eyes, or even between people likely to have Crohn’s disease and those who are unlikely to have it.
-Then there are differences that result simply from a “broken” gene, which is not a variant but simply a mistake.
-Most of these are harmless; the really harmful ones don’t survive long enough to show up anywhere.
-The researchers’ task is to find meaning from all this data.
-We’re just at the beginning of this process, which will take many years.
-While some researchers are looking for statistical correlations, others are studying how the individual genes interact.
-For all of them, access to genome sequences is important.
-But the genomes mean little without the corresponding medical records, just as the Russian novel – in any language – means little without a corresponding knowledge of Russian history.
-Obtaining that history requires consent from the individuals whose genomes are sequenced.
-It also requires a lot of data processing to make the records usable.
-Much of the information is simply not recorded.
-And much is still on paper, or in scanned images, insurance company records, and pharmacy transactions.
-There is a standard language for representing diseases, but in many cases the records containing this language might as well be hidden in mattresses.
-The current movement in many developed countries towards electronic medical records will improve health care directly, but it will also lead to much improved information liquidity to help genetic and other medical research.
-We now have the ability to sequence genomes at increasingly lower costs, and we are slowly making the corresponding health information computer-readable.
-Companies such as Complete Genomics are developing software that can process the information.
-There is, of course, still a huge amount of data to collect and process, and huge amounts of research and discovery to happen.
-But it is hard not to be optimistic about our increasing medical knowledge.
-The challenge five years from now will be to turn all that knowledge into practice through better preventive measures, better drugs, and better care.
+Co se ještě před nedávnem jevilo jako nejvýznamnější vědecký pokrok roku 2005, je nyní pod palbou.
+Prestižní časopis Science v červnu otiskl článek jihokorejského vědce Wu-Suk Hwana a mezinárodního týmu spoluautorů, který popisoval, jak připravili to, co fakticky představovalo „na zakázku vytvořené“ linie lidských kmenových buněk klonovaných z dospělého jedince.
+Přestože vědecká platnost jejich výzkumu je teď předmětem několika samostatných šetření, nijak to nesnižuje důležitost potřeby uvážit jeho etické důsledky.
+Hwang a jeho kolegové tvrdili, že nahradili jádro neoplodněného lidského vajíčka jádrem běžné buňky odebrané jiné osobě a že z výsledného embrya vyvinuli linie kmenových buněk, jež se shodovaly s DNA osoby, která dodala běžnou buňku.
+Zdálo se, že nás tento úspěch přivádí podstatně blíž ke světu, v němž pacienti budou moci dostávat buněčné nebo tkáňové transplantáty, které jejich tělo neodmítne, protože použitý biologický materiál, klonovaný ze samotných pacientů, bude dokonalou náhradou.
+Na počátku prosince Hwang přiznal, že některá z vajíček pocházela od dvou žen, které pracují v laboratoři, a že dalším „dárkyním“ bylo za vajíčka zaplaceno – což bylo porušení etických zásad, které se nikterak nedotýkalo správnosti vědeckých výsledků.
+Hwangovi spolupracovníci však začali zpochybňovat validitu samotného pokusu a Hwang oznámil redakci Science, že by rád studii odvolal.
+Ve chvíli, kdy toto píši, správnost své práce stále ještě obhajuje, avšak připouští „selhání lidského faktoru“ při uchovávání linií kmenových buněk, mimo jiné kontaminaci plísní.
+Údajně dokonce naznačil, že s některými buňkami mohlo být manipulováno.
+Jak blízko jsme k zakázkové výrobě linií kmenových buněk pro konkrétní jedince, se nedozvíme, dokud nebudou dokončena vědecká prošetření Hwangova výzkumu.
+Nicméně jen nemnoho badatelů pochybuje o tom, že to, o čem Hwang a jeho kolegové prohlásili, že se jim zdařilo, je v zásadě uskutečnitelné.
+Jestliže Hwang nebyl prvním, komu se to podařilo, někdo jiný nakonec uspěje.
+Až bude postup možné spolehlivě provádět, připraví cestu významným lékařským průlomům.
+Etický význam tohoto výzkumu ovšem dalece přesahuje jeho nepochybnou důležitost pro záchranu vážně nemocných pacientů.
+Důkaz o možnosti klonovat z jádra obyčejné lidské buňky by proměnil debatu o hodnotě potenciálního lidského života, neboť bychom zjistili, že „potenciální lidský život“ je všude kolem nás, v každé buňce našeho těla.
+Když například prezident George W. Bush v roce 2001 oznámil, že Spojené státy nebudou financovat výzkum v oblasti nových linií kmenových buněk, jež vznikají z lidských zárodků, předložil následující důvod: „Tak jako vločka sněhu, každé z těchto embryí je jedinečné, s jedinečným genetickým potenciálem individuální lidské bytosti.“
+Avšak právě tuto argumentaci ohrožuje to, co podle svých tvrzení dokázal Hwang a jeho tým.
+Jestliže nesprávnost zničení lidského zárodku spočívá v jeho jedinečnosti, pak neexistuje jediný přesvědčivý důvod, proč bychom z embrya neměli odebrat jedinou buňku a v zájmu získání kmenových buněk zničit jeho zbytek, neboť „jedinečný genetický potenciál“ zárodku by tak byl zachován.
+Tato možnost rovněž jasně poukazuje na slabinu argumentu, že nemorální jsou potraty, protože ničí geneticky jedinečné lidské bytosti.
+Podle této úvahy by žena, která v nevhodný čas otěhotní, mohla podstoupit potrat za předpokladu, že zachová jedinou buňku plodu, aby tak zajistila uchování jeho jedinečného genetického potenciálu.
+Zdá se ale absurdní, že by to mohlo mít nějaký vliv na mravnost umělého přerušení vývoje plodu.
+Jestliže si tato žena někdy později bude přát mít dítě, proč by neměla přirozeným způsobem počít jiný plod, ale raději použít DNA svého dřívějšího plodu, jehož vývoj ukončil potrat?
+Oba plody – ten, jehož se zbavila umělým přerušením, i ten, který později počne při pohlavním styku – mají svou „jedinečnou“ DNA.
+Ponecháme-li stranou zvláštní důvody, jako je změna sexuálního partnera, zdá se, že neexistuje důvod, proč dávat přednost existenci jednoho dítěte oproti existenci druhého.
+Možná se předpokládá, jak odpůrci potratů občas říkají, že plod, jehož vývoj se uměle zastaví, měl genetický potenciál stát se druhým Beethovenem nebo Einsteinem.
+Pokud však víme, Beethovenem či Einsteinem se stává onen další plod, který žena počne, nikoliv ten, jehož vývin byl přerušen.
+Takže proč dávat přednost jednomu genetickému potenciálu před jiným?
+Jestliže opustíme argumenty založené na potenciálu, tvrzení, že zabíjení embryí a fétů je nesprávné, se musí zakládat na podstatě těchto entit samotných – na tom, že jsou skutečnými lidskými bytostmi, které již mají vlastnosti, kvůli nimž je zabíjení nemorální.
+Avšak vzhledem k tomu, že u plodů, přinejmenším ve vývojové fázi, kdy se provádí většina potratů, se teprve musí vyvinout vůbec nějaké vědomí, zdá se rozumné považovat ukončení jejich životů za mnohem méně závažné než zabití normální lidské bytosti.
+Je-li tomu tak, tím spíš to platí o embryích.

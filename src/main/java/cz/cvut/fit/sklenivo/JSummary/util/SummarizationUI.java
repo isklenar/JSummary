@@ -7,6 +7,7 @@ import cz.cvut.fit.sklenivo.JSummary.SummarizationSettingsBuilder;
 import cz.cvut.fit.sklenivo.JSummary.Summarizer;
 import cz.cvut.fit.sklenivo.JSummary.classification.bayes.NaiveBayes;
 import cz.cvut.fit.sklenivo.JSummary.classification.knn.KNN;
+import cz.cvut.fit.sklenivo.JSummary.classification.knn.metrics.ManhattanDistance;
 import cz.cvut.fit.sklenivo.JSummary.textrank.TextRank;
 
 import javax.swing.*;
@@ -36,7 +37,7 @@ public class SummarizationUI extends JFrame {
         dispatch.put("TextRank", new TextRank());
         dispatch.put("Naive Bayes", new NaiveBayes());
         //dispatch.put("Evolutionary", new EvolutionarySummarizer());
-        dispatch.put("kNN", new KNN());
+        //dispatch.put("kNN", new KNN());
         dispatch.put("LSA", new LSASummarizer());
 
         initUI();
@@ -44,7 +45,7 @@ public class SummarizationUI extends JFrame {
         this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         this.setTitle("TextRank");
         this.setResizable(true);
-        this.setSize(500,600);
+        this.setSize(800,800);
         this.setVisible(true);
         this.setLocationRelativeTo(null);
     }
@@ -79,8 +80,8 @@ public class SummarizationUI extends JFrame {
         algorithm.addItem("LSA");
 
         language = new JComboBox();
-        language.addItem("CZECH");
-        language.addItem("ENGLISH");
+        language.addItem(WordDatabases.CZECH_LANGUAGE);
+        language.addItem(WordDatabases.ENGLISH_LANGUAGE);
     }
 
     private void initUI() {
@@ -132,6 +133,26 @@ public class SummarizationUI extends JFrame {
             }
         });
 
+        final JButton addData = new JButton("Add data");
+        addData.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                if (algorithm.getSelectedItem().toString().equals("Naive Bayes")){
+                    NaiveBayes bayes = (NaiveBayes) dispatch.get("Naive Bayes");
+                    bayes.addTrainingData(input.getText(), output.getText());
+                }
+
+                if (algorithm.getSelectedItem().toString().equals("kNN")){
+                    if (!dispatch.containsKey("kNN")){
+                        dispatch.put("kNN", new KNN(Integer.parseInt(kTextBox.getText()), new ManhattanDistance()));
+                    }
+
+                    KNN knn = (KNN) dispatch.get("kNN");
+                    knn.addTrainingData(input.getText(), output.getText());
+                }
+            }
+        });
+
         final JButton train = new JButton("Train");
         train.addActionListener(new ActionListener() {
             @Override
@@ -146,24 +167,22 @@ public class SummarizationUI extends JFrame {
 
                 if (algorithm.getSelectedItem().toString().equals("Naive Bayes")){
                     NaiveBayes bayes = (NaiveBayes) dispatch.get("Naive Bayes");
-                    bayes.train(input.getText(), output.getText(), settings);
-                    System.out.println("Trained");
+                    bayes.train(settings);
                 }
 
                 if (algorithm.getSelectedItem().toString().equals("kNN")){
-                    dispatch.put("kNN", new KNN(Integer.parseInt(kTextBox.getText())));
                     KNN knn = (KNN) dispatch.get("kNN");
-                    knn.train(input.getText(), output.getText(), settings);
-                    System.out.println("Trained");
+                    knn.train(settings);
                 }
 
             }
         });
 
-        JPanel firstRow = new JPanel(new GridLayout(1,5)); //1 row 3 columns, algorithm, button, train, language, k
+        JPanel firstRow = new JPanel(new GridLayout(1,6)); //1 row 3 columns, algorithm, button, train, language, k
 
         firstRow.add(algorithm);
         firstRow.add(summarize);
+        firstRow.add(addData);
         firstRow.add(train);
         firstRow.add(language);
         firstRow.add(kTextBox);

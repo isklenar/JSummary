@@ -1,10 +1,8 @@
-The advance of knowledge is often a mixed blessing.
-Today, enterprising firms offer, for a fee, to tell you about your genes.
-But if individuals can do tests from which insurance companies are barred, and if those who receive adverse genetic information then buy additional life insurance without disclosing the tests that they have taken, they are cheating other holders of life insurance.
-Selecting our children raises more profound ethical problems.
-In developed countries, the routine testing of older pregnant women, combined with the availability of abortion, has significantly reduced the incidence of conditions like Down syndrome.
-For several years, some couples at risk of passing a genetic disease on to their children have used in vitro fertilization, producing several embryos that can be tested for the faulty gene and implanting in the woman’s uterus only those without it.
-For many parents, nothing is more important than giving their child the best possible start in life.
-They buy expensive toys to maximize their child’s learning potential and spend much more on private schools or after school tutoring in the hope that he or she will excel on the tests that determine entry to elite universities.
-It may not be long before we can identify genes that improve the odds of success in this quest.
-That is not a future that any of us should approve.
+MELBOURNE – Německý parlament v dubnu stanovil meze využívání genetické diagnostiky.
+Některá ustanovení německého zákona čerpají z obecně sdílených etických zásad úcty k autonomii a soukromí jedince.
+Navzdory dojmu vhodnosti, který tato ustanovení vyvolávají, mohou vyjít draho pro německé firmy.
+Nejkontroverznějším rysem německého zákona je zákaz prenatálních genetických testů na nemoci, které se projeví až v dospělosti.
+Když máme na výběr mezi životy s takto odlišnými vyhlídkami – a můžeme se rozhodnout dřív, než zárodek nebo plod získá jakékoli vědomí –, neměli bychom mít možnost rozhodnout se pro dítě s lepšími vyhlídkami?
+Není divu, že otázkám ohledně genetických testů se dostává zvláštní pozornosti právě v Německu, vzhledem k národnímu imperativu vyhýbat se jakémukoli opakování zločinů nacistické éry.
+Němečtí zákonodárci však ve své chvályhodné touze co nejvíc se těmto zvěrstvům vzdálit přijali zákon, který kriminalizuje využití moderní vědy k předcházení nepochybným lidským tragédiím.
+To je absurdní výsledek.

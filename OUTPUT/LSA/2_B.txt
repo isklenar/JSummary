@@ -1,11 +1,8 @@
-Right now, a genome is akin to a novel written in an unknown language.
-There is a huge amount of information in there, but we can’t understand it.
-And just as it usually takes several individuals to cause an incident, so it often takes several genetic variations, plus ambient factors, to cause a disease.
-There are two key challenges in genomics.
-One is simply detecting the genes, alone or in combination, that seem to lead to certain diseases.
-The second challenge is to understand how the genes interact among themselves or with other factors to produce the condition, which should enable the development of new preventive measures or treatments based on the details of how the condition begins and how it progresses.
-While some researchers are looking for statistical correlations, others are studying how the individual genes interact.
-For all of them, access to genome sequences is important.
-But the genomes mean little without the corresponding medical records, just as the Russian novel – in any language – means little without a corresponding knowledge of Russian history.
-The current movement in many developed countries towards electronic medical records will improve health care directly, but it will also lead to much improved information liquidity to help genetic and other medical research.
-The challenge five years from now will be to turn all that knowledge into practice through better preventive measures, better drugs, and better care.
+Prestižní časopis Science v červnu otiskl článek jihokorejského vědce Wu-Suk Hwana a mezinárodního týmu spoluautorů, který popisoval, jak připravili to, co fakticky představovalo „na zakázku vytvořené“ linie lidských kmenových buněk klonovaných z dospělého jedince.
+Přestože vědecká platnost jejich výzkumu je teď předmětem několika samostatných šetření, nijak to nesnižuje důležitost potřeby uvážit jeho etické důsledky.
+Důkaz o možnosti klonovat z jádra obyčejné lidské buňky by proměnil debatu o hodnotě potenciálního lidského života, neboť bychom zjistili, že „potenciální lidský život“ je všude kolem nás, v každé buňce našeho těla.
+Jestliže nesprávnost zničení lidského zárodku spočívá v jeho jedinečnosti, pak neexistuje jediný přesvědčivý důvod, proč bychom z embrya neměli odebrat jedinou buňku a v zájmu získání kmenových buněk zničit jeho zbytek, neboť „jedinečný genetický potenciál“ zárodku by tak byl zachován.
+Tato možnost rovněž jasně poukazuje na slabinu argumentu, že nemorální jsou potraty, protože ničí geneticky jedinečné lidské bytosti.
+Jestliže opustíme argumenty založené na potenciálu, tvrzení, že zabíjení embryí a fétů je nesprávné, se musí zakládat na podstatě těchto entit samotných – na tom, že jsou skutečnými lidskými bytostmi, které již mají vlastnosti, kvůli nimž je zabíjení nemorální.
+Avšak vzhledem k tomu, že u plodů, přinejmenším ve vývojové fázi, kdy se provádí většina potratů, se teprve musí vyvinout vůbec nějaké vědomí, zdá se rozumné považovat ukončení jejich životů za mnohem méně závažné než zabití normální lidské bytosti.
+Je-li tomu tak, tím spíš to platí o embryích.

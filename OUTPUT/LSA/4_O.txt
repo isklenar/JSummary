@@ -1,8 +1,6 @@
-In June, the prestigious journal Science published an article by the South Korean scientist Woo-Suk Hwang and an international team of co-authors describing how they had developed what were, in effect, “made to order” lines of human stem cells cloned from an adult.
-That achievement appeared to take us significantly closer to a world in which patients could be given cell or tissue transplants that their bodies would not reject, because the biological materials, cloned from the patients themselves, would be a perfect match.
-But then Hwang’s collaborators began questioning the validity of the experiment itself, and Hwang notified Science that he wished to withdraw the paper.
-If Hwang was not the first to do it, someone else eventually will.
-For example, when President George W. Bush announced in 2001 that the United States would not fund research into new stem-cell lines that are created from human embryos, he offered the following reason: “Like a snowflake, each of these embryos is unique, with the unique genetic potential of an individual human being.”
-But it is precisely this reasoning that is threatened by what Hwang and his team claimed to have achieved.
-This possibility highlights the weakness of the argument that abortion, too, is wrong because it destroys a genetically unique human being.
-In the absence of special reasons, like a change in sexual partners, there seems to be no reason to prefer the existence of one child to that of the other.
+V létě roku 2004 dvě skupiny vědců pracující nezávisle na sobě (jedna vedená výzkumníky lékařské fakulty Harvardovy univerzity a Brighamovy a ženské nemocnice v Bostonu a druhá pod vedením výzkumníků Cold Spring Harbor Laboratories) toto dogma zpochybnily.
+Tento objev byl učiněn nedávno, protože až dosud nebyla dostupná technika, která by umožňovala uceleně určovat genomické nevyváženosti způsobem zahrnujícím celou šíři genomu.
+Asi před třemi lety jsme v Brighamově a ženské nemocnici sháněli možný nástroj pro diagnostiku s vysokým rozlišením a technika array-CGH nám dala naději na provedení spolehlivého a efektivního testu celého genomu, který by dokázal nezkresleně a bez subjektivního zabarvení určit přírůstky a úbytky.
+Když byly provedeny validační experimenty, které porovnávaly DNA od jednoho „normálního, zdravého“ jedince s DNA od jiného „normálního, zdravého“ jedince, zaskočilo nás zjištění, že v průměru 12 fragmentů DNA vykazovalo mezi danými dvěma porovnávanými jednotlivci rozdíly v počtu kopií.
+Za použití dvou komplementárních celogenomových technologií a s následnými validačními studiemi bylo zjištěno celkem 1447 CNVs.
+Některé CNVs se rovněž spojují s geny podílejícími se na imunitní reakci a metabolismu souvisejícím s detoxifikací (jde o některé reakce lidského těla na prostředí, v němž žijeme).

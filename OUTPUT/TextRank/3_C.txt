@@ -1,8 +1,8 @@
-It was thought that some of these DNA alterations may in part explain some of the physical differences that exist between two different, but otherwise normal individuals.
-Their research identified hundreds of regions of the human genome where the number of copies of a particular DNA segment varied from individual to individual.
-With only a few exceptions, all DNA segments were thought to exist in two copies (one copy inherited from your mother and one copy inherited from your father).
-Both studies showed that there are hundreds of regions of the genome that could have more or less than the expected two copies.
-That has changed over the last five or six years, with the development of a technique known as “array-based comparative genomic hybridization” (array-CGH), revolutionizing genetic research and diagnostics.
-When validation experiments were performed that compared the DNA from one “normal, healthy” individual with the DNA from another “normal, healthy” individual, we were astonished to find an average of 12 DNA fragments that showed copy number differences between the two individuals being compared.
-The data clearly demonstrate that individuals are not as genetically similar as once thought.
-Overall, we anticipate that many of these CNVs will provide explanations to how we adapt and interact with our ever-changing environment.
+Podnikavé firmy dnes nabízejí, že vám za poplatek povědí něco o vašich genech.
+Ve vyspělých zemích rutinní testování starších těhotných žen společně s dostupností potratu výrazně snížilo výskyt vad, jako je Downův syndrom.
+Některé páry, u nichž hrozí přenos genetického onemocnění na potomky, už několik let využívají mimoděložního oplodnění, při němž se vytvoří několik embryí, která lze testovat na přítomnost vadného genu, a pak se do dělohy usadí jen ta embrya, která jej nemají.
+Vzhledem k tomu, že si každý nese nějaké nepříznivé geny, neexistuje jasná hranice mezi rozhodnutím proti dítěti s nadprůměrným rizikem přenosu nemoci a rozhodnutím pro dítě s mimořádně růžovými zdravotními vyhlídkami.
+V jistém smyslu tomu tak je a v rukou autoritářských režimů by genetická selekce mohla připomínat hrůzy dřívějších forem eugeniky, s jejich obhajobou odporných pseudovědeckých politických přístupů, zejména ve vztahu k „rasové hygieně“.
+V liberálních, tržně motivovaných společnostech však eugenika nebude nátlakově prosazována státem v zájmu kolektivního dobra.
+V případě výběru podle pohlaví je zřejmé, že páry, které si nezávisle vybírají to nejlepší pro své dítě, mohou zapříčinit stav, kdy postavení jejich potomků bude horší, než by bylo, kdyby o pohlaví dítěte nemohl nikdo rozhodovat.
+Nejznepokojivějším důsledkem tohoto režimu genetické selekce je ovšem to, že si ji budou moci dovolit pouze majetní lidé.

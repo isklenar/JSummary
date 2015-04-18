@@ -1,7 +1,10 @@
-For some time, scientists have believed that individual human beings were 99.9% genetically identical.
-In the summer of 2004, two groups of scientists working independently (one led by researchers at Harvard Medical School and Brigham and Women’s Hospital in Boston and the other led by researchers at Cold Spring Harbor Laboratories) called this scientific dogma into question.
-This is the goal of the Structural Genomic Variation Consortium’s Copy Number Variation Project, which aims at providing researchers the most comprehensive list and characterization of CNVs in humans.
-Using two complementary genome-wide technologies, with subsequent validation studies, a total of 1,447 CNVs were identified.
-Since they are being identified in normal individuals, CNVs may not necessarily be a direct cause of human disease, but many may confer susceptibility to certain diseases, serve as disease markers, and/or indicate potential regions of genomic instability.
-Hopefully, a more comprehensive understanding of human genetic variation (i.e. single base pair changes and structural genomic variation, such as CNVs) will ultimately help physicians to prescribe medication in a more individualized manner, that would result in maximum therapeutic effects to each patient, with minimal side effects.
-Indeed, as studies continue to identify and characterize CNVs, we anticipate achieving a better understanding of the relationship between these genetic variations, complex diseases, and human adaptability.
+Jestliže vaše vyhlídky na dlouhověkost nejsou dobré, můžete si sjednat další životní pojištění, nebo dokonce odejít do předčasného důchodu, abyste měli dost času na to, co jste vždycky chtěli dělat.
+Avšak jestliže jedinci mohou podstupovat testy, které jsou pojišťovacím společnostem zapovězeny, a jestliže ti, kdo získají nepříznivé genetické informace, si pak přikoupí dodatečnou životní pojistku, aniž by se zmínili o testech, jimiž prošli, podvádějí ostatní vlastníky životního pojištění.
+Hlubší etické problémy přináší možnost vybírat si děti.
+Ve vyspělých zemích rutinní testování starších těhotných žen společně s dostupností potratu výrazně snížilo výskyt vad, jako je Downův syndrom.
+V některých oblastech Indie a Číny, kde páry zoufale touží po synovi, se nejkrajnější podobou sexismu staly selektivní potraty a provádějí se v takovém rozsahu, že dospívá generace, v níž se mladí muži potýkají s nedostatkem partnerek.
+V jistém smyslu tomu tak je a v rukou autoritářských režimů by genetická selekce mohla připomínat hrůzy dřívějších forem eugeniky, s jejich obhajobou odporných pseudovědeckých politických přístupů, zejména ve vztahu k „rasové hygieně“.
+Budou-li výsledkem zdravější a bystřejší lidé s lepšími schopnostmi řešit problémy, půjde o dobrou věc.
+V případě výběru podle pohlaví je zřejmé, že páry, které si nezávisle vybírají to nejlepší pro své dítě, mohou zapříčinit stav, kdy postavení jejich potomků bude horší, než by bylo, kdyby o pohlaví dítěte nemohl nikdo rozhodovat.
+Nejznepokojivějším důsledkem tohoto režimu genetické selekce je ovšem to, že si ji budou moci dovolit pouze majetní lidé.
+Vyhnout se tomuto vyústění ovšem nebude snadné, neboť to bude vyžadovat, aby genetické zdokonalování buď nebylo dostupné nikomu, nebo aby bylo dostupné všem.
