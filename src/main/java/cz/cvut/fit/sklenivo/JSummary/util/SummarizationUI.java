@@ -122,8 +122,6 @@ public class SummarizationUI extends JFrame {
                         .setRatio(percentage)
                         .setStemming(stemmer.isSelected())
                         .setStopWords(stopwords.isSelected())
-                        .setUseNLP(nlp.isSelected())
-                        .setWordNet(wordnet.isSelected())
                         .setLanguage((String) language.getSelectedItem()).build();
                 out = dispatch.get(algorithm.getSelectedItem()).summarize(inputText, settings);
 
@@ -161,8 +159,6 @@ public class SummarizationUI extends JFrame {
                         .setRatio(slider.getValue() / 100.0)
                         .setStemming(stemmer.isSelected())
                         .setStopWords(stopwords.isSelected())
-                        .setUseNLP(nlp.isSelected())
-                        .setWordNet(wordnet.isSelected())
                         .setLanguage((String)language.getSelectedItem()).build();
 
                 if (algorithm.getSelectedItem().toString().equals("Naive Bayes")){

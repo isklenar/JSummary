@@ -6,9 +6,8 @@ package cz.cvut.fit.sklenivo.JSummary;
 public class SummarizationSettingsBuilder {
     private double ratio = 0.5;
     private boolean stemming = false;
-    private boolean wordNet = false;
     private boolean stopWords = false;
-    private boolean useNLP = false;
+    private boolean normalization = false;
     private String language;
 
     public SummarizationSettingsBuilder setRatio(double ratio) {
@@ -21,18 +20,13 @@ public class SummarizationSettingsBuilder {
         return this;
     }
 
-    public SummarizationSettingsBuilder setWordNet(boolean wordNet) {
-        this.wordNet = wordNet;
-        return this;
-    }
-
     public SummarizationSettingsBuilder setStopWords(boolean stopWords) {
         this.stopWords = stopWords;
         return this;
     }
 
-    public SummarizationSettingsBuilder setUseNLP(boolean useNLP) {
-        this.useNLP = useNLP;
+    public SummarizationSettingsBuilder setNormalization(boolean normalization) {
+        this.normalization = normalization;
         return this;
     }
 
@@ -42,9 +36,9 @@ public class SummarizationSettingsBuilder {
     }
 
     public SummarizationSettings build(){
-        SummarizationSettings settings = new SummarizationSettings(ratio, stemming, wordNet, stopWords, useNLP, language.toLowerCase());
+        SummarizationSettings settings = new SummarizationSettings(ratio, stemming, stopWords, normalization, language);
         ratio = 0.5;
-        stemming = wordNet = stopWords = useNLP = false;
+        stemming = normalization = stopWords = false;
         language = null;
 
         return settings;

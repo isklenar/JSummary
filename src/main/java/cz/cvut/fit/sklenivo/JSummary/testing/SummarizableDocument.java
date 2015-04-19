@@ -22,4 +22,6 @@ public class SummarizableDocument {
     public Map<String, List<String>> getSummaries() {
         return summaries;
     }
+
+
 }

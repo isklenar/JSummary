@@ -1,20 +1,13 @@
 package cz.cvut.fit.sklenivo.JSummary.testing;
 
-import cz.cvut.fit.sklenivo.JSummary.LSA.LSASummarizer;
-import cz.cvut.fit.sklenivo.JSummary.SummarizationSettings;
-import cz.cvut.fit.sklenivo.JSummary.TrainableSummarizer;
-import cz.cvut.fit.sklenivo.JSummary.classification.bayes.NaiveBayes;
-import cz.cvut.fit.sklenivo.JSummary.classification.knn.KNN;
-import cz.cvut.fit.sklenivo.JSummary.classification.knn.metrics.KNNMetric;
-import cz.cvut.fit.sklenivo.JSummary.testing.metric.RougeN;
-import cz.cvut.fit.sklenivo.JSummary.textrank.TextRank;
 import org.w3c.dom.*;
 import org.xml.sax.SAXException;
 
 import javax.xml.parsers.DocumentBuilder;
 import javax.xml.parsers.DocumentBuilderFactory;
 import javax.xml.parsers.ParserConfigurationException;
-import java.io.*;
+import java.io.File;
+import java.io.IOException;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
@@ -23,7 +16,7 @@ import java.util.Map;
 /**
  * Created by Ivo on 14.4.2015.
  */
-public class TestEvaluator {
+public class TestDocumentCache {
     private final static String OUTPUT_FOLDER = "OUTPUT";
 
     private HashMap<String, List<SummarizableDocument>> documentCache = null;
@@ -83,17 +76,17 @@ public class TestEvaluator {
         return documents;
     }
 
-
-    private List<SummarizableDocument> prepareDocuments(List<String> filenames) {
-        List<SummarizableDocument> documents = new ArrayList<>();
-
-        for (String file : filenames) {
-            documents.addAll(readDocument(file));
+    public List<SummarizableDocument> retrieveDocuments(List<String> files) {
+        List<SummarizableDocument> ret = new ArrayList<>();
+        for (String file : files){
+            ret.addAll(documentCache.get(file));
         }
 
-        return documents;
+        return ret;
     }
 
+
+/*
     public void testLSA(SummarizationSettings settings, List<String> files){
         StringBuilder log = new StringBuilder();
         log.append("<TEST>\nLSA\n" + "SETTINGS: ").append(settings).append("\n").append("SETTINGS: ").append(settings).append("\n");
@@ -239,14 +232,7 @@ public class TestEvaluator {
         return Rouge.evaluate(refSummaries, output, new RougeN(1));
     }
 
-    private List<SummarizableDocument> retrieveDocuments(List<String> files) {
-        List<SummarizableDocument> ret = new ArrayList<>();
-        for (String file : files){
-            ret.addAll(documentCache.get(file));
-        }
-
-        return ret;
-    }
+    */
 
     public void preLoadFiles(List<String> files) {
         if (documentCache == null){

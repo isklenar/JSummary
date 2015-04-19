@@ -31,15 +31,6 @@ class SentenceComparator {
         if (settings.isStemming()){
             initStemmer();
         }
-
-        if (settings.isStopWords()){
-            initStopWords();
-        }
-
-
-        if(settings.isUseNLP()){
-            initTokenizer();
-        }
     }
 
     /**
@@ -71,20 +62,11 @@ class SentenceComparator {
     private void initStemmer(){
         try {
             //create a stemmer for specified language
-            stemmer = (SnowballStemmer) Class.forName("org.tartarus.snowball.ext." + settings.getLanguage() + "Stemmer").newInstance();
+            stemmer = (SnowballStemmer) Class.forName("org.tartarus.snowball.ext." + settings.getLanguage().toLowerCase() + "Stemmer").newInstance();
         } catch (InstantiationException | IllegalAccessException | ClassNotFoundException e) {
-            System.out.println("Error creating stemmer for language " + settings.getLanguage());
             e.printStackTrace();
             stemmer = null;
         }
-    }
-
-    private void initStopWords(){
-
-    }
-
-    private void initWordNet(){
-        /*wordNetDictionary = new Dictionary(new File("resources/WordNet/dict"))*/
     }
 
     /**
@@ -115,12 +97,7 @@ class SentenceComparator {
      * @return list of tokenized words
      */
     private List<String> tokenize(String s1) {
-        List<String> ret;
-        if (settings.isUseNLP() && tokenizer != null){
-            ret = Arrays.asList(tokenizer.tokenize(s1)); //using openNLP's tokenizer
-        } else {
-            ret = Arrays.asList(s1.split(" "));
-        }
+        List<String>  ret = new ArrayList<>(Arrays.asList(s1.split(" ")));
 
         if (settings.isStopWords() && settings.getLanguage().equals(WordDatabases.CZECH_LANGUAGE)){
             ret.removeAll(WordDatabases.CZECH_STOP_WORDS);

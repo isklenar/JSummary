@@ -4,6 +4,7 @@ import cz.cvut.fit.sklenivo.JSummary.SummarizationSettings;
 import cz.cvut.fit.sklenivo.JSummary.Summarizer;
 import cz.cvut.fit.sklenivo.JSummary.testing.TestableSummarizer;
 import cz.cvut.fit.sklenivo.JSummary.util.SentenceUtils;
+import cz.cvut.fit.sklenivo.JSummary.util.WordDatabases;
 import org.ejml.simple.SimpleMatrix;
 import org.ejml.simple.SimpleSVD;
 
@@ -20,7 +21,7 @@ public class LSASummarizer implements Summarizer, TestableSummarizer {
     public String summarize(List<String> input, SummarizationSettings settings){
         sentences = new ArrayList<>(input);
 
-        SimpleMatrix LSAMatrix = createLSAMatrix(sentences);
+        SimpleMatrix LSAMatrix = createLSAMatrix(sentences, settings);
 
         SimpleSVD svd = LSAMatrix.svd();
         SimpleMatrix W = svd.getW();
@@ -53,7 +54,7 @@ public class LSASummarizer implements Summarizer, TestableSummarizer {
     public List<String> summarizeToSentences(List<String> input, SummarizationSettings settings) {
         sentences = new ArrayList<>(input);
 
-        SimpleMatrix LSAMatrix = createLSAMatrix(sentences);
+        SimpleMatrix LSAMatrix = createLSAMatrix(sentences, settings);
 
         SimpleSVD svd = LSAMatrix.svd();
         SimpleMatrix W = svd.getW();
@@ -84,8 +85,8 @@ public class LSASummarizer implements Summarizer, TestableSummarizer {
         return sentences.get(maxIndex);
     }
 
-    private SimpleMatrix createLSAMatrix(List<String> sentences) {
-        terms = new ArrayList<>(extractTerms(sentences));
+    private SimpleMatrix createLSAMatrix(List<String> sentences, SummarizationSettings settings) {
+        terms = new ArrayList<>(extractTerms(sentences, settings));
         SimpleMatrix matrix = new SimpleMatrix(terms.size(), sentences.size());
 
         int column = 0;
@@ -126,12 +127,25 @@ public class LSASummarizer implements Summarizer, TestableSummarizer {
         return Math.log(((double)sentences.size())/(n));
     }
 
-    private Set<String> extractTerms(List<String> sentences) {
+    private Set<String> extractTerms(List<String> sentences, SummarizationSettings settings) {
         Set<String> ret = new TreeSet<>();
 
-        for (String sentence : sentences){
-            String [] words = sentence.split(" ");
-            ret.addAll(Arrays.asList(words));
+        for (String sentence : sentences) {
+            String[] words = sentence.split(" ");
+
+            for (String word : words) {
+                if (settings.isStopWords()) {
+                    if (settings.getLanguage().equals(WordDatabases.CZECH_LANGUAGE) && !WordDatabases.CZECH_STOP_WORDS.contains(word)) {
+                        ret.add(word);
+                    } else if (settings.getLanguage().equals(WordDatabases.ENGLISH_LANGUAGE) && !WordDatabases.ENGLISH_STOP_WORDS.contains(word)){
+                        ret.add(word);
+                    }
+                } else {
+                    ret.add(word);
+                }
+            }
+
+            //ret.addAll(Arrays.asList(words));
         }
 
         return ret;

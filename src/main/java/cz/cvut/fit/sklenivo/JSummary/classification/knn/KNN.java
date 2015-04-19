@@ -44,8 +44,8 @@ public class KNN implements TrainableSummarizer, TestableSummarizer {
 
     @Override
     public String summarize(String input, SummarizationSettings settings) {
-        List<ClassificationSentence> inputSentences = ClassificationPreprocessor.preProcess(input, null, settings);
-        classify(inputSentences);
+        List<ClassificationSentence> inputSentences = ClassificationPreprocessor.preProcess(input, settings);
+        classify(inputSentences, settings);
 
         StringBuilder builder = new StringBuilder();
         for (ClassificationSentence sentence : inputSentences){
@@ -59,12 +59,12 @@ public class KNN implements TrainableSummarizer, TestableSummarizer {
 
     @Override
     public void train(SummarizationSettings settings) {
-        for (TrainingData data : trainingData){
-            List<ClassificationSentence> sentences = ClassificationPreprocessor.preProcess(data.getText(), data.getSummary(), settings);
-            model.addAll(sentences);
-        }
-        this.normalizationData = ClassificationUtils.normalize(model);
+        List<ClassificationSentence> sentences = ClassificationPreprocessor.preProcess(trainingData, settings);
 
+        model.addAll(sentences);
+        if (settings.isNormalization()){
+            this.normalizationData = ClassificationUtils.normalize(model);
+        }
     }
 
     @Override
@@ -75,8 +75,10 @@ public class KNN implements TrainableSummarizer, TestableSummarizer {
     }
 
 
-    private void classify(List<ClassificationSentence> input){
-        ClassificationUtils.normalize(input, normalizationData);
+    private void classify(List<ClassificationSentence> input, SummarizationSettings settings){
+        if (settings.isNormalization()){
+            ClassificationUtils.normalize(input, normalizationData);
+        }
         for (ClassificationSentence sentence : input) {
             List<KNNTuple> distances = new ArrayList<>();
 
@@ -110,8 +112,8 @@ public class KNN implements TrainableSummarizer, TestableSummarizer {
             builder.append(sentence).append(" ");
         }
 
-        List<ClassificationSentence> inputSentences = ClassificationPreprocessor.preProcess(builder.toString(), null, settings);
-        classify(inputSentences);
+        List<ClassificationSentence> inputSentences = ClassificationPreprocessor.preProcess(builder.toString(), settings);
+        classify(inputSentences, settings);
 
         List<String> ret = new ArrayList<>();
         for (ClassificationSentence sentence : inputSentences){

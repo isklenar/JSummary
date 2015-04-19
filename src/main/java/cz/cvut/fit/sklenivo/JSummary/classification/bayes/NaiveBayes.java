@@ -2,10 +2,7 @@ package cz.cvut.fit.sklenivo.JSummary.classification.bayes;
 
 import cz.cvut.fit.sklenivo.JSummary.SummarizationSettings;
 import cz.cvut.fit.sklenivo.JSummary.TrainableSummarizer;
-import cz.cvut.fit.sklenivo.JSummary.classification.ClassificationPreprocessor;
-import cz.cvut.fit.sklenivo.JSummary.classification.ClassificationSentence;
-import cz.cvut.fit.sklenivo.JSummary.classification.ClassificationUtils;
-import cz.cvut.fit.sklenivo.JSummary.classification.TrainingData;
+import cz.cvut.fit.sklenivo.JSummary.classification.*;
 import cz.cvut.fit.sklenivo.JSummary.testing.TestableSummarizer;
 import opennlp.tools.sentdetect.SentenceDetectorME;
 import opennlp.tools.tokenize.TokenizerME;
@@ -33,7 +30,7 @@ public class NaiveBayes implements TrainableSummarizer, TestableSummarizer {
     private Map<Integer, Map<Double, Double>> discreteProbabilityNotInSummary = new HashMap<>();
 
     private List<TrainingData> trainingData = new ArrayList<>();
-
+    private List<MeanAndVariance> normalizationData;
     private double probabilityInSummary;
 
     public NaiveBayes() {
@@ -43,9 +40,11 @@ public class NaiveBayes implements TrainableSummarizer, TestableSummarizer {
 
     @Override
     public void train(SummarizationSettings settings) {
-        for (TrainingData data : trainingData){
-            List<ClassificationSentence> sentences = ClassificationPreprocessor.preProcess(data.getText(), data.getSummary(), settings);
-            model.addAll(sentences);
+        List<ClassificationSentence> sentences = ClassificationPreprocessor.preProcess(trainingData, settings);
+        model.addAll(sentences);
+
+        if (settings.isNormalization()){
+             normalizationData = ClassificationUtils.normalize(model);
         }
 
         int in = 0;
@@ -180,14 +179,14 @@ public class NaiveBayes implements TrainableSummarizer, TestableSummarizer {
 
     private BigDecimal normalProbabilityDensity(double value, int i, boolean inSummary) {
         if (inSummary) {
-            if (featuresVarianceInSummary.get(i) != 0 || featuresMeanInSummary.get(i) != 0) {
+            if (featuresVarianceInSummary.get(i) != 0 && featuresMeanInSummary.get(i) != 0) {
                 double firstHalf = 1 / (2 * Math.PI * featuresVarianceInSummary.get(i));
                 double secondHalf = Math.exp((-Math.pow(value - featuresMeanInSummary.get(i), 2)) / (2 * featuresVarianceInSummary.get(i)));
                 //System.out.println(firstHalf + "   " + secondHalf);
                 return new BigDecimal(firstHalf).multiply(new BigDecimal(secondHalf));
             }
         } else {
-            if (featuresVarianceNotInSummary.get(i) != 0 || featuresMeanNotInSummary.get(i) != 0) {
+            if (featuresVarianceNotInSummary.get(i) != 0 && featuresMeanNotInSummary.get(i) != 0) {
                 double firstHalf = 1 / (2 * Math.PI * featuresVarianceNotInSummary.get(i));
                 double secondHalf = Math.exp((-Math.pow(value - featuresMeanNotInSummary.get(i), 2)) / (2 * featuresVarianceNotInSummary.get(i)));
                 //System.out.println(firstHalf + "   " + secondHalf);
@@ -238,10 +237,12 @@ public class NaiveBayes implements TrainableSummarizer, TestableSummarizer {
 
     @Override
     public String summarize(String input, SummarizationSettings settings) {
-        List<ClassificationSentence> sentences = ClassificationPreprocessor.preProcess(input, null, settings);
+        List<ClassificationSentence> sentences = ClassificationPreprocessor.preProcess(input, settings);
 
-        int i = 0;
-        int correct = 0;
+        if (settings.isNormalization()){
+            ClassificationUtils.normalize(sentences, normalizationData);
+        }
+
         for(ClassificationSentence sentence : sentences){
             BigDecimal inSummary = calculatePosteriory(sentence, true);
             BigDecimal notInSummary = calculatePosteriory(sentence, false);
@@ -269,7 +270,11 @@ public class NaiveBayes implements TrainableSummarizer, TestableSummarizer {
             builder.append(sentence).append(" ");
         }
 
-        List<ClassificationSentence> sentences = ClassificationPreprocessor.preProcess(builder.toString(), null, settings);
+        List<ClassificationSentence> sentences = ClassificationPreprocessor.preProcess(builder.toString(), settings);
+
+        if (settings.isNormalization()){
+            ClassificationUtils.normalize(sentences, normalizationData);
+        }
 
         for(ClassificationSentence sentence : sentences){
             BigDecimal inSummary = calculatePosteriory(sentence, true);

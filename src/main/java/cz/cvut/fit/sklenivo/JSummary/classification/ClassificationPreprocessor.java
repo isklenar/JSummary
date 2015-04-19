@@ -11,32 +11,32 @@ import java.util.List;
  * Created by ivo on 18.3.2015.
  */
 public class ClassificationPreprocessor {
-
-    public static List<ClassificationSentence> preProcess(String text, String summary, SummarizationSettings settings){
-        String [] paragraphs = splitParagraphs(text);
+    public static List<ClassificationSentence> preProcess(List<TrainingData> trainingData, SummarizationSettings settings) {
         List<ClassificationSentence> sentences = new ArrayList<>();
-
-        for (int i = 0; i < paragraphs.length; i++){
-            sentences.addAll(createClassificationSentences(paragraphs[i]));
-        }
-
         POSTagger tagger = createTagger(settings);
-        for (ClassificationSentence sentence : sentences){
-            sentence.extractFeatures(tagger);
-        }
 
-        if (summary == null){
-            return sentences;
-        }
+        for (TrainingData data : trainingData){
+            String [] paragraphs = splitParagraphs(data.getText());
 
-        String [] summaryParagraphs = splitParagraphs(summary);
-        for (String summaryParagraph : summaryParagraphs){
-            List<ClassificationSentence> summarySentences = createClassificationSentences(summaryParagraph);
 
-            for (ClassificationSentence summarySentence : summarySentences){
-                int index = sentences.indexOf(summarySentence);
-                if (index != -1){
-                    sentences.get(index).setInSummary(true);
+            for (int i = 0; i < paragraphs.length; i++){
+                sentences.addAll(createClassificationSentences(paragraphs[i]));
+            }
+
+
+            for (ClassificationSentence sentence : sentences){
+                sentence.extractFeatures(tagger);
+            }
+
+            String [] summaryParagraphs = splitParagraphs(data.getSummary());
+            for (String summaryParagraph : summaryParagraphs){
+                List<ClassificationSentence> summarySentences = createClassificationSentences(summaryParagraph);
+
+                for (ClassificationSentence summarySentence : summarySentences){
+                    int index = sentences.indexOf(summarySentence);
+                    if (index != -1){
+                        sentences.get(index).setInSummary(true);
+                    }
                 }
             }
         }
@@ -66,4 +66,19 @@ public class ClassificationPreprocessor {
     }
 
 
+    public static List<ClassificationSentence> preProcess(String text, SummarizationSettings settings) {
+        String [] paragraphs = splitParagraphs(text);
+        List<ClassificationSentence> sentences = new ArrayList<>();
+
+        for (int i = 0; i < paragraphs.length; i++){
+            sentences.addAll(createClassificationSentences(paragraphs[i]));
+        }
+
+        POSTagger tagger = createTagger(settings);
+        for (ClassificationSentence sentence : sentences){
+            sentence.extractFeatures(tagger);
+        }
+
+        return sentences;
+    }
 }
