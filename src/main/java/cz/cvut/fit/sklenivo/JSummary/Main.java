@@ -1,5 +1,6 @@
 package cz.cvut.fit.sklenivo.JSummary;
 
+import cz.cvut.fit.sklenivo.JSummary.classification.knn.metrics.CosineDistance;
 import cz.cvut.fit.sklenivo.JSummary.classification.knn.metrics.ManhattanDistance;
 import cz.cvut.fit.sklenivo.JSummary.classification.knn.metrics.MixedEuclideanDistance;
 import cz.cvut.fit.sklenivo.JSummary.testing.SummarizableDocument;
@@ -29,7 +30,6 @@ public class Main {
         filesCZ.add("resources/TestingFiles/Malaria.cz.xml");
         filesCZ.add("resources/TestingFiles/ScienceAndSociety.cz.xml");
 
-        final SummarizationSettings settingsEN = new SummarizationSettingsBuilder().setLanguage(WordDatabases.ENGLISH_LANGUAGE).setStemming(true).setStopWords(true).setRatio(0.3).build();
         final List<String> filesEN = new ArrayList<>();
         filesEN.add("resources/TestingFiles/Genetic.en.xml");
         filesEN.add("resources/TestingFiles/IsraelPalestineConflict.en.xml");
@@ -40,10 +40,10 @@ public class Main {
         cache.preLoadFiles(filesEN);
 
         /*textRankCZ(cache.retrieveDocuments(filesCZ));
-        textRankEN(cache.retrieveDocuments(filesEN));
+        textRankEN(cache.retrieveDocuments(filesEN));*/
 
         LSACZ(cache.retrieveDocuments(filesCZ));
-        LSAEN(cache.retrieveDocuments(filesEN));*/
+        LSAEN(cache.retrieveDocuments(filesEN));
 
         bayesEN(cache.retrieveDocuments(filesEN));
         bayesCZ(cache.retrieveDocuments(filesCZ));
@@ -105,10 +105,12 @@ public class Main {
         final SummarizationSettings settings = new SummarizationSettingsBuilder().setLanguage(WordDatabases.CZECH_LANGUAGE).setNormalization(false).build();
         threads.add(new Thread(new TestKNN(documents, kBound, new ManhattanDistance(), settings)));
         threads.add(new Thread(new TestKNN(documents, kBound, new MixedEuclideanDistance(), settings)));
+        threads.add(new Thread(new TestKNN(documents, kBound, new CosineDistance(), settings)));
 
         final SummarizationSettings settingsNO = new SummarizationSettingsBuilder().setLanguage(WordDatabases.CZECH_LANGUAGE).setNormalization(true).build();
         threads.add(new Thread(new TestKNN(documents, kBound, new ManhattanDistance(), settingsNO)));
         threads.add(new Thread(new TestKNN(documents, kBound, new MixedEuclideanDistance(), settingsNO)));
+        threads.add(new Thread(new TestKNN(documents, kBound, new CosineDistance(), settingsNO)));
 
         long start = System.nanoTime();
         for(Thread t : threads){
@@ -129,10 +131,13 @@ public class Main {
         final SummarizationSettings settings = new SummarizationSettingsBuilder().setLanguage(WordDatabases.ENGLISH_LANGUAGE).setNormalization(false).build();
         threads.add(new Thread(new TestKNN(documents, kBound, new ManhattanDistance(), settings)));
         threads.add(new Thread(new TestKNN(documents, kBound, new MixedEuclideanDistance(), settings)));
+        threads.add(new Thread(new TestKNN(documents, kBound, new CosineDistance(), settings)));
+
 
         final SummarizationSettings settingsNO = new SummarizationSettingsBuilder().setLanguage(WordDatabases.ENGLISH_LANGUAGE).setNormalization(true).build();
         threads.add(new Thread(new TestKNN(documents, kBound, new ManhattanDistance(), settingsNO)));
         threads.add(new Thread(new TestKNN(documents, kBound, new MixedEuclideanDistance(), settingsNO)));
+        threads.add(new Thread(new TestKNN(documents, kBound, new CosineDistance(), settingsNO)));
 
         long start = System.nanoTime();
         for(Thread t : threads){

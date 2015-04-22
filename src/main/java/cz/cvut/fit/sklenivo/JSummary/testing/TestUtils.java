@@ -2,7 +2,6 @@ package cz.cvut.fit.sklenivo.JSummary.testing;
 
 import cz.cvut.fit.sklenivo.JSummary.SummarizationSettings;
 import cz.cvut.fit.sklenivo.JSummary.TrainableSummarizer;
-import cz.cvut.fit.sklenivo.JSummary.testing.metric.RougeN;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -29,7 +28,7 @@ public class TestUtils {
         }
     }
 
-    public static double xValidationRound(TrainableSummarizer algorithm, List<SummarizableDocument> documents, int i, SummarizationSettings settings) {
+    public static RougeResult xValidationRound(TrainableSummarizer algorithm, List<SummarizableDocument> documents, int i, SummarizationSettings settings) {
         for (int j = 0; j < documents.size(); j++){
             if (i == j){
                 continue;
@@ -47,6 +46,6 @@ public class TestUtils {
             refSummaries.add(toText(documents.get(i).getSummaries().get(p)));
         }
 
-        return Rouge.evaluate(refSummaries, output, new RougeN(1));
+        return Rouge.evaluate(refSummaries, output);
     }
 }

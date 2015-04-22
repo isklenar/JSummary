@@ -44,6 +44,22 @@ public class ClassificationPreprocessor {
         return sentences;
     }
 
+    public static List<ClassificationSentence> preProcess(String text, SummarizationSettings settings) {
+        String [] paragraphs = splitParagraphs(text);
+        List<ClassificationSentence> sentences = new ArrayList<>();
+
+        for (int i = 0; i < paragraphs.length; i++){
+            sentences.addAll(createClassificationSentences(paragraphs[i]));
+        }
+
+        POSTagger tagger = createTagger(settings);
+        for (ClassificationSentence sentence : sentences){
+            sentence.extractFeatures(tagger);
+        }
+
+        return sentences;
+    }
+
     private static POSTagger createTagger(SummarizationSettings settings) {
         return new POSTagger(settings.getLanguage());
     }
@@ -66,19 +82,5 @@ public class ClassificationPreprocessor {
     }
 
 
-    public static List<ClassificationSentence> preProcess(String text, SummarizationSettings settings) {
-        String [] paragraphs = splitParagraphs(text);
-        List<ClassificationSentence> sentences = new ArrayList<>();
 
-        for (int i = 0; i < paragraphs.length; i++){
-            sentences.addAll(createClassificationSentences(paragraphs[i]));
-        }
-
-        POSTagger tagger = createTagger(settings);
-        for (ClassificationSentence sentence : sentences){
-            sentence.extractFeatures(tagger);
-        }
-
-        return sentences;
-    }
 }
