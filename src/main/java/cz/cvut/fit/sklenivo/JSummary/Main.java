@@ -41,12 +41,12 @@ public class Main {
 
 
 
-        /*textRankCZ(cache.retrieveDocuments(filesCZ));
+        textRankCZ(cache.retrieveDocuments(filesCZ));
         textRankEN(cache.retrieveDocuments(filesEN));
 
 
 
-
+/*
         LSACZ(cache.retrieveDocuments(filesCZ));
         LSAEN(cache.retrieveDocuments(filesEN));
 

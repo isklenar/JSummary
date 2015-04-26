@@ -154,15 +154,16 @@ public class TextRank implements Summarizer, TestableSummarizer {
     private void calculateScores(List<TextRankSentence> textRankSentences, Graph graph) {
 
         for (TextRankSentence textRankSentence : textRankSentences){
-            ArrayList<TextRankSentence> in = graph.getIncoming(textRankSentence);
-            ArrayList<TextRankSentence> out = graph.getOutgoing(textRankSentence);
+            ArrayList<TextRankSentence> in = graph.getNeighbour(textRankSentence);
+
 
             double inSum = 0;
 
             for(TextRankSentence inTextRankSentence : in){
                 double outSum = 0;
+                ArrayList<TextRankSentence> out = graph.getNeighbour(inTextRankSentence);
                 for (TextRankSentence outTextRankSentence : out){
-                    Double addition = graph.get(new DirectedEdge(inTextRankSentence, outTextRankSentence));
+                    Double addition = graph.get(new Edge(inTextRankSentence, outTextRankSentence));
 
                     //this happens if there isn't edge between inSentence and outSentence
                     //as if there was edge, but had weight 0
@@ -173,7 +174,7 @@ public class TextRank implements Summarizer, TestableSummarizer {
                     outSum += addition;
                 }
 
-                double tmp = graph.get(new DirectedEdge(inTextRankSentence, textRankSentence)) / outSum;
+                double tmp = graph.get(new Edge(inTextRankSentence, textRankSentence)) / outSum;
                 tmp *= inTextRankSentence.getScore();
 
                 inSum += tmp;
@@ -204,7 +205,7 @@ public class TextRank implements Summarizer, TestableSummarizer {
 
                 // If distance == 0, then sentences don't have anything in common. No point adding an edge
                 if (distance != 0) {
-                    graph.insert(new DirectedEdge(textRankSentences.get(i), textRankSentences.get(j)), distance);
+                    graph.insert(new Edge(textRankSentences.get(i), textRankSentences.get(j)), distance);
                 }
             }
         }

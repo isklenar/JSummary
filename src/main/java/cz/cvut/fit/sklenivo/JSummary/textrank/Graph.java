@@ -8,7 +8,7 @@ import java.util.Map;
  * Class for a weighted directed graph
  */
 class Graph {
-    private Map<DirectedEdge, Double> graph;
+    private Map<Edge, Double> graph;
 
 
     public Graph() {
@@ -17,20 +17,20 @@ class Graph {
 
     /**
      * Inserts a new edge
-     * @param directedEdge edge with two vertices
+     * @param edge edge with two vertices
      * @param weight weight of edge
      */
-    public void insert(DirectedEdge directedEdge, Double weight){
-        graph.put(directedEdge, weight);
+    public void insert(Edge edge, Double weight){
+        graph.put(edge, weight);
     }
 
     /**
      * Returns weight of edge
-     * @param directedEdge edge
+     * @param edge edge
      * @return weight of edge
      */
-    public Double get(DirectedEdge directedEdge){
-        return graph.get(directedEdge);
+    public Double get(Edge edge){
+        return graph.get(edge);
     }
 
     /**
@@ -39,14 +39,17 @@ class Graph {
      * @param textRankSentence target sentence
      * @return collection of sentences
      */
-    public ArrayList<TextRankSentence> getIncoming(TextRankSentence textRankSentence){
+    public ArrayList<TextRankSentence> getNeighbour(TextRankSentence textRankSentence){
         ArrayList<TextRankSentence> ret = new ArrayList<>();
 
         //iterate over every edege in graph
-        for (DirectedEdge directedEdge : graph.keySet()){
+        for (Edge edge : graph.keySet()){
             //if parameter is destination
-            if (directedEdge.isDestination(textRankSentence)){
-                ret.add(directedEdge.getSource());
+            if (edge.isVertex1(textRankSentence)){
+                ret.add(edge.getVertex2());
+            }
+            if (edge.isVertex2(textRankSentence)){
+                ret.add(edge.getVertex1());
             }
         }
 
@@ -59,17 +62,17 @@ class Graph {
      * @param textRankSentence source sentence
      * @return collection of sentences
      */
-    public ArrayList<TextRankSentence> getOutgoing(TextRankSentence textRankSentence){
+   /* public ArrayList<TextRankSentence> getOutgoing(TextRankSentence textRankSentence){
         ArrayList<TextRankSentence> ret = new ArrayList<>();
 
-        for (DirectedEdge directedEdge : graph.keySet()){
-            if (directedEdge.isSource(textRankSentence)){
-                ret.add(directedEdge.getDestination());
+        for (Edge edge : graph.keySet()){
+            if (edge.isSource(textRankSentence)){
+                ret.add(edge.getDestination());
             }
         }
 
         return ret;
-    }
+    }*/
 
     /**
      * Returns size of graph (number of edges)
