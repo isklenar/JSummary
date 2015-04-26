@@ -1,17 +1,16 @@
 package cz.cvut.fit.sklenivo.JSummary.testing.metric;
 
-import java.util.ArrayList;
 import java.util.List;
 
 /**
  * Created by ivo on 22.4.2015.
  */
 public class RougeWCLS implements RougeMetric {
-    private static int beta = 8;
+    private static double beta = 8;
 
     @Override
     public double evaluate(List<String> references, String candidate) {
-        List<Double> results = new ArrayList<>();
+        double acc = 0;
         for (int i = 0; i < references.size(); i++){
             double max = 0;
             for (int j = 0; j < references.size(); j++){
@@ -23,15 +22,11 @@ public class RougeWCLS implements RougeMetric {
                 }
 
             }
-            results.add(max);
+            acc += max;
         }
 
-        double acc = 0;
-        for (Double result : results){
-            acc += result;
-        }
 
-        return acc / results.size();
+        return acc / references.size();
     }
 
     private double evalWLCS(String reference, String candidate) {

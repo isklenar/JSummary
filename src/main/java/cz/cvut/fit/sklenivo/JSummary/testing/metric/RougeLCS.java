@@ -1,6 +1,5 @@
 package cz.cvut.fit.sklenivo.JSummary.testing.metric;
 
-import java.util.ArrayList;
 import java.util.List;
 
 /**
@@ -12,9 +11,9 @@ public class RougeLCS implements RougeMetric{
 
     @Override
     public double evaluate(List<String> references, String candidate) {
-        List<Double> results = new ArrayList<>();
+        double acc = 0;
         for (int i = 0; i < references.size(); i++){
-            double max = -1;
+            double max = 0;
             for (int j = 0; j < references.size(); j++){
                 if (i != j){
                     double score = evalLCS(references.get(j), candidate);
@@ -24,15 +23,11 @@ public class RougeLCS implements RougeMetric{
                 }
 
             }
-            results.add(max);
+            acc += max;
         }
 
-        double acc = 0;
-        for (Double result : results){
-            acc += result;
-        }
 
-        return acc / results.size();
+        return acc / references.size();
     }
 
     private double evalLCS(String reference, String candidate) {

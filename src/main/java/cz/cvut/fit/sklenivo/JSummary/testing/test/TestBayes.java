@@ -31,8 +31,11 @@ public class TestBayes implements Runnable {
         for (int i = 0; i < documents.size(); i++) {
             NaiveBayes algorithm = new NaiveBayes();
 
+            long taskStart = System.nanoTime();
             RougeResult perf = TestUtils.xValidationRound(algorithm, documents, i, settings);
-            log.append("TEST ").append(i).append("  Rouge-1: ").append(perf).append("\n");
+            long taskEnd = System.nanoTime();
+
+            log.append("TEST ").append(i).append("  Rouge-1: ").append(perf).append("  TESTTIME: ").append((taskEnd - taskStart)/1000000).append("ms\n");
             avg.setRougeN(avg.getRougeN() + perf.getRougeN());
             avg.setRougeL(avg.getRougeL() + perf.getRougeL());
             avg.setRougeW(avg.getRougeW() + perf.getRougeW());

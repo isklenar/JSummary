@@ -17,6 +17,42 @@ public class WordDatabases {
     public static String CZECH_LANGUAGE = "CZECH";
     public static String ENGLISH_LANGUAGE = "ENGLISH";
 
+    static {
+        NUMERIC_WORD_DATABASE.add("one");
+        NUMERIC_WORD_DATABASE.add("two");
+        NUMERIC_WORD_DATABASE.add("three");
+        NUMERIC_WORD_DATABASE.add("four");
+        NUMERIC_WORD_DATABASE.add("five");
+        NUMERIC_WORD_DATABASE.add("six");
+        NUMERIC_WORD_DATABASE.add("seven");
+        NUMERIC_WORD_DATABASE.add("eight");
+        NUMERIC_WORD_DATABASE.add("nine");
+        NUMERIC_WORD_DATABASE.add("ten");
+
+        NUMERIC_WORD_DATABASE.add("jeden");
+        NUMERIC_WORD_DATABASE.add("dva");
+        NUMERIC_WORD_DATABASE.add("tři");
+        NUMERIC_WORD_DATABASE.add("čtyři");
+        NUMERIC_WORD_DATABASE.add("pět");
+        NUMERIC_WORD_DATABASE.add("šest");
+        NUMERIC_WORD_DATABASE.add("sedm");
+        NUMERIC_WORD_DATABASE.add("osm");
+        NUMERIC_WORD_DATABASE.add("devět");
+        NUMERIC_WORD_DATABASE.add("deset");
+
+        NUMERIC_WORD_DATABASE.add("milion");
+        NUMERIC_WORD_DATABASE.add("bilion");
+        NUMERIC_WORD_DATABASE.add("trilion");
+        NUMERIC_WORD_DATABASE.add("quadrilion");
+        NUMERIC_WORD_DATABASE.add("thousand");
+        NUMERIC_WORD_DATABASE.add("tisíc");
+        NUMERIC_WORD_DATABASE.add("milarda");
+        NUMERIC_WORD_DATABASE.add("miliard");
+        NUMERIC_WORD_DATABASE.add("biliarda");
+        NUMERIC_WORD_DATABASE.add("bilidard");
+
+    }
+
     static{
         UNITS_DATABASE.add("cm");
         UNITS_DATABASE.add("g");

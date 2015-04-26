@@ -4,11 +4,16 @@ import cz.cvut.fit.sklenivo.JSummary.SummarizationSettings;
 import cz.cvut.fit.sklenivo.JSummary.Summarizer;
 import cz.cvut.fit.sklenivo.JSummary.testing.TestableSummarizer;
 import cz.cvut.fit.sklenivo.JSummary.util.SentenceUtils;
+import cz.cvut.fit.sklenivo.JSummary.util.StemmerFactory;
 import cz.cvut.fit.sklenivo.JSummary.util.WordDatabases;
 import org.ejml.simple.SimpleMatrix;
 import org.ejml.simple.SimpleSVD;
+import org.tartarus.snowball.SnowballStemmer;
 
-import java.util.*;
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Set;
+import java.util.TreeSet;
 
 /**
  * Created by ivo on 15.4.2015.
@@ -24,7 +29,6 @@ public class LSASummarizer implements Summarizer, TestableSummarizer {
         SimpleMatrix LSAMatrix = createLSAMatrix(sentences, settings);
 
         SimpleSVD svd = LSAMatrix.svd();
-        SimpleMatrix W = svd.getW();
         SimpleMatrix V = svd.getV();
 
         int summarySentencesCount = (int) (sentences.size() * settings.getRatio());
@@ -55,9 +59,8 @@ public class LSASummarizer implements Summarizer, TestableSummarizer {
         sentences = new ArrayList<>(input);
 
         SimpleMatrix LSAMatrix = createLSAMatrix(sentences, settings);
-
         SimpleSVD svd = LSAMatrix.svd();
-        SimpleMatrix W = svd.getW();
+
         SimpleMatrix V = svd.getV();
 
         int summarySentencesCount = (int) (sentences.size() * settings.getRatio());
@@ -93,7 +96,7 @@ public class LSASummarizer implements Summarizer, TestableSummarizer {
         for (String sentence : sentences){
             double [] termFrequencyVector = new double[terms.size()];
             for (int i = 0; i < termFrequencyVector.length; i++){
-                termFrequencyVector[i] = localWeighting(i, sentence) * globalWeighting(i);
+                termFrequencyVector[i] = localWeighting(i, sentence, settings) * globalWeighting(i);
             }
 
             matrix.setColumn(column++, 0, termFrequencyVector);
@@ -102,12 +105,20 @@ public class LSASummarizer implements Summarizer, TestableSummarizer {
         return matrix;
     }
 
-    private double localWeighting(int i, String sentence) {
+    private double localWeighting(int i, String sentence, SummarizationSettings settings) {
         String [] t = sentence.split(" ");
         double count = 0;
 
         for (String term : t){
-            if (terms.get(i).equals(term)){
+            String tmp = term;
+            if (settings.isStemming()){
+                SnowballStemmer stemmer = StemmerFactory.create(settings.getLanguage());
+                stemmer.setCurrent(tmp);
+                stemmer.stem();
+                tmp = stemmer.getCurrent();
+            }
+
+            if (terms.get(i).equals(tmp)){
                 count = count + 1;
             }
         }
@@ -124,28 +135,38 @@ public class LSASummarizer implements Summarizer, TestableSummarizer {
             }
         }
 
-        return Math.log(((double)sentences.size())/(n));
+        return n == 0 ? 0 : Math.log(((double)sentences.size())/n);
     }
 
     private Set<String> extractTerms(List<String> sentences, SummarizationSettings settings) {
         Set<String> ret = new TreeSet<>();
-
         for (String sentence : sentences) {
             String[] words = sentence.split(" ");
 
             for (String word : words) {
                 if (settings.isStopWords()) {
-                    if (settings.getLanguage().equals(WordDatabases.CZECH_LANGUAGE) && !WordDatabases.CZECH_STOP_WORDS.contains(word)) {
+                    if (settings.getLanguage().equals(WordDatabases.CZECH_LANGUAGE) && !WordDatabases.CZECH_STOP_WORDS.contains(word)){
                         ret.add(word);
-                    } else if (settings.getLanguage().equals(WordDatabases.ENGLISH_LANGUAGE) && !WordDatabases.ENGLISH_STOP_WORDS.contains(word)){
+                    } else if(settings.getLanguage().equals(WordDatabases.ENGLISH_LANGUAGE) && !WordDatabases.ENGLISH_STOP_WORDS.contains(word)) {
                         ret.add(word);
                     }
                 } else {
                     ret.add(word);
                 }
             }
+        }
 
-            //ret.addAll(Arrays.asList(words));
+        if (settings.isStemming()){
+            Set<String> tmp = new TreeSet<>();
+            SnowballStemmer stemmer = StemmerFactory.create(settings.getLanguage());
+
+            for (String word : ret){
+                stemmer.setCurrent(word);
+                stemmer.stem();
+                tmp.add(stemmer.getCurrent());
+            }
+
+            return tmp;
         }
 
         return ret;

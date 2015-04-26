@@ -33,7 +33,11 @@ public class TestTextRank implements Runnable {
         for (int i = 0; i < documents.size(); i++) {
             TextRank algorithm = new TextRank();
 
+
+            long taskStart = System.nanoTime();
             List<String> summary = algorithm.summarizeToSentences(documents.get(i).getSentences(), settings);
+            long taskEnd = System.nanoTime();
+
 
             String text = TestUtils.toText(summary);
             List<String> refSummaries = new ArrayList<>();
@@ -43,7 +47,7 @@ public class TestTextRank implements Runnable {
             }
 
             RougeResult perf = Rouge.evaluate(refSummaries, text);
-            log.append("TEST ").append(i).append("  Rouge-1: ").append(perf).append("\n");
+            log.append("TEST ").append(i).append("  Rouge-1: ").append(perf).append("  TESTTIME: ").append((taskEnd - taskStart)/1000000).append("ms\n");
 
 
             avg.setRougeN(avg.getRougeN() + perf.getRougeN());

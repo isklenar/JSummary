@@ -2,14 +2,11 @@ package cz.cvut.fit.sklenivo.JSummary.textrank;
 
 
 import cz.cvut.fit.sklenivo.JSummary.SummarizationSettings;
+import cz.cvut.fit.sklenivo.JSummary.util.StemmerFactory;
 import cz.cvut.fit.sklenivo.JSummary.util.WordDatabases;
 import opennlp.tools.tokenize.TokenizerME;
-import opennlp.tools.tokenize.TokenizerModel;
 import org.tartarus.snowball.SnowballStemmer;
 
-import java.io.FileInputStream;
-import java.io.IOException;
-import java.io.InputStream;
 import java.util.*;
 
 /**
@@ -62,26 +59,9 @@ class SentenceComparator {
     private void initStemmer(){
         try {
             //create a stemmer for specified language
-            stemmer = (SnowballStemmer) Class.forName("org.tartarus.snowball.ext." + settings.getLanguage().toLowerCase() + "Stemmer").newInstance();
-        } catch (InstantiationException | IllegalAccessException | ClassNotFoundException e) {
-            e.printStackTrace();
+            stemmer = StemmerFactory.create(settings.getLanguage());
+        } catch (IllegalArgumentException e) {
             stemmer = null;
-        }
-    }
-
-    /**
-     * Creates tokenizer for NLP.
-     * If creation fails, prints an error message and won't use tokenizer for comparisons
-     */
-    private void initTokenizer(){
-
-        try(InputStream is = new FileInputStream("resources/OpenNLP/en-token.bin")) {
-            TokenizerModel tokenizerModel = new TokenizerModel(is);
-            tokenizer = new TokenizerME(tokenizerModel);
-        } catch (IOException e) {
-            System.out.println("Error creating NLP tokenizer. Reason:");
-            System.out.println(e.getMessage());
-            tokenizer = null;
         }
     }
 

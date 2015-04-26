@@ -3,7 +3,9 @@ package cz.cvut.fit.sklenivo.JSummary.testing;
 import cz.cvut.fit.sklenivo.JSummary.SummarizationSettings;
 import cz.cvut.fit.sklenivo.JSummary.TrainableSummarizer;
 
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
+import java.util.Calendar;
 import java.util.List;
 
 /**
@@ -25,6 +27,11 @@ public class TestUtils {
     public static void print(StringBuilder log){
         synchronized (lock){
             System.out.println(log.toString());
+
+            Calendar cal = Calendar.getInstance();
+            cal.getTime();
+            SimpleDateFormat sdf = new SimpleDateFormat("HH:mm:ss");
+            System.out.println("Current Time: " + sdf.format(cal.getTime()) );
         }
     }
 

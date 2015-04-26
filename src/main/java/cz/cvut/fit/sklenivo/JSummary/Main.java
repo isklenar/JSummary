@@ -39,17 +39,29 @@ public class Main {
         cache.preLoadFiles(filesCZ);
         cache.preLoadFiles(filesEN);
 
+
+
         /*textRankCZ(cache.retrieveDocuments(filesCZ));
-        textRankEN(cache.retrieveDocuments(filesEN));*/
+        textRankEN(cache.retrieveDocuments(filesEN));
+
+
+
 
         LSACZ(cache.retrieveDocuments(filesCZ));
         LSAEN(cache.retrieveDocuments(filesEN));
 
-        bayesEN(cache.retrieveDocuments(filesEN));
-        bayesCZ(cache.retrieveDocuments(filesCZ));
 
-        /*KNNEN(cache.retrieveDocuments(filesEN), 10);
-        KNNCZ(cache.retrieveDocuments(filesCZ), 10);*/
+
+
+        bayesEN(cache.retrieveDocuments(filesEN));
+        bayesCZ(cache.retrieveDocuments(filesCZ));*/
+
+
+
+
+       /* KNNEN(cache.retrieveDocuments(filesEN), 20);
+        KNNCZ(cache.retrieveDocuments(filesCZ), 20);*/
+
 
 
         //SummarizationUI ui = new SummarizationUI();

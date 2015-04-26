@@ -85,7 +85,6 @@ public class ClassificationSentence implements Comparable<ClassificationSentence
         extractSentenceEndFeature();
         extractMathSymbolsCountFeature();
         extractGreekLettersCountFeature();
-        extractDateTimeCountFeature();
         extractNumericCountFeature();
     }
 
@@ -93,9 +92,6 @@ public class ClassificationSentence implements Comparable<ClassificationSentence
 
     }
 
-    private void extractDateTimeCountFeature() {
-
-    }
 
     private void extractGreekLettersCountFeature() {
         String [] words = text.split(" ");

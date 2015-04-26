@@ -3,6 +3,7 @@ package cz.cvut.fit.sklenivo.JSummary.classification.knn;
 import cz.cvut.fit.sklenivo.JSummary.SummarizationSettings;
 import cz.cvut.fit.sklenivo.JSummary.TrainableSummarizer;
 import cz.cvut.fit.sklenivo.JSummary.classification.*;
+import cz.cvut.fit.sklenivo.JSummary.classification.knn.metrics.CosineDistance;
 import cz.cvut.fit.sklenivo.JSummary.classification.knn.metrics.KNNMetric;
 import cz.cvut.fit.sklenivo.JSummary.testing.TestableSummarizer;
 
@@ -79,6 +80,7 @@ public class KNN implements TrainableSummarizer, TestableSummarizer {
         if (settings.isNormalization()){
             ClassificationUtils.normalize(input, normalizationData);
         }
+
         for (ClassificationSentence sentence : input) {
             List<KNNTuple> distances = new ArrayList<>();
 
@@ -92,7 +94,23 @@ public class KNN implements TrainableSummarizer, TestableSummarizer {
     }
 
     private void classifyByNeighbours(ClassificationSentence sentence, List<KNNTuple> distances) {
-        Collections.sort(distances);
+        if (metric instanceof CosineDistance){
+            Collections.sort(distances, new Comparator<KNNTuple>() {
+                @Override
+                public int compare(KNNTuple o1, KNNTuple o2) {
+                    if (o2.getDistance() > o1.getDistance()){
+                        return 1;
+                    }
+                    if (o2.getDistance() < o1.getDistance()){
+                        return -1;
+                    }
+
+                    return 0;
+                }
+            });
+        } else {
+            Collections.sort(distances);
+        }
         int inSummaryCount = 0;
         for (int i = 0; i < k; i++){
             if (distances.get(i).getSentence().isInSummary()){
