@@ -5,7 +5,7 @@ import java.util.List;
 /**
  * Created by ivo on 22.4.2015.
  */
-public class RougeWCLS implements RougeMetric {
+public class RougeWLCS implements RougeMetric {
     private static double beta = 8;
 
     @Override
