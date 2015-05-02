@@ -9,6 +9,7 @@ import cz.cvut.fit.sklenivo.JSummary.testing.test.TestBayes;
 import cz.cvut.fit.sklenivo.JSummary.testing.test.TestKNN;
 import cz.cvut.fit.sklenivo.JSummary.testing.test.TestLSA;
 import cz.cvut.fit.sklenivo.JSummary.testing.test.TestTextRank;
+import cz.cvut.fit.sklenivo.JSummary.util.SummarizationUI;
 import cz.cvut.fit.sklenivo.JSummary.util.WordDatabases;
 
 import java.util.ArrayList;
@@ -20,7 +21,16 @@ import java.util.List;
 public class Main {
 
     public static void main(String [] args) throws InterruptedException {
+        if (args.length > 0){
+            if (args[0].equals("-t") || args[0].equals("--test")){
+                runTests();
+            }
+        } else {
+            SummarizationUI ui = new SummarizationUI();
+        }
+    }
 
+    private static void runTests() {
         final TestDocumentCache cache = new TestDocumentCache();
 
 
@@ -39,32 +49,21 @@ public class Main {
         cache.preLoadFiles(filesCZ);
         cache.preLoadFiles(filesEN);
 
+        try {
+            textRankCZ(cache.retrieveDocuments(filesCZ));
+            textRankEN(cache.retrieveDocuments(filesEN));
 
+            LSACZ(cache.retrieveDocuments(filesCZ));
+            LSAEN(cache.retrieveDocuments(filesEN));
 
-        textRankCZ(cache.retrieveDocuments(filesCZ));
-        textRankEN(cache.retrieveDocuments(filesEN));
+            bayesEN(cache.retrieveDocuments(filesEN));
+            bayesCZ(cache.retrieveDocuments(filesCZ));
 
-
-
-/*
-        LSACZ(cache.retrieveDocuments(filesCZ));
-        LSAEN(cache.retrieveDocuments(filesEN));
-
-
-
-
-        bayesEN(cache.retrieveDocuments(filesEN));
-        bayesCZ(cache.retrieveDocuments(filesCZ));*/
-
-
-
-
-       /* KNNEN(cache.retrieveDocuments(filesEN), 20);
-        KNNCZ(cache.retrieveDocuments(filesCZ), 20);*/
-
-
-
-        //SummarizationUI ui = new SummarizationUI();
+            KNNEN(cache.retrieveDocuments(filesEN), 20);
+            KNNCZ(cache.retrieveDocuments(filesCZ), 20);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
     }
 
     private static void bayesCZ(List<SummarizableDocument> documents) throws InterruptedException {
