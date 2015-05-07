@@ -3,6 +3,7 @@ package cz.cvut.fit.sklenivo.JSummary.LSA;
 import cz.cvut.fit.sklenivo.JSummary.SummarizationSettings;
 import cz.cvut.fit.sklenivo.JSummary.Summarizer;
 import cz.cvut.fit.sklenivo.JSummary.testing.TestableSummarizer;
+import cz.cvut.fit.sklenivo.JSummary.util.Languages;
 import cz.cvut.fit.sklenivo.JSummary.util.SentenceUtils;
 import cz.cvut.fit.sklenivo.JSummary.util.StemmerFactory;
 import cz.cvut.fit.sklenivo.JSummary.util.WordDatabases;
@@ -145,9 +146,9 @@ public class LSASummarizer implements Summarizer, TestableSummarizer {
 
             for (String word : words) {
                 if (settings.isStopWords()) {
-                    if (settings.getLanguage().equals(WordDatabases.CZECH_LANGUAGE) && !WordDatabases.CZECH_STOP_WORDS.contains(word)){
+                    if (settings.getLanguage().equals(Languages.CZECH_LANGUAGE) && !WordDatabases.CZECH_STOP_WORDS.contains(word)){
                         ret.add(word);
-                    } else if(settings.getLanguage().equals(WordDatabases.ENGLISH_LANGUAGE) && !WordDatabases.ENGLISH_STOP_WORDS.contains(word)) {
+                    } else if(settings.getLanguage().equals(Languages.ENGLISH_LANGUAGE) && !WordDatabases.ENGLISH_STOP_WORDS.contains(word)) {
                         ret.add(word);
                     }
                 } else {

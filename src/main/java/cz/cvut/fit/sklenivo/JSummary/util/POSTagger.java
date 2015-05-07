@@ -26,7 +26,7 @@ public class POSTagger {
     private CzechLemma lemma;
 
     public POSTagger(String language) {
-        if (language.equals(WordDatabases.ENGLISH_LANGUAGE)){
+        if (language.equals(Languages.ENGLISH_LANGUAGE)){
             tagger = new MaxentTagger("resources/StanfordPOS/english-bidirectional-distsim.tagger");
         } else {
             this.fileName = "resources/POS/gwg-cze-latest.xml";

@@ -14,9 +14,6 @@ public class WordDatabases {
     public static Set<String> ENGLISH_STOP_WORDS = new TreeSet<>();
     public static Set<String> CZECH_STOP_WORDS = new TreeSet<>();
 
-    public static String CZECH_LANGUAGE = "CZECH";
-    public static String ENGLISH_LANGUAGE = "ENGLISH";
-
     static {
         NUMERIC_WORD_DATABASE.add("one");
         NUMERIC_WORD_DATABASE.add("two");

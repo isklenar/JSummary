@@ -2,6 +2,7 @@ package cz.cvut.fit.sklenivo.JSummary.textrank;
 
 
 import cz.cvut.fit.sklenivo.JSummary.SummarizationSettings;
+import cz.cvut.fit.sklenivo.JSummary.util.Languages;
 import cz.cvut.fit.sklenivo.JSummary.util.StemmerFactory;
 import cz.cvut.fit.sklenivo.JSummary.util.WordDatabases;
 import opennlp.tools.tokenize.TokenizerME;
@@ -79,11 +80,11 @@ class SentenceComparator {
     private List<String> tokenize(String s1) {
         List<String>  ret = new ArrayList<>(Arrays.asList(s1.split(" ")));
 
-        if (settings.isStopWords() && settings.getLanguage().equals(WordDatabases.CZECH_LANGUAGE)){
+        if (settings.isStopWords() && settings.getLanguage().equals(Languages.CZECH_LANGUAGE)){
             ret.removeAll(WordDatabases.CZECH_STOP_WORDS);
         }
 
-        if (settings.isStopWords() && settings.getLanguage().equals(WordDatabases.ENGLISH_LANGUAGE)){
+        if (settings.isStopWords() && settings.getLanguage().equals(Languages.ENGLISH_LANGUAGE)){
             ret.removeAll(WordDatabases.ENGLISH_STOP_WORDS);
         }
 
