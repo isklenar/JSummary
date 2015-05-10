@@ -1,6 +1,0 @@
-V létě roku 2004 dvě skupiny vědců pracující nezávisle na sobě (jedna vedená výzkumníky lékařské fakulty Harvardovy univerzity a Brighamovy a ženské nemocnice v Bostonu a druhá pod vedením výzkumníků Cold Spring Harbor Laboratories) toto dogma zpochybnily.
-Tento objev byl učiněn nedávno, protože až dosud nebyla dostupná technika, která by umožňovala uceleně určovat genomické nevyváženosti způsobem zahrnujícím celou šíři genomu.
-Asi před třemi lety jsme v Brighamově a ženské nemocnici sháněli možný nástroj pro diagnostiku s vysokým rozlišením a technika array-CGH nám dala naději na provedení spolehlivého a efektivního testu celého genomu, který by dokázal nezkresleně a bez subjektivního zabarvení určit přírůstky a úbytky.
-Když byly provedeny validační experimenty, které porovnávaly DNA od jednoho „normálního, zdravého“ jedince s DNA od jiného „normálního, zdravého“ jedince, zaskočilo nás zjištění, že v průměru 12 fragmentů DNA vykazovalo mezi danými dvěma porovnávanými jednotlivci rozdíly v počtu kopií.
-Za použití dvou komplementárních celogenomových technologií a s následnými validačními studiemi bylo zjištěno celkem 1447 CNVs.
-Některé CNVs se rovněž spojují s geny podílejícími se na imunitní reakci a metabolismu souvisejícím s detoxifikací (jde o některé reakce lidského těla na prostředí, v němž žijeme).

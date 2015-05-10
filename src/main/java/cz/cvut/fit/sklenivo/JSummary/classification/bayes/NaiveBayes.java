@@ -4,8 +4,6 @@ import cz.cvut.fit.sklenivo.JSummary.SummarizationSettings;
 import cz.cvut.fit.sklenivo.JSummary.TrainableSummarizer;
 import cz.cvut.fit.sklenivo.JSummary.classification.*;
 import cz.cvut.fit.sklenivo.JSummary.testing.TestableSummarizer;
-import opennlp.tools.sentdetect.SentenceDetectorME;
-import opennlp.tools.tokenize.TokenizerME;
 
 import java.math.BigDecimal;
 import java.util.ArrayList;
@@ -17,9 +15,6 @@ import java.util.Map;
  * Created by ivo on 20.10.14.
  */
 public class NaiveBayes implements TrainableSummarizer, TestableSummarizer {
-    private SentenceDetectorME sentenceDetector;
-    private TokenizerME tokenizer;
-
     private List<ClassificationSentence> model = new ArrayList<>();
     private Map<Integer, Double> featuresMeanInSummary = new HashMap<>();
     private Map<Integer, Double> featuresVarianceInSummary = new HashMap<>();

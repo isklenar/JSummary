@@ -1,8 +1,0 @@
-Myslelo se, že některé z těchto modifikací DNA mohou částečně vysvětlovat některé tělesné odlišnosti mezi dvěma různými, ale jinak běžnými jedinci.
-Jejich výzkum určil stovky oblastí lidského genomu, kde se jedinec od jedince lišila celá řada kopií konkrétního segmentu DNA.
-Až na několik málo výjimek se myslelo, že segmenty DNA existují ve dvou kopiích (jedna kopie zděděná po matce, druhá kopie zděděná po otci).
-Obě studie prokázaly, že existují stovky oblastí genomu, které mohou mít více nebo méně kopií než očekávané dvě.
-To se za posledních pět šest let změnilo, díky rozvoji techniky známé jako „array-based comparative genomic hybridization“ (array-CGH) čili „maticová komparativní genomová hybridizace“, která v genetickém výzkumu a diagnostice způsobila revoluci.
-Když byly provedeny validační experimenty, které porovnávaly DNA od jednoho „normálního, zdravého“ jedince s DNA od jiného „normálního, zdravého“ jedince, zaskočilo nás zjištění, že v průměru 12 fragmentů DNA vykazovalo mezi danými dvěma porovnávanými jednotlivci rozdíly v počtu kopií.
-Data jednoznačně prokazují, že jedinci si nejsou natolik geneticky podobní, jak se kdysi myslelo.
-Celkově očekáváme, že mnohé z těchto CNVs nám přinesou vysvětlení, jak se adaptujeme na neustále se měnící životní prostředí a jak s ním interagujeme.

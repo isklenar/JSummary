@@ -1,9 +1,0 @@
-Po jistý čas byli vědci přesvědčeni, že jednotlivé lidské bytosti jsou z 99,9% geneticky identické.
-Oněch 0,1% genomu, které se lišily (zhruba 3 miliony bází DNA), tvořily „jednonukleotidové polymorfismy“ (modifikace individuálních bází DNA) rozptýlené po celém genomu.
-V létě roku 2004 dvě skupiny vědců pracující nezávisle na sobě (jedna vedená výzkumníky lékařské fakulty Harvardovy univerzity a Brighamovy a ženské nemocnice v Bostonu a druhá pod vedením výzkumníků Cold Spring Harbor Laboratories) toto dogma zpochybnily.
-Obě studie prokázaly, že existují stovky oblastí genomu, které mohou mít více nebo méně kopií než očekávané dvě.
-Když byly provedeny validační experimenty, které porovnávaly DNA od jednoho „normálního, zdravého“ jedince s DNA od jiného „normálního, zdravého“ jedince, zaskočilo nás zjištění, že v průměru 12 fragmentů DNA vykazovalo mezi danými dvěma porovnávanými jednotlivci rozdíly v počtu kopií.
-Ty vešly ve známost jako „copy number variants“ (CNVs) neboli variace v počtu kopií.
-Za použití dvou komplementárních celogenomových technologií a s následnými validačními studiemi bylo zjištěno celkem 1447 CNVs.
-Data jednoznačně prokazují, že jedinci si nejsou natolik geneticky podobní, jak se kdysi myslelo.
-Ba jak studie nadále CNVs určují a charakterově popisují, očekáváme dosažení lepšího porozumění vztahu mezi těmito genetickými variacemi, složitými nemocemi a lidskou adaptabilitou.

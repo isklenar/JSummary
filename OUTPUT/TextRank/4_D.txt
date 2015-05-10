@@ -1,7 +1,0 @@
-Po jistý čas byli vědci přesvědčeni, že jednotlivé lidské bytosti jsou z 99,9% geneticky identické.
-V létě roku 2004 dvě skupiny vědců pracující nezávisle na sobě (jedna vedená výzkumníky lékařské fakulty Harvardovy univerzity a Brighamovy a ženské nemocnice v Bostonu a druhá pod vedením výzkumníků Cold Spring Harbor Laboratories) toto dogma zpochybnily.
-Právě to je cílem Projektu variací v počtu kopií Konsorcia strukturální variace genomu, který se snaží poskytnout výzkumníkům nejucelenější seznam a charakteristiku CNVs u lidí.
-Za použití dvou komplementárních celogenomových technologií a s následnými validačními studiemi bylo zjištěno celkem 1447 CNVs.
-Poněvadž se zjišťují u běžných jedinců, CNVs nemusí být nutně přímou příčinou lidských chorob, ale mnohé mohou způsobovat náchylnost k jistým nemocím, sloužit jako předzvěst onemocnění nebo naznačovat potenciální oblasti genomické nestability.
-Doufejme, že ucelenější porozumění lidské genetické variaci (například změnám jednotlivých párů bází a strukturním genomickým odchylkám, jako jsou CNVs) nakonec pomůže lékařům předepisovat léky individualizovanějším způsobem, který by u každého pacienta vyústil v maximální terapeutický účinek při minimálních vedlejších účincích.
-Ba jak studie nadále CNVs určují a charakterově popisují, očekáváme dosažení lepšího porozumění vztahu mezi těmito genetickými variacemi, složitými nemocemi a lidskou adaptabilitou.

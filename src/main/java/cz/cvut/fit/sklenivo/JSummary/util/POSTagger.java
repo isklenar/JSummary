@@ -1,6 +1,5 @@
 package cz.cvut.fit.sklenivo.JSummary.util;
 
-import CzechLemma.CzechLemma;
 import edu.stanford.nlp.tagger.maxent.MaxentTagger;
 import org.w3c.dom.Document;
 import org.w3c.dom.Element;
@@ -23,21 +22,18 @@ public class POSTagger {
     private MaxentTagger tagger = null;
     private Map<String, String> database = null;
 
-    private CzechLemma lemma;
-
     public POSTagger(String language) {
         if (language.equals(Languages.ENGLISH_LANGUAGE)){
-            tagger = new MaxentTagger("resources/StanfordPOS/english-bidirectional-distsim.tagger");
+            tagger = new MaxentTagger("resources/StandfordPOS/english-bidirectional-distsim.tagger");
         } else {
             this.fileName = "resources/POS/gwg-cze-latest.xml";
-            lemma = new CzechLemma();
             loadDatabase(); // czech
         }
 
     }
 
     /**
-     * Tags input text by each words part of speach.
+     * Tags input text by each words part of speech.
      *
      * Tags: _NN noun, _VB verb, _JJ adjective.
      *
@@ -66,8 +62,8 @@ public class POSTagger {
             return tagger.tagString(word);
         }
 
-        if (database.containsKey(lemma.lemmatizeWord(word).toLowerCase())){
-            return word + "_" + database.get(lemma.lemmatizeWord(word).toLowerCase());
+        if (database.containsKey(word.toLowerCase())){
+            return word + "_" + database.get(word.toLowerCase());
         }
 
         return word;
@@ -98,7 +94,7 @@ public class POSTagger {
                             case "v" : pos = "VB"; break;
                             case "a" : pos = "JJ"; break;
                         }
-                        database.put(lemma.lemmatizeWord(word.toLowerCase()), pos);
+                        database.put(word.toLowerCase(), pos);
                     }
                 }
             }

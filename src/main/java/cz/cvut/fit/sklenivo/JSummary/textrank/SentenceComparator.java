@@ -5,7 +5,6 @@ import cz.cvut.fit.sklenivo.JSummary.SummarizationSettings;
 import cz.cvut.fit.sklenivo.JSummary.util.Languages;
 import cz.cvut.fit.sklenivo.JSummary.util.StemmerFactory;
 import cz.cvut.fit.sklenivo.JSummary.util.WordDatabases;
-import opennlp.tools.tokenize.TokenizerME;
 import org.tartarus.snowball.SnowballStemmer;
 
 import java.util.*;
@@ -14,9 +13,6 @@ import java.util.*;
  * Utility class that compares senteces.
  */
 class SentenceComparator {
-    private TokenizerME tokenizer;
-
-
     private SnowballStemmer stemmer;
 
     private SummarizationSettings settings;

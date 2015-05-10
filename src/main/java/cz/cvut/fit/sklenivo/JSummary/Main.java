@@ -1,35 +1,16 @@
-//package cz.cvut.fit.sklenivo.JSummary;
-//
-//import cz.cvut.fit.sklenivo.JSummary.classification.knn.metrics.CosineDistance;
-//import cz.cvut.fit.sklenivo.JSummary.classification.knn.metrics.ManhattanDistance;
-//import cz.cvut.fit.sklenivo.JSummary.classification.knn.metrics.MixedEuclideanDistance;
-//import cz.cvut.fit.sklenivo.JSummary.testing.SummarizableDocument;
-//import cz.cvut.fit.sklenivo.JSummary.testing.TestDocumentCache;
-//import cz.cvut.fit.sklenivo.JSummary.testing.test.TestBayes;
-//import cz.cvut.fit.sklenivo.JSummary.testing.test.TestKNN;
-//import cz.cvut.fit.sklenivo.JSummary.testing.test.TestLSA;
-//import cz.cvut.fit.sklenivo.JSummary.testing.test.TestTextRank;
-//import cz.cvut.fit.sklenivo.JSummary.util.SummarizationUI;
-//import cz.cvut.fit.sklenivo.JSummary.util.WordDatabases;
-//
-//import java.util.ArrayList;
-//import java.util.List;
-//
-///**
-// * Created by Ivo on 29.1.2015.
-// */
-//public class Main {
-//
-//    public static void main(String [] args) throws InterruptedException {
-//        if (args.length > 0){
-//            if (args[0].equals("-t") || args[0].equals("--test")){
-//                runTests();
-//            }
-//        } else {
-//            SummarizationUI ui = new SummarizationUI();
-//        }
-//    }
-//
+package cz.cvut.fit.sklenivo.JSummary;
+
+import cz.cvut.fit.sklenivo.JSummary.util.SummarizationUI;
+
+/**
+* Created by Ivo on 29.1.2015.
+*/
+public class Main {
+
+    public static void main(String [] args) throws InterruptedException {
+        SummarizationUI ui = new SummarizationUI();
+    }
+
 //    private static void runTests() {
 //        final TestDocumentCache cache = new TestDocumentCache();
 //
@@ -289,4 +270,4 @@
 //
 //        System.out.println(" TOTAL TIME: " + (System.nanoTime() - start) / 1000000000 + " s");
 //    }
-//}
+}

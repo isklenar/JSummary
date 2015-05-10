@@ -1,8 +1,0 @@
-Jejich výzkum určil stovky oblastí lidského genomu, kde se jedinec od jedince lišila celá řada kopií konkrétního segmentu DNA.
-Když byly provedeny validační experimenty, které porovnávaly DNA od jednoho „normálního, zdravého“ jedince s DNA od jiného „normálního, zdravého“ jedince, zaskočilo nás zjištění, že v průměru 12 fragmentů DNA vykazovalo mezi danými dvěma porovnávanými jednotlivci rozdíly v počtu kopií.
-Ty vešly ve známost jako „copy number variants“ (CNVs) neboli variace v počtu kopií.
-Data jednoznačně prokazují, že jedinci si nejsou natolik geneticky podobní, jak se kdysi myslelo.
-Mnohé oblasti, kde byly rozpoznány CNVs, se překrývají se známými geny nemocí.
-Některé CNVs by se mohly ukázat jako vysvětlení toho, proč někteří lidé reagují na určitá léčiva odlišně.
-Celkově očekáváme, že mnohé z těchto CNVs nám přinesou vysvětlení, jak se adaptujeme na neustále se měnící životní prostředí a jak s ním interagujeme.
-Ba jak studie nadále CNVs určují a charakterově popisují, očekáváme dosažení lepšího porozumění vztahu mezi těmito genetickými variacemi, složitými nemocemi a lidskou adaptabilitou.

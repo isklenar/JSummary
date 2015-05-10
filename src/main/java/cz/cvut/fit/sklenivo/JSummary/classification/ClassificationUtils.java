@@ -72,9 +72,6 @@ public class ClassificationUtils {
     }
 
     public static List<MeanAndVariance> normalize(List<ClassificationSentence> sentences) {
-        Map<Integer, Double> featuresMean = new HashMap<>();
-        Map<Integer, Double> featuresVar = new HashMap<>();
-
         List<MeanAndVariance> ret = new ArrayList<>();
 
         for(int i = 0; i < sentences.get(0).getFeatures().length; i++){
@@ -85,8 +82,6 @@ public class ClassificationUtils {
             double mean = ClassificationUtils.calculateMean(i, sentences);
             double var = ClassificationUtils.calculateVariance(i, sentences);
 
-            featuresMean.put(i, mean);
-            featuresVar.put(i, var);
 
             ret.add(new MeanAndVariance(mean, var, i));
         }
