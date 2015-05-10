@@ -94,17 +94,11 @@
         </dependency>
 
         <dependency>
-            <groupId>CzechLemma</groupId>
-            <artifactId>CzechLemma</artifactId>
-            <version>1.0</version>
-            <scope>system</scope>
-            <systemPath>${basedir}/lib/CzechLemmaGen/CzechLemmaFull.jar</systemPath>
-        </dependency>
-
-        <dependency>
             <groupId>stanford-postagger</groupId>
             <artifactId>stanford-postagger</artifactId>
             <version>3.5.1</version>
+            <scope>system</scope>
+            <systemPath>${basedir}/lib/stanford-postagger/stanford-postagger.jar</systemPath>
         </dependency>
 
     </dependencies>
